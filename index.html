@@ -791,18 +791,27 @@ const ALL=[
 
 // MEDALS
 const MD=[
-{n:"Triple Luffy Set",c:"runner",m:["Battle Ax G-40","Jet Rocket G-105","King Cobra G-119"],tg:["Luffy","Straw Hat","Paramecia"],b:"Skill 1+2 CD Reduction",d:"Versatile skill cycle.",f:"Runner & Attacker"},
-{n:"Triple Kaido Set",c:"defender",m:["Kaido Medal","King Medal","Queen Medal"],tg:["Kaido Pirates","New World","Treachery"],b:"Balanced + DMG Reduction",d:"Balanced defender HP.",f:"Defender"},
-{n:"Triple Shanks Set",c:"runner",m:["Shanks Medal","Roger Medal","Beckman Medal"],tg:["Red Hair Pirates","Grandline","Supernova"],b:"Skill Cycle + Speed",d:"Skill cycle runner.",f:"Runner"},
-{n:"BM Pirates Set",c:"attacker",m:["Big Mom Medal","Katakuri Medal","Cracker Medal"],tg:["BM Pirates","New World","Paramecia"],b:"Balanced ATK + HP",d:"Balanced attacker.",f:"Attacker"},
-{n:"Marineford Set",c:"defender",m:["Garp Medal","Akainu Medal","Kuzan Medal"],tg:["Marine","Marineford","Haki"],b:"DEF + DMG Reduction",d:"Pure tank.",f:"Defender"},
-{n:"Worst Gen Set",c:"attacker",m:["Luffy Medal","Law Medal","Kid Medal"],tg:["Worst Gen","Supernova","Paramecia"],b:"ATK + Crit Rate",d:"Damage tinggi.",f:"Attacker"},
-{n:"Wano Country Set",c:"runner",m:["Oden Medal","Yamato Medal","Zoro Medal"],tg:["Wano Country","Samurai","New World"],b:"Speed + Capture Speed",d:"Runner cepat.",f:"Runner"},
-{n:"WB Pirates Set",c:"defender",m:["WB Medal","Marco Medal","Ace Medal"],tg:["WB Pirates","Grandline","Paramecia"],b:"HP + Heal on KO",d:"Tank sustain.",f:"Defender"},
-{n:"Egghead Luffy Set",c:"attacker",m:["Egghead Luffy Medal","Gear 4 Medal","Nika Medal"],tg:["Luffy","Egghead","Nika"],b:"S1 CD + Damage",d:"Untuk Luffy G5.",f:"Attacker"},
-{n:"Gorosei Set",c:"defender",m:["Nusjuro Medal","Mars Medal","Gorosei Medal"],tg:["Gorosei","Holy Knights","World Gov"],b:"HP + DEF Boost",d:"Gorosei EX.",f:"Defender"},
-{n:"CP0 Set",c:"attacker",m:["Lucci Medal","Kaku Medal","Spandam Medal"],tg:["CP0","World Gov","Cipher Pol"],b:"ATK + Crit Boost",d:"Lucci Awakened.",f:"Attacker"},
-{n:"Seraphim Set",c:"attacker",m:["S-Snake Medal","Seraphim Medal","Hancock Medal"],tg:["Seraphim","Seven Warlords","Land of Women"],b:"ATK + Freeze",d:"S-Snake EX.",f:"Attacker"}
+// === ATTACKER SETS ===
+{n:"Triple Kaido Set",c:"attacker",m:["Kaido Medal","King Medal","Queen Medal"],tg:["Kaido Pirates","New World","Treachery"],b:"ATK +54% (spawn) | S1 CD -18% | DMG Reduction 10%",d:"Best universal attacker set. Balanced stats + survivability. Cocok untuk semua attacker termasuk EX Bonney, Garp, Zoro.",f:"Universal Attacker"},
+{n:"Boa Medal Set",c:"attacker",m:["Boa Hancock Medal","Kuja Pirates Medal","Boa 2 Medal"],tg:["Kuja Pirates","Seven Warlords","Land of Women"],b:"DMG Boost 20% | DMG Reduction 10% | Knockback",d:"High damage + survivability. Bagus untuk karakter dengan 4 skill (Zonji). 20% damage boost saat lawan di treasure area.",f:"High DMG Attacker"},
+{n:"Triple Wano Luffy",c:"attacker",m:["Wano Luffy Medal","Luffytaro Medal","Raid Luffy Medal"],tg:["Straw Hat","Wano Country","Paramecia"],b:"S1 CD -20% | S2 CD -20% | ATK +54%",d:"Skill spam set. Max cooldown reduction untuk kedua skill. Cocok untuk Garp, Bonney, Luffy G5.",f:"Skill Spam Attacker"},
+{n:"Dressrosa Set",c:"attacker",m:["Doflamingo Medal","Trebol Medal","Diamante Medal"],tg:["Don Quixote","Dressrosa","Paramecia"],b:"ATK + Crit Rate | Knockback Distance UP",d:"Aggressive damage set. Crit rate tinggi untuk burst damage. Cocok untuk Zoro, Lucci.",f:"Crit Burst Attacker"},
+{n:"Worst Gen Set",c:"attacker",m:["Luffy Medal","Law Medal","Kid Medal"],tg:["Worst Gen","Supernova","Paramecia"],b:"ATK + Crit Rate | Knockback +10%",d:"Attack-focused set. ATK boost besar + crit untuk max damage output.",f:"Pure Damage Attacker"},
+{n:"CP0 Set",c:"attacker",m:["Lucci Medal","Kaku Medal","Spandam Medal"],tg:["CP0","World Gov","Cipher Pol"],b:"ATK + Crit | S1 CD -18%",d:"Set untuk Lucci Awakened. ATK tinggi + skill cooldown. Cocok untuk burst playstyle.",f:"CP0 Attacker"},
+// === DEFENDER SETS ===
+{n:"Triple Kaido DEF",c:"defender",m:["Kaido Medal","King Medal","Queen Medal"],tg:["Kaido Pirates","New World","Treachery"],b:"HP + DEF | DMG Reduction 10% | Knockback",d:"Tank terbaik. HP + DEF tinggi + damage reduction. Cocok untuk Kaido, Mars, WB, Akainu.",f:"Tank Defender"},
+{n:"Marineford Set",c:"defender",m:["Garp Medal","Akainu Medal","Kuzan Medal"],tg:["Marine","Marineford","Haki"],b:"DEF + HP | DMG Reduction 10% | Freeze Immune",d:"Pure tank set. DEF tinggi + damage reduction + freeze immunity. Cocok untuk defender meta.",f:"Pure Tank Defender"},
+{n:"WB Pirates Set",c:"defender",m:["WB Medal","Marco Medal","Ace Medal"],tg:["WB Pirates","Grandline","Paramecia"],b:"HP + Heal on KO | DMG Reduction 10%",d:"Sustain tank. Heal saat KO lawan + damage reduction. Cocok untuk long fight.",f:"Sustain Defender"},
+{n:"Gorosei Set",c:"defender",m:["Nusjuro Medal","Mars Medal","Gorosei Medal"],tg:["Gorosei","Holy Knights","World Gov"],b:"HP + DEF Boost | Damage Reduction",d:"Set khusus Gorosei EX. HP + DEF tinggi + damage reduction. Cocok untuk Mars, Nusjuro.",f:"Gorosei Defender"},
+// === RUNNER SETS ===
+{n:"Triple Shanks Set",c:"runner",m:["Shanks Medal","Roger Medal","Beckman Medal"],tg:["Red Hair Pirates","Grandline","Supernova"],b:"S1 CD -18% | Capture Speed UP | Speed Boost",d:"Best runner set. Skill cycle cepat + capture speed tinggi. Cocok untuk Shanks, Sabo, Kizaru.",f:"Speed Runner"},
+{n:"Egghead Runner Set",c:"runner",m:["Egghead Zoro Medal","Egghead Luffy Medal","Egghead Nami Medal"],tg:["Straw Hat","Egghead","New World"],b:"Capture Speed MAX | Speed UP | S1 CD -18%",d:"Runner cepat dengan capture speed max. Cocok untuk Egghead runner karakter.",f:"Egghead Runner"},
+{n:"Wano Country Set",c:"runner",m:["Oden Medal","Yamato Medal","Zoro Medal"],tg:["Wano Country","Samurai","New World"],b:"Speed + Capture Speed | Knockback UP",d:"Speed-focused runner. Capture speed tinggi + knockback untuk lawan. Cocok untuk Yamato, Oden.",f:"Speed Runner"},
+// === HYBRID SETS ===
+{n:"Egghead Luffy ATK Set",c:"attacker",m:["Egghead Luffy Medal","Gear 4 Medal","Nika Medal"],tg:["Luffy","Egghead","Nika","Straw Hat"],b:"S1 CD -20% | DMG Reduction 10% | ATK UP",d:"Best for EX Luffy G5 & Bonney. Skill 1 spam + damage reduction. Universal attacker-meta set.",f:"EX Attacker Meta"},
+{n:"Triple Big Mom Set",c:"defender",m:["Big Mom Medal","Katakuri Medal","Cracker Medal"],tg:["BM Pirates","New World","Paramecia"],b:"Balanced ATK + HP | DMG Reduction",d:"Balanced set untuk all-round. ATK + HP seimbang + damage reduction. Cocok untuk BM, Katakuri.",f:"All-Round"},
+{n:"Red Hair Pirates Set",c:"runner",m:["Shanks Medal","Beckman Medal","Yasopp Medal"],tg:["Red Hair Pirates","Grandline","New World"],b:"ATK + Speed | Crit Rate UP",d:"Hybrid ATK+Speed. Cocok untuk runner yang juga mau damage.",f:"ATK Runner"},
+{n:"Seraphim Set",c:"attacker",m:["S-Snake Medal","Seraphim Medal","Hancock Medal"],tg:["Seraphim","Seven Warlords","Land of Women"],b:"ATK + Freeze Effect | DMG Boost",d:"Set untuk S-Snake EX. ATK + freeze effect saat lawan. Unique mechanic.",f:"Seraphim ATK"}
 ];
 
 // SUPPORTS
