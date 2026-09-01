@@ -3,52 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OPBR Guide v2 - Meta, Medal, Support & Counter</title>
+    <title>OPBR Guide v2 - Semua Karakter Lengkap</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <style>
         *{margin:0;padding:0;box-sizing:border-box}
-        :root{--bg:#0a0a1a;--card:#12122a;--card2:#1a1a3a;--pri:#ff4444;--sec:#4488ff;--acc:#ffaa00;--grn:#44cc44;--pur:#aa44ff;--txt:#fff;--dim:#8888aa;--bdr:#2a2a4a;--r:#ff4444;--b:#4488ff;--g:#44cc44}
+        :root{--bg:#0a0a1a;--card:#12122a;--pri:#ff4444;--sec:#4488ff;--acc:#ffaa00;--grn:#44cc44;--pur:#aa44ff;--txt:#fff;--dim:#8888aa;--bdr:#2a2a4a;--r:#ff4444;--b:#4488ff;--g:#44cc44}
         body{font-family:'Poppins',sans-serif;background:var(--bg);color:var(--txt);min-height:100vh}
-        .bgf{position:fixed;top:0;left:0;width:100%;height:100%;z-index:-1;background:radial-gradient(ellipse at 20% 50%,rgba(255,68,68,.08) 0%,transparent 50%),radial-gradient(ellipse at 80% 50%,rgba(68,136,255,.08) 0%,transparent 50%),radial-gradient(ellipse at 50% 100%,rgba(255,170,0,.05) 0%,transparent 50%)}
-        header{background:linear-gradient(135deg,#1a1a3a,#0a0a2a);border-bottom:2px solid var(--pri);padding:12px 0;position:sticky;top:0;z-index:100;backdrop-filter:blur(10px)}
-        .hd{max-width:1400px;margin:0 auto;padding:0 16px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px}
-        .lg{display:flex;align-items:center;gap:10px}
-        .lg-i{width:42px;height:42px;background:linear-gradient(135deg,var(--pri),var(--acc));border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:20px}
-        .lg h1{font-size:18px;font-weight:800;background:linear-gradient(135deg,var(--pri),var(--acc));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-        .lg p{font-size:10px;color:var(--dim)}
-        nav{display:flex;gap:5px;flex-wrap:wrap}
-        .nb{padding:7px 14px;border:2px solid var(--bdr);background:transparent;color:var(--txt);border-radius:18px;cursor:pointer;font-family:'Poppins',sans-serif;font-size:12px;font-weight:500;transition:all .3s}
-        .nb:hover,.nb.on{background:var(--pri);border-color:var(--pri);transform:translateY(-2px);box-shadow:0 4px 12px rgba(255,68,68,.3)}
-        main{max-width:1400px;margin:0 auto;padding:20px 16px}
-        .sec{display:none}.sec.on{display:block;animation:fu .4s ease}
-        @keyframes fu{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
-        .st{font-size:26px;font-weight:800;margin-bottom:6px;background:linear-gradient(135deg,var(--pri),var(--acc));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-        .sd{color:var(--dim);margin-bottom:20px;font-size:13px}
-        .sf{display:flex;gap:8px;margin-bottom:20px;flex-wrap:wrap;position:relative}
-        .sb{flex:1;min-width:200px;padding:9px 14px;background:var(--card);border:2px solid var(--bdr);border-radius:10px;color:var(--txt);font-size:13px;font-family:'Poppins',sans-serif}
+        .bgf{position:fixed;top:0;left:0;width:100%;height:100%;z-index:-1;background:radial-gradient(ellipse at 20% 50%,rgba(255,68,68,.06) 0%,transparent 50%),radial-gradient(ellipse at 80% 50%,rgba(68,136,255,.06) 0%,transparent 50%)}
+        header{background:linear-gradient(135deg,#1a1a3a,#0a0a2a);border-bottom:2px solid var(--pri);padding:10px 0;position:sticky;top:0;z-index:100;backdrop-filter:blur(10px)}
+        .hd{max-width:1400px;margin:0 auto;padding:0 14px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:6px}
+        .lg{display:flex;align-items:center;gap:8px}
+        .lg-i{width:38px;height:38px;background:linear-gradient(135deg,var(--pri),var(--acc));border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:18px}
+        .lg h1{font-size:16px;font-weight:800;background:linear-gradient(135deg,var(--pri),var(--acc));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+        .lg p{font-size:9px;color:var(--dim)}
+        nav{display:flex;gap:4px;flex-wrap:wrap}
+        .nb{padding:6px 12px;border:2px solid var(--bdr);background:transparent;color:var(--txt);border-radius:16px;cursor:pointer;font-family:'Poppins',sans-serif;font-size:11px;font-weight:500;transition:all .3s}
+        .nb:hover,.nb.on{background:var(--pri);border-color:var(--pri);transform:translateY(-1px);box-shadow:0 3px 10px rgba(255,68,68,.3)}
+        main{max-width:1400px;margin:0 auto;padding:16px 14px}
+        .sec{display:none}.sec.on{display:block;animation:fu .3s ease}
+        @keyframes fu{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+        .st{font-size:22px;font-weight:800;margin-bottom:4px;background:linear-gradient(135deg,var(--pri),var(--acc));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+        .sd{color:var(--dim);margin-bottom:16px;font-size:12px}
+        .sf{display:flex;gap:6px;margin-bottom:16px;flex-wrap:wrap;position:relative}
+        .sb{flex:1;min-width:180px;padding:8px 12px;background:var(--card);border:2px solid var(--bdr);border-radius:8px;color:var(--txt);font-size:12px;font-family:'Poppins',sans-serif}
         .sb:focus{outline:none;border-color:var(--pri)}
-        .fb{padding:7px 14px;border:2px solid var(--bdr);background:var(--card);color:var(--txt);border-radius:10px;cursor:pointer;font-family:'Poppins',sans-serif;font-size:12px;transition:all .3s}
+        .fb{padding:6px 12px;border:2px solid var(--bdr);background:var(--card);color:var(--txt);border-radius:8px;cursor:pointer;font-family:'Poppins',sans-serif;font-size:11px;transition:all .3s}
         .fb:hover,.fb.on{border-color:var(--pri);background:rgba(255,68,68,.15)}
         .fb.r{border-color:var(--r)}.fb.r:hover,.fb.r.on{background:rgba(255,68,68,.2)}
         .fb.b{border-color:var(--b)}.fb.b:hover,.fb.b.on{background:rgba(68,136,255,.2)}
         .fb.g{border-color:var(--g)}.fb.g:hover,.fb.g.on{background:rgba(68,204,68,.2)}
-        .gr{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:14px}
-        .cd{background:var(--card);border:2px solid var(--bdr);border-radius:12px;padding:16px;transition:all .3s;cursor:pointer;position:relative}
-        .cd:hover{border-color:var(--pri);transform:translateY(-3px);box-shadow:0 6px 20px rgba(255,68,68,.2)}
-        .ch{display:flex;align-items:center;gap:10px;margin-bottom:10px}
-        .av{width:50px;height:50px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:20px;font-weight:800;flex-shrink:0}
-        .av.r{background:linear-gradient(135deg,#ff4444,#cc0000)}.av.b{background:linear-gradient(135deg,#4488ff,#0044cc)}.av.g{background:linear-gradient(135deg,#44cc44,#008800)}
-        .ci h3{font-size:14px;font-weight:700}
-        .eb{display:inline-block;padding:2px 7px;border-radius:12px;font-size:10px;font-weight:600;margin-top:3px}
-        .eb.r{background:rgba(255,68,68,.2);color:var(--r)}.eb.b{background:rgba(68,136,255,.2);color:var(--b)}.eb.g{background:rgba(68,204,68,.2);color:var(--g)}
-        .cc{display:inline-block;padding:2px 7px;border-radius:12px;font-size:9px;font-weight:600;margin-left:5px;background:rgba(255,170,0,.2);color:var(--acc)}
-        .tb{position:absolute;top:7px;right:7px;padding:3px 8px;border-radius:5px;font-size:10px;font-weight:700}
-        .t-god{background:linear-gradient(135deg,#ff0000,#ff4444)}.t-ss{background:linear-gradient(135deg,#ff6600,#ffaa00)}.t-s{background:linear-gradient(135deg,#00aaff,#4488ff)}.t-a{background:linear-gradient(135deg,#44cc44,#00aa00)}.t-b{background:linear-gradient(135deg,#888888,#aaaaaa)}.t-c{background:linear-gradient(135deg,#666666,#888888)}
-        .cs{margin-top:10px;padding-top:10px;border-top:1px solid var(--bdr)}
-        .ct-t{font-size:12px;font-weight:600;margin-bottom:6px}
-        .ct-t.md{color:var(--acc)}.ct-t.sp{color:var(--grn)}.ct-t.ct{color:var(--pri)}
-        .tl{display:flex;flex-wrap:wrap;gap:5px}
-        .ti{padding:3px 8px;border-radius:5px;font-size:10px}
+        .gr{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:12px}
+        .cd{background:var(--card);border:2px solid var(--bdr);border-radius:10px;padding:14px;transition:all .3s;cursor:pointer;position:relative}
+        .cd:hover{border-color:var(--pri);transform:translateY(-2px);box-shadow:0 4px 15px rgba(255,68,68,.15)}
+        .ch{display:flex;align-items:center;gap:8px;margin-bottom:8px}
+        .av{width:44px;height:44px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:16px;font-weight:800;flex-shrink:0}
+        .av.r{background:linear-gradient(135deg,#ff4444,#cc0000)}.av.b{background:linear-gradient(135deg,#4488ff,#0044cc)}.av.g{background:linear-gradient(135deg,#44cc44,#008800)}.av.d{background:linear-gradient(135deg,#888,#666)}.av.l{background:linear-gradient(135deg,#ffd700,#ff8c00)}
+        .ci h3{font-size:13px;font-weight:700;line-height:1.2}
+        .ci small{font-size:10px;color:var(--dim)}
+        .eb{display:inline-block;padding:1px 6px;border-radius:10px;font-size:9px;font-weight:600;margin-top:2px}
+        .eb.r{background:rgba(255,68,68,.2);color:var(--r)}.eb.b{background:rgba(68,136,255,.2);color:var(--b)}.eb.g{background:rgba(68,204,68,.2);color:var(--g)}.eb.d{background:rgba(136,136,136,.2);color:#aaa}.eb.l{background:rgba(255,215,0,.2);color:#ffd700}
+        .cc{display:inline-block;padding:1px 6px;border-radius:10px;font-size:8px;font-weight:600;margin-left:4px;background:rgba(255,170,0,.2);color:var(--acc)}
+        .tb{position:absolute;top:6px;right:6px;padding:2px 6px;border-radius:4px;font-size:9px;font-weight:700}
+        .t-ex{background:linear-gradient(135deg,#ff0000,#ff4444)}.t-bf{background:linear-gradient(135deg,#ff6600,#ffaa00)}.t-sp{background:linear-gradient(135deg,#00aaff,#4488ff)}.t-fr{background:linear-gradient(135deg,#44cc44,#00aa00)}.t-co{background:linear-gradient(135deg,#888888,#aaaaaa)}.t-lm{background:linear-gradient(135deg,#aa44ff,#cc66ff)}.t-sc{background:linear-gradient(135deg,#00cccc,#008888)}.t-tw{background:linear-gradient(135deg,#666666,#888888)}
+        .cs{margin-top:8px;padding-top:8px;border-top:1px solid var(--bdr);font-size:11px;color:var(--dim)}
+        .cs-t{font-size:11px;font-weight:600;margin-bottom:4px}
+        .cs-t.md{color:var(--acc)}.cs-t.sp{color:var(--grn)}.cs-t.ct{color:var(--pri)}
+        .tl{display:flex;flex-wrap:wrap;gap:4px}
+        .ti{padding:2px 6px;border-radius:4px;font-size:9px}
         .ti.md{background:rgba(255,170,0,.1);border:1px solid rgba(255,170,0,.3);color:var(--acc)}
         .ti.sp{background:rgba(68,204,68,.1);border:1px solid rgba(68,204,68,.3);color:var(--grn)}
         .ti.ct{background:rgba(255,68,68,.1);border:1px solid rgba(255,68,68,.3);color:var(--pri)}
@@ -56,112 +57,128 @@
         .ti.nw{background:rgba(170,68,255,.1);border:1px solid rgba(170,68,255,.3);color:var(--pur)}
         .ti.bf{background:rgba(68,204,68,.15);border:1px solid rgba(68,204,68,.4);color:var(--grn)}
         .ti.nf{background:rgba(255,68,68,.15);border:1px solid rgba(255,68,68,.4);color:var(--pri)}
-        .ti.rr{background:rgba(255,170,0,.15);border:1px solid rgba(255,170,0,.4);color:var(--acc)}
-        .nb-bar{background:linear-gradient(135deg,rgba(170,68,255,.15),rgba(255,68,68,.1));border:2px solid var(--pur);border-radius:12px;padding:16px 20px;margin-bottom:20px}
-        .nb-bar h3{font-size:15px;color:var(--pur);margin-bottom:10px}
-        .nb-i{display:flex;align-items:center;gap:8px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.05)}
+        .nb-bar{background:linear-gradient(135deg,rgba(170,68,255,.12),rgba(255,68,68,.08));border:2px solid var(--pur);border-radius:10px;padding:14px 18px;margin-bottom:16px}
+        .nb-bar h3{font-size:14px;color:var(--pur);margin-bottom:8px}
+        .nb-i{display:flex;align-items:center;gap:6px;padding:6px 0;border-bottom:1px solid rgba(255,255,255,.04)}
         .nb-i:last-child{border-bottom:none}
-        .nb-b{padding:3px 8px;border-radius:10px;font-size:9px;font-weight:700;white-space:nowrap}
+        .nb-b{padding:2px 6px;border-radius:8px;font-size:8px;font-weight:700;white-space:nowrap}
         .nb-b.new{background:rgba(170,68,255,.2);color:var(--pur)}.nb-b.buff{background:rgba(68,204,68,.2);color:var(--grn)}.nb-b.nerf{background:rgba(255,68,68,.2);color:var(--pri)}.nb-b.rerun{background:rgba(255,170,0,.2);color:var(--acc)}
-        .nb-t{font-size:12px;color:var(--dim)}.nb-d{font-size:10px;color:var(--dim);margin-left:auto;white-space:nowrap}
-        .bg-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:14px;margin-bottom:20px}
-        .bg-c{background:var(--card);border:2px solid var(--bdr);border-radius:12px;padding:14px;text-align:center;min-height:110px;display:flex;flex-direction:column;align-items:center;justify-content:center;transition:all .3s;cursor:pointer}
+        .nb-t{font-size:11px;color:var(--dim)}.nb-d{font-size:9px;color:var(--dim);margin-left:auto;white-space:nowrap}
+        .bg-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:12px;margin-bottom:16px}
+        .bg-c{background:var(--card);border:2px dashed var(--bdr);border-radius:10px;padding:12px;text-align:center;min-height:100px;display:flex;flex-direction:column;align-items:center;justify-content:center;transition:all .3s;cursor:pointer}
         .bg-c.filled{border-style:solid;border-color:var(--grn)}.bg-c:hover{border-color:var(--acc)}
-        .bg-n{font-size:11px;color:var(--dim);margin-bottom:6px}
-        .bg-nm{font-size:13px;font-weight:600;margin-bottom:3px}
-        .bg-h{font-size:10px;color:var(--dim);margin-top:4px}
-        .bg-r{font-size:16px;color:var(--pri);cursor:pointer;margin-top:4px}
-        .bg-e{font-size:24px;color:var(--bdr)}
-        .tb-box{background:var(--card);border:2px solid var(--acc);border-radius:12px;padding:18px;margin-bottom:20px}
-        .tb-box h3{font-size:16px;color:var(--acc);margin-bottom:12px}
-        .tr{display:flex;justify-content:space-between;align-items:center;padding:6px 0;border-bottom:1px solid rgba(255,255,255,.05)}
+        .bg-n{font-size:10px;color:var(--dim);margin-bottom:5px}
+        .bg-nm{font-size:12px;font-weight:600;margin-bottom:2px}
+        .bg-h{font-size:9px;color:var(--dim);margin-top:3px}
+        .bg-r{font-size:14px;color:var(--pri);cursor:pointer;margin-top:3px}
+        .bg-e{font-size:20px;color:var(--bdr)}
+        .tb-box{background:var(--card);border:2px solid var(--acc);border-radius:10px;padding:16px;margin-bottom:16px}
+        .tb-box h3{font-size:14px;color:var(--acc);margin-bottom:10px}
+        .tr{display:flex;justify-content:space-between;align-items:center;padding:5px 0;border-bottom:1px solid rgba(255,255,255,.04)}
         .tr:last-child{border-bottom:none}
-        .tr-n{font-size:12px;color:var(--dim)}.tr-v{font-size:13px;font-weight:600}
+        .tr-n{font-size:11px;color:var(--dim)}.tr-v{font-size:12px;font-weight:600}
         .tr-v.hi{color:var(--grn)}.tr-v.md{color:var(--acc)}.tr-v.lo{color:var(--pri)}
-        .mbg{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.8);z-index:200;justify-content:center;align-items:center;padding:12px}
+        .mbg{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.8);z-index:200;justify-content:center;align-items:center;padding:10px}
         .mbg.on{display:flex}
-        .mdl{background:var(--card);border:2px solid var(--bdr);border-radius:14px;max-width:620px;width:100%;max-height:86vh;overflow-y:auto;padding:22px;position:relative}
-        .mc{position:absolute;top:10px;right:10px;width:30px;height:30px;border:none;background:rgba(255,68,68,.2);color:var(--pri);border-radius:50%;cursor:pointer;font-size:14px;display:flex;align-items:center;justify-content:center}
-        .mh{display:flex;align-items:center;gap:14px;margin-bottom:16px}
-        .ma{width:65px;height:65px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:26px;font-weight:800}
-        .ms{margin-bottom:14px}.ms h4{font-size:14px;font-weight:600;margin-bottom:8px;padding-bottom:5px;border-bottom:2px solid var(--bdr)}
+        .mdl{background:var(--card);border:2px solid var(--bdr);border-radius:12px;max-width:600px;width:100%;max-height:85vh;overflow-y:auto;padding:20px;position:relative}
+        .mc{position:absolute;top:8px;right:8px;width:28px;height:28px;border:none;background:rgba(255,68,68,.2);color:var(--pri);border-radius:50%;cursor:pointer;font-size:12px;display:flex;align-items:center;justify-content:center}
+        .mh{display:flex;align-items:center;gap:12px;margin-bottom:14px}
+        .ma{width:60px;height:60px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:24px;font-weight:800}
+        .ms{margin-bottom:12px}.ms h4{font-size:13px;font-weight:600;margin-bottom:6px;padding-bottom:4px;border-bottom:2px solid var(--bdr)}
         .ms h4.md{color:var(--acc);border-color:var(--acc)}.ms h4.sp{color:var(--grn);border-color:var(--grn)}.ms h4.ct{color:var(--pri);border-color:var(--pri)}
-        .mi{padding:6px 10px;background:rgba(255,255,255,.03);border-radius:7px;margin-bottom:5px}
-        .mi-n{font-weight:500;font-size:12px}.mi-d{font-size:11px;color:var(--dim)}
-        .sts{display:grid;grid-template-columns:repeat(auto-fit,minmax(110px,1fr));gap:10px;margin-bottom:20px}
-        .st-c{background:var(--card);border:2px solid var(--bdr);border-radius:8px;padding:14px;text-align:center}
-        .st-n{font-size:28px;font-weight:800;background:linear-gradient(135deg,var(--pri),var(--acc));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-        .st-l{font-size:11px;color:var(--dim);margin-top:3px}
-        .eg{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin-bottom:20px}
-        .ec{background:var(--card);border:2px solid var(--bdr);border-radius:12px;padding:18px;text-align:center}
-        .ei{width:60px;height:60px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:28px;margin:0 auto 10px}
+        .mi{padding:5px 8px;background:rgba(255,255,255,.03);border-radius:6px;margin-bottom:4px;font-size:11px}
+        .mi-n{font-weight:500}.mi-d{font-size:10px;color:var(--dim)}
+        .sts{display:grid;grid-template-columns:repeat(auto-fit,minmax(100px,1fr));gap:8px;margin-bottom:16px}
+        .st-c{background:var(--card);border:2px solid var(--bdr);border-radius:6px;padding:12px;text-align:center}
+        .st-n{font-size:24px;font-weight:800;background:linear-gradient(135deg,var(--pri),var(--acc));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+        .st-l{font-size:9px;color:var(--dim);margin-top:2px}
+        .eg{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin-bottom:16px}
+        .ec{background:var(--card);border:2px solid var(--bdr);border-radius:10px;padding:16px;text-align:center}
+        .ei{width:55px;height:55px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:26px;margin:0 auto 8px}
         .ei.r{background:linear-gradient(135deg,#ff4444,#cc0000)}.ei.b{background:linear-gradient(135deg,#4488ff,#0044cc)}.ei.g{background:linear-gradient(135deg,#44cc44,#008800)}
-        .ec h3{font-size:16px;margin-bottom:6px}.ec p{color:var(--dim);font-size:12px;line-height:1.4}
-        .ew{margin-top:10px;padding:6px;background:rgba(255,68,68,.1);border-radius:6px;font-size:11px}
-        .tg{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px}
-        .tc{background:var(--card);border:2px solid var(--bdr);border-radius:12px;padding:18px}
-        .tc h3{font-size:14px;margin-bottom:8px;color:var(--acc)}
-        .tc ul{list-style:none}.tc li{padding:4px 0;color:var(--dim);font-size:11px}.tc li::before{content:"⚔️ "}
-        footer{text-align:center;padding:20px;color:var(--dim);font-size:11px;border-top:1px solid var(--bdr);margin-top:30px}
-        @media(max-width:768px){.hd{flex-direction:column}nav{justify-content:center}.gr{grid-template-columns:1fr}.st{font-size:20px}}
-        ::-webkit-scrollbar{width:6px}::-webkit-scrollbar-track{background:var(--bg)}::-webkit-scrollbar-thumb{background:var(--bdr);border-radius:3px}::-webkit-scrollbar-thumb:hover{background:var(--pri)}
+        .ec h3{font-size:15px;margin-bottom:5px}.ec p{color:var(--dim);font-size:11px;line-height:1.3}
+        .ew{margin-top:8px;padding:5px;background:rgba(255,68,68,.1);border-radius:5px;font-size:10px}
+        .tg{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}
+        .tc{background:var(--card);border:2px solid var(--bdr);border-radius:10px;padding:16px}
+        .tc h3{font-size:13px;margin-bottom:6px;color:var(--acc)}
+        .tc ul{list-style:none}.tc li{padding:3px 0;color:var(--dim);font-size:10px}.tc li::before{content:"⚔️ "}
+        .cnt{color:var(--dim);font-size:11px;margin-bottom:10px}
+        footer{text-align:center;padding:16px;color:var(--dim);font-size:10px;border-top:1px solid var(--bdr);margin-top:24px}
+        @media(max-width:768px){.hd{flex-direction:column}nav{justify-content:center}.gr{grid-template-columns:1fr}.st{font-size:18px}}
+        ::-webkit-scrollbar{width:5px}::-webkit-scrollbar-track{background:var(--bg)}::-webkit-scrollbar-thumb{background:var(--bdr);border-radius:3px}::-webkit-scrollbar-thumb:hover{background:var(--pri)}
     </style>
 </head>
 <body>
 <div class="bgf"></div>
 <header><div class="hd">
-    <div class="lg"><div class="lg-i">⚔️</div><div><h1>OPBR GUIDE v2</h1><p>Season 181 • August 2026 • 34 EX Characters</p></div></div>
+    <div class="lg"><div class="lg-i">⚔️</div><div><h1>OPBR GUIDE v2</h1><p>350+ Karakter • Season 181 • August 2026</p></div></div>
     <nav>
         <button class="nb on" onclick="go('home',this)">🏠 Home</button>
-        <button class="nb" onclick="go('chars',this)">👤 Karakter</button>
+        <button class="nb" onclick="go('chars',this)">👤 Semua Karakter</button>
+        <button class="nb" onclick="go('meta',this)">🏆 Meta Tier</button>
         <button class="nb" onclick="go('medals',this)">🏅 Medal</button>
         <button class="nb" onclick="go('support',this)">👥 Support</button>
         <button class="nb" onclick="go('builder',this)">🔧 Builder</button>
         <button class="nb" onclick="go('counters',this)">⚔️ Counter</button>
         <button class="nb" onclick="go('news',this)">📢 News</button>
-        <button class="nb" onclick="go('tips',this)">💡 Tips</button>
     </nav>
 </div></header>
 
 <main>
 <!-- HOME -->
 <div id="home" class="sec on">
-<h2 class="st">🏴‍☠️ OPBR Guide Season 181</h2>
-<p class="sd">Panduan lengkap One Piece Bounty Rush - Meta terbaru August 2026 - 34 EX Characters</p>
+<h2 class="st">🏴‍☠️ OPBR Guide - Semua Karakter</h2>
+<p class="sd">350+ Karakter lengkap dari OPBR Wiki & Bandai Namco Official. Season 181 August 2026.</p>
 <div class="sts">
-    <div class="st-c"><div class="st-n" id="sCh">0</div><div class="st-l">Karakter</div></div>
-    <div class="st-c"><div class="st-n" id="sMd">0</div><div class="st-l">Medal Sets</div></div>
-    <div class="st-c"><div class="st-n" id="sSp">0</div><div class="st-l">Support</div></div>
-    <div class="st-c"><div class="st-n" id="sCt">0</div><div class="st-l">Counter</div></div>
-    <div class="st-c"><div class="st-n" id="sNw">0</div><div class="st-l">Updates</div></div>
+    <div class="st-c"><div class="st-n" id="sCh">0</div><div class="st-l">Total Karakter</div></div>
+    <div class="st-c"><div class="st-n" id="sEx">0</div><div class="st-l">EX</div></div>
+    <div class="st-c"><div class="st-n" id="sBf">0</div><div class="st-l">BF</div></div>
+    <div class="st-c"><div class="st-n" id="sSp2">0</div><div class="st-l">Step Up</div></div>
+    <div class="st-c"><div class="st-n" id="sOt">0</div><div class="st-l">Lainnya</div></div>
 </div>
-<h3 style="font-size:18px;margin-bottom:14px">🎯 Element System</h3>
+<h3 style="font-size:16px;margin-bottom:12px">🎯 Element System</h3>
 <div class="eg">
-    <div class="ec"><div class="ei r">🔥</div><h3 style="color:var(--r)">RED</h3><p>Kuat terhadap GREEN. Damage tinggi.</p><div class="ew">❌ Lemah: <b style="color:var(--b)">BLUE</b></div></div>
-    <div class="ec"><div class="ei b">💧</div><h3 style="color:var(--b)">BLUE</h3><p>Kuat terhadap RED. Defense kuat.</p><div class="ew">❌ Lemah: <b style="color:var(--g)">GREEN</b></div></div>
-    <div class="ec"><div class="ei g">🌿</div><h3 style="color:var(--g)">GREEN</h3><p>Kuat terhadap BLUE. Speed tinggi.</p><div class="ew">❌ Lemah: <b style="color:var(--r)">RED</b></div></div>
+    <div class="ec"><div class="ei r">🔥</div><h3 style="color:var(--r)">RED</h3><p>Kuat terhadap GREEN.</p><div class="ew">❌ Lemah: <b style="color:var(--b)">BLUE</b></div></div>
+    <div class="ec"><div class="ei b">💧</div><h3 style="color:var(--b)">BLUE</h3><p>Kuat terhadap RED.</p><div class="ew">❌ Lemah: <b style="color:var(--g)">GREEN</b></div></div>
+    <div class="ec"><div class="ei g">🌿</div><h3 style="color:var(--g)">GREEN</h3><p>Kuat terhadap BLUE.</p><div class="ew">❌ Lemah: <b style="color:var(--r)">RED</b></div></div>
 </div>
 <div class="eg">
-    <div class="ec" style="border-color:var(--acc)"><h3 style="color:var(--acc);margin-bottom:10px">⚔️ Class System</h3><p><b style="color:var(--pri)">ATTACKER</b> - Damage dealer</p><p style="margin-top:5px"><b style="color:var(--sec)">DEFENDER</b> - Tank, jaga treasure</p><p style="margin-top:5px"><b style="color:var(--grn)">RUNNER</b> - Cepat, capture</p></div>
-    <div class="ec" style="border-color:var(--acc)"><h3 style="color:var(--acc);margin-bottom:10px">📊 Tier System</h3><p><span class="tb t-god" style="position:static">GOD</span> - Meta defining</p><p style="margin-top:5px"><span class="tb t-ss" style="position:static">SS</span> - Sangat kuat</p><p style="margin-top:5px"><span class="tb t-s" style="position:static">S</span> - Kuat, viable</p><p style="margin-top:5px"><span class="tb t-a" style="position:static">A</span> - Bagus</p><p style="margin-top:5px"><span class="tb t-b" style="position:static">B</span> - Playable</p><p style="margin-top:5px"><span class="tb t-c" style="position:static">C</span> - Outclassed</p></div>
+    <div class="ec" style="border-color:var(--acc)"><h3 style="color:var(--acc);margin-bottom:8px">⚔️ Class</h3><p><b style="color:var(--pri)">ATK</b> Damage dealer</p><p style="margin-top:4px"><b style="color:var(--sec)">DEF</b> Tank</p><p style="margin-top:4px"><b style="color:var(--grn)">RUN</b> Cepat capture</p></div>
+    <div class="ec" style="border-color:var(--acc)"><h3 style="color:var(--acc);margin-bottom:8px">📊 Rarity</h3><p><span class="tb t-ex" style="position:static">EX</span> Extreme</p><p style="margin-top:4px"><span class="tb t-bf" style="position:static">BF</span> Bounty Festival</p><p style="margin-top:4px"><span class="tb t-sp" style="position:static">SP</span> Step Up</p><p style="margin-top:4px"><span class="tb t-fr" style="position:static">FREE</span> Free/Cola</p></div>
 </div>
 </div>
 
-<!-- CHARACTERS -->
+<!-- SEMUA KARAKTER -->
 <div id="chars" class="sec">
-<h2 class="st">👤 Daftar Karakter (34 EX)</h2>
-<p class="sd">Semua EX Character berdasarkan data resmi OPBR Wiki. Klik untuk detail.</p>
+<h2 class="st">👤 Semua Karakter (350+)</h2>
+<p class="sd">Database lengkap semua karakter OPBR. Klik untuk detail medal, support, counter.</p>
 <div class="sf">
     <input type="text" class="sb" placeholder="🔍 Cari nama karakter..." id="cS" oninput="rC()">
-    <button class="fb" onclick="sE('c','all',this)">Semua</button>
-    <button class="fb r" onclick="sE('c','red',this)">🔥 RED</button>
-    <button class="fb b" onclick="sE('c','blue',this)">💧 BLUE</button>
-    <button class="fb g" onclick="sE('c','green',this)">🌿 GREEN</button>
-    <button class="fb" onclick="sL('c','attacker',this)">⚔️ ATK</button>
-    <button class="fb" onclick="sL('c','defender',this)">🛡️ DEF</button>
-    <button class="fb" onclick="sL('c','runner',this)">🏃 RUN</button>
+    <button class="fb" onclick="sR('c','all',this)">Semua</button>
+    <button class="fb" onclick="sR('c','EX',this)">🔴 EX</button>
+    <button class="fb" onclick="sR('c','BF',this)">🟠 BF</button>
+    <button class="fb" onclick="sR('c','SP',this)">🔵 SP</button>
+    <button class="fb" onclick="sR('c','FREE',this)">🟢 Free</button>
 </div>
+<div class="sf">
+    <button class="fb" onclick="sE2('c','all',this)">All Element</button>
+    <button class="fb r" onclick="sE2('c','red',this)">🔥 RED</button>
+    <button class="fb b" onclick="sE2('c','blue',this)">💧 BLUE</button>
+    <button class="fb g" onclick="sE2('c','green',this)">🌿 GREEN</button>
+    <button class="fb" onclick="sC2('c','all',this)">All Class</button>
+    <button class="fb" onclick="sC2('c','attacker',this)">⚔️ ATK</button>
+    <button class="fb" onclick="sC2('c','defender',this)">🛡️ DEF</button>
+    <button class="fb" onclick="sC2('c','runner',this)">🏃 RUN</button>
+</div>
+<div class="cnt" id="charCount"></div>
 <div class="gr" id="cG"></div>
+</div>
+
+<!-- META TIER -->
+<div id="meta" class="sec">
+<h2 class="st">🏆 Meta Tier List Season 181</h2>
+<p class="sd">Karakter meta terkuat berdasarkan League Battle performance</p>
+<div id="metaGrid"></div>
 </div>
 
 <!-- MEDALS -->
@@ -197,18 +214,18 @@
 <h2 class="st">🔧 Support Builder</h2>
 <p class="sd">Pilih 10 support karakter untuk melihat traits yang terbentuk</p>
 <div class="sf">
-    <input type="text" class="sb" placeholder="🔍 Ketik nama karakter untuk menambah..." id="bS" oninput="rB()">
-    <div id="bR" style="position:absolute;top:100%;left:0;right:0;display:none;background:var(--card);border:2px solid var(--bdr);border-radius:10px;max-height:180px;overflow-y:auto;z-index:50"></div>
+    <input type="text" class="sb" placeholder="🔍 Ketik nama untuk menambah..." id="bS" oninput="rB()">
+    <div id="bR" style="position:absolute;top:100%;left:0;right:0;display:none;background:var(--card);border:2px solid var(--bdr);border-radius:8px;max-height:160px;overflow-y:auto;z-index:50"></div>
 </div>
 <div class="bg-grid" id="bSl"></div>
 <div class="tb-box" id="tB" style="display:none"><h3>📊 Traits Summary</h3><div id="tL"></div></div>
-<div style="margin-top:12px"><button class="fb" onclick="cB()" style="background:rgba(255,68,68,.15);border-color:var(--pri);color:var(--pri)">🗑️ Clear All</button></div>
+<div style="margin-top:10px"><button class="fb" onclick="cB()" style="background:rgba(255,68,68,.15);border-color:var(--pri);color:var(--pri)">🗑️ Clear All</button></div>
 </div>
 
 <!-- COUNTERS -->
 <div id="counters" class="sec">
 <h2 class="st">⚔️ Counter Matchup</h2>
-<p class="sd">Panduan matchup - siapa mengalahkan siapa</p>
+<p class="sd">Panduan matchup meta - siapa mengalahkan siapa</p>
 <div class="sf"><input type="text" class="sb" placeholder="🔍 Cari counter..." id="ctS" oninput="rCT()"></div>
 <div class="gr" id="ctG"></div>
 </div>
@@ -219,109 +236,574 @@
 <p class="sd">Info terbaru: karakter baru, buff/nerf, dan rerun</p>
 <div class="nb-bar">
     <h3>🆕 Karakter Baru (2026)</h3>
-    <div class="nb-i"><span class="nb-b new">NEW EX</span><span class="nb-t"><b>Jewelry Bonney (Nika)</b> - 7.5 Anniversary Climax! Attacker terbaru skill range luar biasa.</span><span class="nb-d">Aug 2026</span></div>
-    <div class="nb-i"><span class="nb-b new">NEW EX</span><span class="nb-t"><b>Sanji & Zoro (Wings)</b> - Duo EX pertama! Dual-class mechanic.</span><span class="nb-d">Jul 2026</span></div>
-    <div class="nb-i"><span class="nb-b new">NEW EX</span><span class="nb-t"><b>St. Marcus Mars</b> - Gorosei EX defense luar biasa.</span><span class="nb-d">Jun 2026</span></div>
-    <div class="nb-i"><span class="nb-b new">NEW EX</span><span class="nb-t"><b>St. Ethanbaron V. Nusjuro</b> - Gorosei EX speed tinggi.</span><span class="nb-d">May 2026</span></div>
-    <div class="nb-i"><span class="nb-b new">NEW EX</span><span class="nb-t"><b>Rob Lucci (Awakened)</b> - CP0 EX dengan damage burst.</span><span class="nb-d">Mar 2026</span></div>
+    <div class="nb-i"><span class="nb-b new">NEW EX</span><span class="nb-t"><b>Jewelry Bonney (Nika)</b> - 7.5 Anniversary! Attacker terbaru.</span><span class="nb-d">Aug 2026</span></div>
+    <div class="nb-i"><span class="nb-b new">NEW EX</span><span class="nb-t"><b>Sanji & Zoro (Wings)</b> - Duo EX pertama!</span><span class="nb-d">Jul 2026</span></div>
+    <div class="nb-i"><span class="nb-b new">NEW EX</span><span class="nb-t"><b>St. Marcus Mars</b> - Gorosei EX defense.</span><span class="nb-d">Jun 2026</span></div>
+    <div class="nb-i"><span class="nb-b new">NEW EX</span><span class="nb-t"><b>St. Nusjuro</b> - Gorosei EX speed.</span><span class="nb-d">May 2026</span></div>
+    <div class="nb-i"><span class="nb-b new">NEW EX</span><span class="nb-t"><b>Rob Lucci (Awakened)</b> - CP0 EX burst.</span><span class="nb-d">Mar 2026</span></div>
     <div class="nb-i"><span class="nb-b new">NEW EX</span><span class="nb-t"><b>S-Snake (Seraphim)</b> - Seraphim EX pertama!</span><span class="nb-d">Jan 2026</span></div>
+    <div class="nb-i"><span class="nb-b new">NEW BF</span><span class="nb-t"><b>Wapol</b> - Dark Defender BF terbaru.</span><span class="nb-d">Aug 2026</span></div>
+    <div class="nb-i"><span class="nb-b new">NEW BF</span><span class="nb-t"><b>Vegapunk</b> - Green Runner BF.</span><span class="nb-d">Jul 2026</span></div>
 </div>
 <div class="nb-bar" style="border-color:var(--grn)">
     <h3 style="color:var(--grn)">⬆️ Buff Character</h3>
-    <div class="nb-i"><span class="nb-b buff">BUFF</span><span class="nb-t"><b>Garp (Legendary Hero)</b> - Cooldown skill 1 dikurangi. Hyper armor duration dinaikkan.</span><span class="nb-d">Aug 2026</span></div>
-    <div class="nb-i"><span class="nb-b buff">BUFF</span><span class="nb-t"><b>Shanks (Film Red)</b> - Speed boost dinaikkan. Observation haki range lebih luas.</span><span class="nb-d">Jul 2026</span></div>
-    <div class="nb-i"><span class="nb-b buff">BUFF</span><span class="nb-t"><b>Sakazuki (Akainu)</b> - Damage skill 2 +15%. Range skill 1 diperluas.</span><span class="nb-d">Jul 2026</span></div>
-    <div class="nb-i"><span class="nb-b buff">BUFF</span><span class="nb-t"><b>Yamato (Okuchi)</b> - Speed boost dinaikkan. Counter damage +10%.</span><span class="nb-d">Jun 2026</span></div>
+    <div class="nb-i"><span class="nb-b buff">BUFF</span><span class="nb-t"><b>Garp</b> - Cooldown S1 dikurangi. Hyper armor naik.</span><span class="nb-d">Aug 2026</span></div>
+    <div class="nb-i"><span class="nb-b buff">BUFF</span><span class="nb-t"><b>Shanks (Film Red)</b> - Speed boost naik.</span><span class="nb-d">Jul 2026</span></div>
+    <div class="nb-i"><span class="nb-b buff">BUFF</span><span class="nb-t"><b>Akainu</b> - Damage S2 +15%.</span><span class="nb-d">Jul 2026</span></div>
+    <div class="nb-i"><span class="nb-b buff">BUFF</span><span class="nb-t"><b>Yamato (Okuchi)</b> - Speed boost naik.</span><span class="nb-d">Jun 2026</span></div>
 </div>
 <div class="nb-bar" style="border-color:var(--pri)">
     <h3 style="color:var(--pri)">⬇️ Nerf Character</h3>
-    <div class="nb-i"><span class="nb-b nerf">NERF</span><span class="nb-t"><b>Borsalino (Kizaru)</b> - Invincibility duration -0.5 detik. Speed boost diturunkan.</span><span class="nb-d">Aug 2026</span></div>
-    <div class="nb-i"><span class="nb-b nerf">NERF</span><span class="nb-t"><b>Kuzan (BB Pirates)</b> - Freeze duration dikurangi. Damage skill 1 -10%.</span><span class="nb-d">Jul 2026</span></div>
+    <div class="nb-i"><span class="nb-b nerf">NERF</span><span class="nb-t"><b>Kizaru</b> - Invincibility -0.5 detik.</span><span class="nb-d">Aug 2026</span></div>
+    <div class="nb-i"><span class="nb-b nerf">NERF</span><span class="nb-t"><b>Kuzan (BB)</b> - Freeze duration dikurangi.</span><span class="nb-d">Jul 2026</span></div>
 </div>
 <div class="nb-bar" style="border-color:var(--acc)">
-    <h3 style="color:var(--acc)">🔄 Rerun / Rilis Ulang</h3>
-    <div class="nb-i"><span class="nb-b rerun">RERUN</span><span class="nb-t"><b>Luffy (Gear Five)</b> - Kembali di banner Anniversary!</span><span class="nb-d">Aug 2026</span></div>
-    <div class="nb-i"><span class="nb-b rerun">RERUN</span><span class="nb-t"><b>Kaido (Strongest)</b> - Rerun di Bounty Festival.</span><span class="nb-d">Jul 2026</span></div>
-    <div class="nb-i"><span class="nb-b rerun">RERUN</span><span class="nb-t"><b>Gol D. Roger (King)</b> - Kembali untuk waktu terbatas.</span><span class="nb-d">Jul 2026</span></div>
-    <div class="nb-i"><span class="nb-b rerun">RERUN</span><span class="nb-t"><b>Yamato (Son)</b> - Rerun di Wano-themed banner.</span><span class="nb-d">Jun 2026</span></div>
-    <div class="nb-i"><span class="nb-b rerun">RERUN</span><span class="nb-t"><b>Shanks (Divine)</b> - Rerun di Film Red event.</span><span class="nb-d">Jun 2026</span></div>
-</div>
-</div>
-
-<!-- TIPS -->
-<div id="tips" class="sec">
-<h2 class="st">💡 Tips & Strategi</h2>
-<p class="sd">Tips bermain OPBR dari pemula hingga advanced</p>
-<div class="tg">
-    <div class="tc"><h3>🎯 Tips Attacker</h3><ul><li>Fokus target lemah element</li><li>Gunakan skill cooldown tepat</li><li>Jangan agresif tanpa support</li><li>Medal set fokus damage</li><li>Timing skill 2 untuk finish</li></ul></div>
-    <div class="tc"><h3>🛡️ Tips Defender</h3><ul><li>Jaga treasure area selalu aman</li><li>Gunakan hyper armor blocking</li><li>Partner dengan attacker</li><li>Medal set fokus HP + defense</li><li>Jangan kejar runner</li></ul></div>
-    <div class="tc"><h3>🏃 Tips Runner</h3><ul><li>Capture treasure secepat mungkin</li><li>Speed boost untuk escape</li><li>Timing capture saat lawan sibuk</li><li>Medal set fokus speed</li><li>Jangan fight, fokus capture</li></ul></div>
-    <div class="tc"><h3>📊 Tips Support</h3><ul><li>Build support 160%+ max bonus</li><li>Sesuaikan element dengan main char</li><li>Max level semua support</li><li>Transfer boost semua slot</li><li>Fokus tag sesuai class main</li></ul></div>
-    <div class="tc"><h3>🏅 Tips Medal</h3><ul><li>3 medal dengan tag sama</li><li>Prioritaskan skill CD reduction</li><li>Medal EX untuk bonus tinggi</li><li>Upgrade medal ke max</li><li>Kombinasikan sesuai playstyle</li></ul></div>
-    <div class="tc"><h3>⚡ Tips General</h3><ul><li>Kenali element lawan dulu</li><li>Timing dodge hindari skill</li><li>Communication tim penting</li><li>Fokus objective, bukan kill</li><li>Practice di solo battle dulu</li></ul></div>
+    <h3 style="color:var(--acc)">🔄 Rerun</h3>
+    <div class="nb-i"><span class="nb-b rerun">RERUN</span><span class="nb-t"><b>Luffy G5</b> - Banner Anniversary!</span><span class="nb-d">Aug 2026</span></div>
+    <div class="nb-i"><span class="nb-b rerun">RERUN</span><span class="nb-t"><b>Kaido (Strongest)</b> - Bounty Festival.</span><span class="nb-d">Jul 2026</span></div>
+    <div class="nb-i"><span class="nb-b rerun">RERUN</span><span class="nb-t"><b>Roger (King)</b> - Waktu terbatas.</span><span class="nb-d">Jul 2026</span></div>
+    <div class="nb-i"><span class="nb-b rerun">RERUN</span><span class="nb-t"><b>Shanks (Divine)</b> - Film Red event.</span><span class="nb-d">Jun 2026</span></div>
 </div>
 </div>
 </main>
 
 <div class="mbg" id="modal"><div class="mdl"><button class="mc" onclick="clM()">✕</button><div id="mC"></div></div></div>
-<footer><p>🏴‍☠️ OPBR Guide v2 - 34 EX Characters - Season 181</p><p style="margin-top:3px">Data dari OPBR Wiki & Bandai Namco Official • Meta August 2026</p></footer>
+<footer><p>🏴‍☠️ OPBR Guide v2 - 350+ Karakter - Season 181</p><p style="margin-top:2px">Data: OPBR Wiki, Bandai Namco, OPBR Helper • Meta August 2026</p></footer>
 
 <script>
-// ============ ALL 34 EX CHARACTERS (FROM OPBR WIKI) ============
-const CH=[
-// GOD TIER
-{n:"Jewelry Bonney (Nika)",i:"BN",e:"red",c:"attacker",t:"GOD",md:["Nika Bonney Medal","Gear 5 Medal","Shanks Medal"],mD:"+22% ATK | +20% S1 CD | +15% Crit",s:["Luffy G5","Garp","Zoro","Nami","Sanji"],sD:"Red ATK 160%",ct:["Kizaru (BLUE)","Kuzan (BLUE)"],w:["Kizaru","Kuzan"],d:"EX terbaru 7.5 Anniversary! Attacker terkuat meta. Skill range luar biasa.",fl:"new"},
-{n:"Garp (Legendary Hero)",i:"GP",e:"red",c:"attacker",t:"GOD",md:["Garp Medal","Roger Medal","Akainu Medal"],mD:"+20% ATK | +15% Crit | +12% S2 CD",s:["Roger","Shanks","Akainu","Kaido","WB"],sD:"Red ATK 160%",ct:["Kizaru (BLUE)","Kuzan (BLUE)"],w:["Kizaru","Kuzan"],d:"EX terkuat. Damage skill 2 sangat besar range luas.",fl:"buff"},
-{n:"Borsalino (Kizaru)",i:"KZ",e:"blue",c:"runner",t:"GOD",md:["Kizaru Medal","Kuzan Medal","Marco Medal"],mD:"+20% SPD | +15% S1 CD | +10% Capture",s:["Kuzan","Marco","Law","Kaido"],sD:"Blue RUN 160%",ct:["Garp (RED)","Zoro (GREEN)"],w:["Garp","Zoro"],d:"Speed tinggi invincibility. Sulit ditangkap.",fl:"nerf"},
-{n:"Sanji & Zoro (Wings)",i:"SZ",e:"green",c:"attacker",t:"GOD",md:["Zoro Medal","Sanji Medal","Mihawk Medal"],mD:"+22% ATK | +18% Crit | +15% HP",s:["Mihawk","Luffy","Yamato","Oden","Judge"],sD:"Green ATK 160%",ct:["Garp (RED)","Akainu (RED)"],w:["Garp","Akainu"],d:"Duo EX pertama! Dual-class mechanic unik.",fl:"new"},
-// SS TIER
-{n:"St. Marcus Mars",i:"MR",e:"blue",c:"defender",t:"SS",md:["Mars Medal","Nusjuro Medal","Gorosei Medal"],mD:"+20% HP | +15% DEF | +10% DMG Red",s:["Nusjuro","Gorosei","Holy Knights"],sD:"Blue DEF 160%",ct:["Zoro (GREEN)","Yamato (GREEN)"],w:["Zoro","Yamato"],d:"Gorosei EX defense luar biasa. Tank terkuat.",fl:"new"},
-{n:"St. Ethanbaron V. Nusjuro",i:"NJ",e:"green",c:"attacker",t:"SS",md:["Nusjuro Medal","Mars Medal","Gorosei Medal"],mD:"+20% ATK | +15% Crit | +12% S1 CD",s:["Mars","Gorosei","Holy Knights"],sD:"Green ATK 160%",ct:["Garp (RED)","Akainu (RED)"],w:["Garp","Akainu"],d:"Gorosei EX speed tinggi. Masih sangat meta.",fl:"new"},
-{n:"Kuzan (BB Pirates)",i:"KJ",e:"blue",c:"attacker",t:"SS",md:["Kuzan Medal","Akainu Medal","Garp Medal"],mD:"+18% ATK | +15% Freeze | +12% S1 CD",s:["Garp","Akainu","Sengoku","Kizaru"],sD:"Blue ATK 160%",ct:["Zoro (GREEN)","Yamato (GREEN)"],w:["Zoro","Yamato"],d:"Freeze skill sangat mengganggu. Range luas.",fl:"nerf"},
-{n:"Roronoa Zoro (Raid)",i:"ZR",e:"green",c:"attacker",t:"SS",md:["Zoro Medal","Mihawk Medal","Raid Zoro Medal"],mD:"+18% ATK | +15% Crit | +12% HP",s:["Mihawk","Luffy","Sanji","Yamato","Oden"],sD:"Green ATK 160%",ct:["Garp (RED)","Kizaru (BLUE)"],w:["Garp"],d:"Damage dealer terkuat GREEN. Counter mematikan."},
-{n:"Shanks (Film Red)",i:"SK",e:"red",c:"runner",t:"SS",md:["Shanks Medal","Roger Medal","Beckman Medal"],mD:"+18% SPD | +15% Capture | +12% Dodge",s:["Roger","Beckman","Lucky Roo","Yasopp"],sD:"Red RUN 160%",ct:["Kizaru (BLUE)","Kuzan (BLUE)"],w:["Kizaru","Kuzan"],d:"Haki observation kuat. Detect musuh dekat treasure.",fl:"buff"},
-{n:"Luffy (Gear Five)",i:"L5",e:"red",c:"attacker",t:"SS",md:["Egghead Luffy Medal","Gear 4 Medal","Shanks Medal"],mD:"+20% ATK | +18% S1 CD | +15% Crit",s:["Zoro","Nami","Sanji","Garp","Roger"],sD:"Red ATK 160%",ct:["Kizaru (BLUE)","Kuzan (BLUE)"],w:["Kizaru","Kuzan"],d:"Transformasi terkuat Luffy. Multiple forms."},
-{n:"Sabo (Flame Emperor)",i:"SB",e:"red",c:"runner",t:"SS",md:["Sabo Medal","Ace Medal","Luffy Medal"],mD:"+18% SPD | +15% Capture | +12% Dodge",s:["Ace","Luffy","Dragon","Kuma"],sD:"Red RUN 160%",ct:["Kizaru (BLUE)","Kuzan (BLUE)"],w:["Kizaru","Kuzan"],d:"Revolutionary Army EX. Speed tinggi AOE skill."},
-{n:"Kaido (Strongest)",i:"KD",e:"blue",c:"defender",t:"SS",md:["Kaido Medal","King Medal","Queen Medal"],mD:"+20% HP | +15% DEF | +10% DMG Red",s:["King","Queen","Jack","Katakuri"],sD:"Blue DEF 160%",ct:["Zoro (GREEN)","Yamato (GREEN)"],w:["Zoro","Yamato"],d:"Tank terkuat hyper armor."},
-{n:"Shanks (Divine)",i:"SD",e:"red",c:"attacker",t:"SS",md:["Shanks Medal","Roger Medal","Beckman Medal"],mD:"+20% ATK | +15% Crit | +12% S2 CD",s:["Roger","Beckman","Lucky Roo","Yasopp"],sD:"Red ATK 160%",ct:["Kizaru (BLUE)","Kuzan (BLUE)"],w:["Kizaru","Kuzan"],d:"Haki Conqueror kuat. One-shot potential."},
-// S TIER
-{n:"Gol D. Roger (King)",i:"RG",e:"red",c:"attacker",t:"S",md:["Roger Medal","Oden Medal","WB Medal"],mD:"+18% ATK | +15% Crit | +12% S2 CD",s:["Oden","WB","Shanks","Marco","Ace"],sD:"Red ATK 160%",ct:["Kizaru (BLUE)","Kuzan (BLUE)"],w:["Kizaru","Kuzan"],d:"King of Pirates. Skill 2 one-shot potential."},
-{n:"Yamato (Okuchi)",i:"YM",e:"green",c:"runner",t:"S",md:["Yamato Medal","Kaido Medal","Oden Medal"],mD:"+18% SPD | +15% Capture | +12% Dodge",s:["Kaido","Oden","Luffy","Zoro"],sD:"Green RUN 160%",ct:["Garp (RED)","Akainu (RED)"],w:["Garp","Akainu"],d:"Runner cepat damage bagus.",fl:"buff"},
-{n:"Sakazuki (Akainu)",i:"AK",e:"red",c:"defender",t:"S",md:["Akainu Medal","Kuzan Medal","Garp Medal"],mD:"+20% HP | +15% DEF | +10% DMG Red",s:["Kuzan","Garp","Sengoku","Borsalino"],sD:"Red DEF 160%",ct:["Kaido (BLUE)","Kuzan (BLUE)"],w:["Kaido","Kuzan"],d:"Magma fists DOT damage. Kuat di defense.",fl:"buff"},
-{n:"Marshall D. Teach (4 Emperors)",i:"BB",e:"blue",c:"attacker",t:"S",md:["Blackbeard Medal","Shanks Medal","Luffy Medal"],mD:"+18% ATK | +15% Dark | +12% HP",s:["Shanks","Luffy","Ace","Marco"],sD:"Blue ATK 160%",ct:["Luffy G5 (RED)","Zoro (GREEN)"],w:["Luffy G5","Zoro"],d:"Gravity pull mengganggu semua musuh."},
-{n:"Trafalgar Law (Winner)",i:"LW",e:"blue",c:"runner",t:"S",md:["Law Medal","Kid Medal","Corazon Medal"],mD:"+18% SPD | +15% Capture | +12% S1 CD",s:["Kid","Corazon","Bonney","Hawkins"],sD:"Blue RUN 160%",ct:["Kaido (BLUE)","Kuzan (BLUE)"],w:["Kaido","Kuzan"],d:"Room skill teleport dan attack."},
-{n:"Rob Lucci (Awakened)",i:"LC",e:"red",c:"attacker",t:"S",md:["Lucci Medal","Kaku Medal","Spandam Medal"],mD:"+18% ATK | +15% Crit | +12% SPD",s:["Kaku","Spandam","Koby","Garp"],sD:"Red ATK 160%",ct:["Kizaru (BLUE)","Kuzan (BLUE)"],w:["Kizaru","Kuzan"],d:"CP0 EX burst damage tinggi.",fl:"new"},
-{n:"Kid & Law (Onigashima)",i:"KL",e:"red",c:"attacker",t:"S",md:["Kid Medal","Law Medal","Apoo Medal"],mD:"+18% ATK | +15% Crit | +12% HP",s:["Apoo","Hawkins","Killer","Bonney"],sD:"Red ATK 160%",ct:["Kizaru (BLUE)","Kuzan (BLUE)"],w:["Kizaru","Kuzan"],d:"Combo attack AoE damage."},
-// A TIER
-{n:"Gol D. Roger (Great)",i:"GG",e:"red",c:"runner",t:"A",md:["Roger Medal","Oden Medal","Rayleigh Medal"],mD:"+18% SPD | +15% Capture | +12% Dodge",s:["Oden","Rayleigh","Marco","Ace"],sD:"Red RUN 160%",ct:["Kizaru (BLUE)","Kuzan (BLUE)"],w:["Kizaru","Kuzan"],d:"Roger versi runner. Speed tinggi."},
-{n:"Kaido (Onigashima)",i:"KO",e:"blue",c:"attacker",t:"A",md:["Kaido Medal","King Medal","Olin Medal"],mD:"+18% ATK | +15% Crit | +12% HP",s:["King","Queen","Olin","Katakuri"],sD:"Blue ATK 160%",ct:["Zoro (GREEN)","Yamato (GREEN)"],w:["Zoro","Yamato"],d:"Kaido versi attacker. Damage tinggi."},
-{n:"Kouzuki Oden",i:"OD",e:"green",c:"attacker",t:"A",md:["Oden Medal","Roger Medal","Izo Medal"],mD:"+18% ATK | +15% Crit | +12% S2 CD",s:["Roger","Izo","Kinemon","Denjiro"],sD:"Green ATK 160%",ct:["Garp (RED)","Akainu (RED)"],w:["Garp","Akainu"],d:"Attack range luas damage tinggi."},
-{n:"Charlotte Linlin (Hunger)",i:"CL",e:"green",c:"defender",t:"A",md:["Big Mom Medal","Katakuri Medal","Cracker Medal"],mD:"+20% HP | +15% DEF | +10% DMG Red",s:["Katakuri","Cracker","Smoothie"],sD:"Green DEF 160%",ct:["Garp (RED)","Akainu (RED)"],w:["Garp","Akainu"],d:"Big Mom versi EX. Tank kuat."},
-{n:"Yamato (Son)",i:"YS",e:"green",c:"attacker",t:"A",md:["Yamato Medal","Kaido Medal","Oden Medal"],mD:"+18% ATK | +15% Crit | +12% HP",s:["Kaido","Oden","Luffy","Zoro"],sD:"Green ATK 160%",ct:["Garp (RED)","Akainu (RED)"],w:["Garp","Akainu"],d:"Yamato versi attacker. Damage tinggi."},
-{n:"O-Lin (Onigashima)",i:"OL",e:"red",c:"defender",t:"A",md:["Big Mom Medal","Katakuri Medal","Cracker Medal"],mD:"+20% HP | +15% DEF | +10% DMG Red",s:["Katakuri","Cracker","Smoothie"],sD:"Red DEF 160%",ct:["Kizaru (BLUE)","Kuzan (BLUE)"],w:["Kizaru","Kuzan"],d:"Big Mom versi RED defender."},
-{n:"Monkey D. Luffy (4 Emperors)",i:"L4",e:"red",c:"runner",t:"A",md:["Luffy Medal","Katakuri Medal","G4 Medal"],mD:"+18% SPD | +15% Capture | +12% S1 CD",s:["Katakuri","Sanji","Zoro","Nami"],sD:"Red RUN 160%",ct:["Kizaru (BLUE)","Kuzan (BLUE)"],w:["Kizaru","Kuzan"],d:"Luffy Emperor versi runner."},
-// B TIER
-{n:"Marshall D. Teach (7 Warlords)",i:"BW",e:"blue",c:"runner",t:"B",md:["Blackbeard Medal","Luffy Medal","Ace Medal"],mD:"+18% SPD | +15% Capture | +12% Dodge",s:["Luffy","Ace","Shanks"],sD:"Blue RUN 160%",ct:["Zoro (GREEN)","Yamato (GREEN)"],w:["Zoro","Yamato"],d:"Blackbeard versi Warlords. Runner."},
-{n:"S-Snake (Seraphim)",i:"SS",e:"blue",c:"attacker",t:"B",md:["S-Snake Medal","Seraphim Medal","Hancock Medal"],mD:"+18% ATK | +15% Crit | +12% HP",s:["Hancock","Luffy","Boa"],sD:"Blue ATK 160%",ct:["Zoro (GREEN)","Yamato (GREEN)"],w:["Zoro","Yamato"],d:"Seraphim EX pertama. Unique mechanics.",fl:"new"},
-// C TIER
-{n:"Monkey D. Luffy (King)",i:"LK",e:"red",c:"attacker",t:"C",md:["Luffy Medal","Roger Medal","Shanks Medal"],mD:"+16% ATK | +12% Crit | +10% HP",s:["Roger","Shanks","Garp"],sD:"Red ATK 160%",ct:["Kizaru (BLUE)","Kuzan (BLUE)"],w:["Kizaru","Kuzan"],d:"Luffy versi King. Outclassed by G5."},
-{n:"Edward Newgate (WB)",i:"WB",e:"red",c:"defender",t:"C",md:["WB Medal","Roger Medal","Marco Medal"],mD:"+18% HP | +12% DEF | +8% DMG Red",s:["Roger","Marco","Ace"],sD:"Red DEF 160%",ct:["Kizaru (BLUE)","Kuzan (BLUE)"],w:["Kizaru","Kuzan"],d:"WB EX lama. Outclassed."}
+// ============ CHARACTER DATABASE (350+ dari OPBR Helper) ============
+const ALL=[
+// === EX (34) ===
+{n:"Jewelry Bonney (Nika)",s:"Nika Bonney",e:"red",c:"attacker",r:"EX",star:4,d:"EX 7.5 Anniversary! Attacker terkuat meta.",fl:"new",md:["Nika Bonney Medal","Gear 5 Medal","Shanks Medal"],sD:"+22% ATK",ct:["Kizaru","Kuzan"],w:["Kizaru","Kuzan"]},
+{n:"Garp (Legendary Hero)",s:"Monkey D. Garp",e:"red",c:"attacker",r:"EX",star:4,d:"EX terkuat. Damage S2 sangat besar.",fl:"buff",md:["Garp Medal","Roger Medal","Akainu Medal"],sD:"+20% ATK",ct:["Kizaru","Kuzan"],w:["Kizaru","Kuzan"]},
+{n:"Borsalino (Kizaru)",s:"Borsalino",e:"blue",c:"runner",r:"EX",star:4,d:"Speed tinggi invincibility.",fl:"nerf",md:["Kizaru Medal","Kuzan Medal","Marco Medal"],sD:"+20% SPD",ct:["Garp","Zoro"],w:["Garp","Zoro"]},
+{n:"Sanji & Zoro (Wings)",s:"Sanji and Zoro",e:"green",c:"attacker",r:"EX",star:4,d:"Duo EX pertama! Dual-class.",fl:"new",md:["Zoro Medal","Sanji Medal","Mihawk Medal"],sD:"+22% ATK",ct:["Garp","Akainu"],w:["Garp","Akainu"]},
+{n:"St. Marcus Mars",s:"St. Marcus Mars",e:"blue",c:"defender",r:"EX",star:4,d:"Gorosei EX defense.",fl:"new",md:["Mars Medal","Nusjuro Medal","Gorosei Medal"],sD:"+20% HP",ct:["Zoro","Yamato"],w:["Zoro","Yamato"]},
+{n:"St. Nusjuro",s:"St. Ethanbaron V. Nusjuro",e:"green",c:"attacker",r:"EX",star:4,d:"Gorosei EX speed.",fl:"new",md:["Nusjuro Medal","Mars Medal","Gorosei Medal"],sD:"+20% ATK",ct:["Garp","Akainu"],w:["Garp","Akainu"]},
+{n:"Kuzan (BB Pirates)",s:"Kuzan",e:"blue",c:"attacker",r:"EX",star:4,d:"Freeze skill mengganggu.",fl:"nerf",md:["Kuzan Medal","Akainu Medal","Garp Medal"],sD:"+18% ATK",ct:["Zoro","Yamato"],w:["Zoro","Yamato"]},
+{n:"Zoro (Raid)",s:"Roronoa Zoro",e:"green",c:"attacker",r:"EX",star:4,d:"Damage dealer terkuat GREEN.",md:["Zoro Medal","Mihawk Medal","Raid Zoro Medal"],sD:"+18% ATK",ct:["Garp","Kizaru"],w:["Garp"]},
+{n:"Shanks (Film Red)",s:"Shanks",e:"red",c:"runner",r:"EX",star:4,d:"Haki observation kuat.",fl:"buff",md:["Shanks Medal","Roger Medal","Beckman Medal"],sD:"+18% SPD",ct:["Kizaru","Kuzan"],w:["Kizaru","Kuzan"]},
+{n:"Luffy (Gear Five)",s:"Monkey D. Luffy",e:"red",c:"attacker",r:"EX",star:4,d:"Transformasi terkuat Luffy.",md:["Egghead Luffy Medal","Gear 4 Medal","Shanks Medal"],sD:"+20% ATK",ct:["Kizaru","Kuzan"],w:["Kizaru","Kuzan"]},
+{n:"Sabo (Flame Emperor)",s:"Sabo",e:"red",c:"runner",r:"EX",star:4,d:"Revolutionary EX. Speed tinggi.",md:["Sabo Medal","Ace Medal","Luffy Medal"],sD:"+18% SPD",ct:["Kizaru","Kuzan"],w:["Kizaru","Kuzan"]},
+{n:"Kaido (Strongest)",s:"Kaido",e:"blue",c:"defender",r:"EX",star:4,d:"Tank terkuat hyper armor.",md:["Kaido Medal","King Medal","Queen Medal"],sD:"+20% HP",ct:["Zoro","Yamato"],w:["Zoro","Yamato"]},
+{n:"Shanks (Divine)",s:"Shanks",e:"red",c:"attacker",r:"EX",star:4,d:"Haki Conqueror kuat.",md:["Shanks Medal","Roger Medal","Beckman Medal"],sD:"+20% ATK",ct:["Kizaru","Kuzan"],w:["Kizaru","Kuzan"]},
+{n:"Roger (King)",s:"Gol D. Roger",e:"red",c:"attacker",r:"EX",star:4,d:"King of Pirates. One-shot.",md:["Roger Medal","Oden Medal","WB Medal"],sD:"+18% ATK",ct:["Kizaru","Kuzan"],w:["Kizaru","Kuzan"]},
+{n:"Yamato (Okuchi)",s:"Yamato",e:"green",c:"runner",r:"EX",star:4,d:"Runner cepat damage bagus.",fl:"buff",md:["Yamato Medal","Kaido Medal","Oden Medal"],sD:"+18% SPD",ct:["Garp","Akainu"],w:["Garp","Akainu"]},
+{n:"Akainu (Sakazuki)",s:"Sakazuki",e:"red",c:"defender",r:"EX",star:4,d:"Magma DOT damage.",fl:"buff",md:["Akainu Medal","Kuzan Medal","Garp Medal"],sD:"+20% HP",ct:["Kaido","Kuzan"],w:["Kaido","Kuzan"]},
+{n:"Blackbeard (4 Emperors)",s:"Marshall D. Teach",e:"blue",c:"attacker",r:"EX",star:4,d:"Gravity pull mengganggu.",md:["Blackbeard Medal","Shanks Medal","Luffy Medal"],sD:"+18% ATK",ct:["Luffy G5","Zoro"],w:["Luffy G5","Zoro"]},
+{n:"Law (Winner)",s:"Trafalgar Law",e:"blue",c:"runner",r:"EX",star:4,d:"Room teleport attack.",md:["Law Medal","Kid Medal","Corazon Medal"],sD:"+18% SPD",ct:["Kaido","Kuzan"],w:["Kaido","Kuzan"]},
+{n:"Lucci (Awakened)",s:"Rob Lucci",e:"red",c:"attacker",r:"EX",star:4,d:"CP0 EX burst damage.",fl:"new",md:["Lucci Medal","Kaku Medal","Spandam Medal"],sD:"+18% ATK",ct:["Kizaru","Kuzan"],w:["Kizaru","Kuzan"]},
+{n:"Kid & Law (Onigashima)",s:"Kid & Law",e:"red",c:"attacker",r:"EX",star:4,d:"Combo attack AoE.",md:["Kid Medal","Law Medal","Apoo Medal"],sD:"+18% ATK",ct:["Kizaru","Kuzan"],w:["Kizaru","Kuzan"]},
+{n:"Roger (Great)",s:"Gol D. Roger",e:"red",c:"runner",r:"EX",star:4,d:"Roger versi runner.",md:["Roger Medal","Oden Medal","Rayleigh Medal"],sD:"+18% SPD",ct:["Kizaru","Kuzan"],w:["Kizaru","Kuzan"]},
+{n:"Kaido (Onigashima)",s:"Kaido",e:"blue",c:"attacker",r:"EX",star:4,d:"Kaido versi attacker.",md:["Kaido Medal","King Medal","Olin Medal"],sD:"+18% ATK",ct:["Zoro","Yamato"],w:["Zoro","Yamato"]},
+{n:"Oden (Daimyo)",s:"Kouzuki Oden",e:"green",c:"attacker",r:"EX",star:4,d:"Attack range luas.",md:["Oden Medal","Roger Medal","Izo Medal"],sD:"+18% ATK",ct:["Garp","Akainu"],w:["Garp","Akainu"]},
+{n:"Charlotte Linlin",s:"Charlotte Linlin",e:"green",c:"defender",r:"EX",star:4,d:"Big Mom EX tank kuat.",md:["Big Mom Medal","Katakuri Medal","Cracker Medal"],sD:"+20% HP",ct:["Garp","Akainu"],w:["Garp","Akainu"]},
+{n:"Yamato (Son)",s:"Yamato",e:"green",c:"attacker",r:"EX",star:4,d:"Yamato versi attacker.",md:["Yamato Medal","Kaido Medal","Oden Medal"],sD:"+18% ATK",ct:["Garp","Akainu"],w:["Garp","Akainu"]},
+{n:"O-Lin (Onigashima)",s:"O-Lin",e:"red",c:"defender",r:"EX",star:4,d:"Big Mom RED defender.",md:["Big Mom Medal","Katakuri Medal","Cracker Medal"],sD:"+20% HP",ct:["Kizaru","Kuzan"],w:["Kizaru","Kuzan"]},
+{n:"Luffy (4 Emperors)",s:"Monkey D. Luffy",e:"red",c:"runner",r:"EX",star:4,d:"Luffy Emperor runner.",md:["Luffy Medal","Katakuri Medal","G4 Medal"],sD:"+18% SPD",ct:["Kizaru","Kuzan"],w:["Kizaru","Kuzan"]},
+{n:"Blackbeard (Warlords)",s:"Marshall D. Teach",e:"blue",c:"runner",r:"EX",star:4,d:"Blackbeard Warlords runner.",md:["Blackbeard Medal","Luffy Medal","Ace Medal"],sD:"+18% SPD",ct:["Zoro","Yamato"],w:["Zoro","Yamato"]},
+{n:"S-Snake (Seraphim)",s:"S-Snake",e:"blue",c:"attacker",r:"EX",star:4,d:"Seraphim EX pertama.",fl:"new",md:["S-Snake Medal","Seraphim Medal","Hancock Medal"],sD:"+18% ATK",ct:["Zoro","Yamato"],w:["Zoro","Yamato"]},
+{n:"Luffy (King)",s:"Monkey D. Luffy",e:"red",c:"attacker",r:"EX",star:4,d:"Luffy versi King outclassed.",md:["Luffy Medal","Roger Medal","Shanks Medal"],sD:"+16% ATK",ct:["Kizaru","Kuzan"],w:["Kizaru","Kuzan"]},
+{n:"WB (Edward Newgate)",s:"Edward Newgate",e:"red",c:"defender",r:"EX",star:4,d:"WB EX lama outclassed.",md:["WB Medal","Roger Medal","Marco Medal"],sD:"+18% HP",ct:["Kizaru","Kuzan"],w:["Kizaru","Kuzan"]},
+{n:"Zephyr (Film Z)",s:"Zephyr",e:"green",c:"defender",r:"EX",star:4,d:"Film Z EX defender.",md:["Zephyr Medal","Navy Medal","Admiral Medal"],sD:"+18% HP",ct:["Garp","Akainu"],w:["Garp","Akainu"]},
+{n:"Teach (Warlords)",s:"Marshall D. Teach",e:"red",c:"defender",r:"EX",star:4,d:"Blackbeard Warlords DEF.",md:["Blackbeard Medal","Shanks Medal","Luffy Medal"],sD:"+18% HP",ct:["Kizaru","Kuzan"],w:["Kizaru","Kuzan"]},
+{n:"Luffy (Four Emperors)",s:"Monkey D. Luffy",e:"blue",c:"attacker",r:"EX",star:4,d:"Luffy Emperor ATK.",md:["Luffy Medal","Katakuri Medal","G4 Medal"],sD:"+18% ATK",ct:["Zoro","Yamato"],w:["Zoro","Yamato"]},
+{n:"Luffy (Paramount)",s:"Monkey D. Luffy",e:"green",c:"runner",r:"EX",star:4,d:"Luffy Paramount free unit.",md:["Luffy Medal","Ace Medal","Sabo Medal"],sD:"+15% SPD",ct:["Garp","Akainu"],w:["Garp","Akainu"]},
+// === BF TOP META (partial - too many to list all) ===
+{n:"Zoro (Billion)",s:"Roronoa Zoro",e:"red",c:"attacker",r:"BF",star:4,d:"Zoro Dressrosa attacker kuat."},
+{n:"Katakuri (Superhuman)",s:"Charlotte Katakuri",e:"green",c:"defender",r:"BF",star:4,d:"Future sight defender."},
+{n:"Mihawk (Greatest)",s:"Dracule Mihawk",e:"green",c:"defender",r:"BF",star:4,d:"Greatest swordsman DEF."},
+{n:"Doflamingo (Captain)",s:"Don Quixote Doflamingo",e:"blue",c:"attacker",r:"BF",star:4,d:"String fruit ATK."},
+{n:"Boa Hancock (Kuja)",s:"Boa Hancock",e:"blue",c:"attacker",r:"BF",star:4,d:"Kuja Pirates ATK."},
+{n:"Crocodile (Paramount)",s:"Crocodile",e:"green",c:"runner",r:"BF",star:4,d:"Logia runner."},
+{n:"Eneru (Amaru)",s:"Eneru",e:"blue",c:"defender",r:"BF",star:4,d:"Logia DEF thunder."},
+{n:"Moria (Paramount)",s:"Gecko Moria",e:"blue",c:"attacker",r:"BF",star:4,d:"Shadow ATK."},
+{n:"Sengoku (Fleet Admiral)",s:"Sengoku",e:"blue",c:"defender",r:"BF",star:4,d:"Zoan DEF tank."},
+{n:"Koby (Captain)",s:"Koby",e:"dark",c:"attacker",r:"BF",star:4,d:"Navy ATK."},
+{n:"Issho (Fujitora)",s:"Issho",e:"blue",c:"runner",r:"BF",star:4,d:"Paramecia gravity RUN."},
+{n:"Rayleigh (Dark King)",s:"Silvers Rayleigh",e:"dark",c:"defender",r:"BF",star:4,d:"Roger first mate DEF."},
+{n:"Rayleigh (Pirate King)",s:"Silvers-rayleigh",e:"blue",c:"runner",r:"BF",star:4,d:"Roger Pirates RUN."},
+{n:"Ace (Fire Fist)",s:"Portgas D. Ace",e:"blue",c:"defender",r:"BF",star:4,d:"Logia DEF fire."},
+{n:"Sabo (Luffy Brother)",s:"Sabo",e:"red",c:"attacker",r:"BF",star:4,d:"Revolutionary ATK."},
+{n:"Oden (Wano)",s:"Kozuki Oden",e:"light",c:"attacker",r:"BF",star:4,d:"Wano Daimyo ATK."},
+{n:"Marco (Land of Wano)",s:"Marco",e:"green",c:"runner",r:"BF",star:4,d:"WB Pirates RUN phoenix."},
+{n:"King (Lead Performer)",s:"King",e:"red",c:"runner",r:"BF",star:4,d:"Lunarian RUN."},
+{n:"Queen (Cyborg)",s:"Queen",e:"red",c:"runner",r:"BF",star:4,d:"Lead Performer RUN."},
+{n:"Jack (Lead)",s:"Jack",e:"green",c:"attacker",r:"BF",star:4,d:"Fish-Man ATK."},
+{n:"Jinbe (Raid)",s:"Jinbe",e:"blue",c:"defender",r:"BF",star:4,d:"Fish-Man karate DEF."},
+{n:"Kaido (Supreme)",s:"Kaido",e:"green",c:"attacker",r:"BF",star:4,d:"Animal Kingdom ATK."},
+{n:"Charlotte Cracker",s:"Charlotte Cracker",e:"blue",c:"attacker",r:"BF",star:4,d:"Sweet 3 ATK."},
+{n:"Charlotte Perospero",s:"Charlotte Perospero",e:"green",c:"attacker",r:"BF",star:4,d:"BM Pirates ATK candy."},
+{n:"Charlotte Oven",s:"Charlotte Oven",e:"red",c:"defender",r:"BF",star:4,d:"BM Pirates DEF heat."},
+{n:"Charlotte Pudding (Wed)",s:"Charlotte Pudding",e:"green",c:"defender",r:"BF",star:4,d:"BM Pirates DEF."},
+{n:"Charlotte Pudding (Act)",s:"Charlotte Pudding",e:"red",c:"attacker",r:"BF",star:4,d:"BM Pirates ATK."},
+{n:"Who's Who",s:"Who's-Who",e:"green",c:"attacker",r:"BF",star:4,d:"Tobi Roppo ATK."},
+{n:"Ulti",s:"Ulti",e:"blue",c:"attacker",r:"BF",star:4,d:"Tobi Roppo ATK dino."},
+{n:"Page One",s:"Page One",e:"red",c:"defender",r:"BF",star:4,d:"Tobi Roppo DEF."},
+{n:"Black Maria",s:"Black Maria",e:"green",c:"defender",r:"BF",star:4,d:"Tobi Roppo DEF spider."},
+{n:"Sasaki",s:"Sasaki",e:"green",c:"runner",r:"BF",star:4,d:"Tobi Roppo RUN."},
+{n:"Apoo",s:"Scratchmen Apoo",e:"green",c:"runner",r:"BF",star:4,d:"On-Air RUN music."},
+{n:"Urouge",s:"Urouge",e:"red",c:"defender",r:"BF",star:4,d:"Fallen Monk DEF."},
+{n:"Bepo",s:"Bepo",e:"light",c:"defender",r:"BF",star:4,d:"Minks DEF bear."},
+{n:"Killer",s:"Killer",e:"blue",c:"attacker",r:"BF",star:4,d:"Kid Pirates ATK."},
+{n:"Vinsmoke Judge",s:"Vinsmoke Judge",e:"blue",c:"defender",r:"BF",star:4,d:"Germa 66 DEF."},
+{n:"Vinsmoke Reiju",s:"Vinsmoke Reiju",e:"blue",c:"runner",r:"BF",star:4,d:"Germa 66 RUN."},
+{n:"Vinsmoke Ichiji",s:"Vinsmoke Ichiji",e:"red",c:"attacker",r:"BF",star:4,d:"Germa 66 ATK fire."},
+{n:"Vinsmoke Niji",s:"Vinsmoke Neji",e:"blue",c:"runner",r:"BF",star:4,d:"Germa 66 RUN lightning."},
+{n:"Vinsmoke Yonji",s:"Vinsmoke Yonji",e:"green",c:"defender",r:"BF",star:4,d:"Germa 66 DEF."},
+{n:"Corazon",s:"Corazon",e:"blue",c:"defender",r:"BF",star:4,d:"Don Quixote DEF silent."},
+{n:"Trebol",s:"Trebol",e:"green",c:"defender",r:"BF",star:4,d:"Don Quixote DEF sticky."},
+{n:"Diamante",s:"Diamante",e:"green",c:"attacker",r:"BF",star:4,d:"Don Quixote ATK."},
+{n:"Sugar",s:"Sugar",e:"red",c:"defender",r:"BF",star:4,d:"Don Quixote DEF toy."},
+{n:"Senor Pink",s:"Señor Pink",e:"red",c:"runner",r:"BF",star:4,d:"Don Quixote RUN."},
+{n:"Baby 5",s:"Baby 5",e:"green",c:"defender",r:"BF",star:4,d:"Don Quixote DEF weapon."},
+{n:"Jozu",s:"Jozu",e:"blue",c:"defender",r:"BF",star:4,d:"WB Pirates 3rd DEF diamond."},
+{n:"Vista",s:"Vista",e:"blue",c:"runner",r:"BF",star:4,d:"WB Pirates 5th RUN."},
+{n:"Izo",s:"Izo",e:"blue",c:"attacker",r:"BF",star:4,d:"WB Pirates 16th ATK."},
+{n:"Belo Betty",s:"Belo Betty",e:"red",c:"defender",r:"BF",star:4,d:"Revolutionary East DEF."},
+{n:"Karasu",s:"Karasu",e:"green",c:"runner",r:"BF",star:4,d:"Revolutionary North RUN."},
+{n:"Inazuma",s:"Inazuma",e:"blue",c:"defender",r:"BF",star:4,d:"Revolutionary DEF scissors."},
+{n:"Hack",s:"Hack",e:"blue",c:"attacker",r:"BF",star:4,d:"Revolutionary ATK Fish-Man."},
+{n:"Koala",s:"Koala",e:"red",c:"attacker",r:"BF",star:4,d:"Revolutionary ATK Fish-Man Karate."},
+{n:"Emporio Ivankov",s:"Emporio Ivankov",e:"green",c:"runner",r:"BF",star:4,d:"Revolutionary RUN hormone."},
+{n:"Kuma",s:"Bartholomew Kuma",e:"blue",c:"defender",r:"BF",star:4,d:"Warlords DEF paw."},
+{n:"Kuma & Bonney",s:"Kuma & Bonney",e:"red",c:"attacker",r:"BF",star:4,d:"Father daughter ATK."},
+{n:"Buggy (Warlords)",s:"Buggy",e:"blue",c:"attacker",r:"BF",star:4,d:"Warlords ATK chop."},
+{n:"Perona (Ghost)",s:"Perona",e:"blue",c:"defender",r:"BF",star:4,d:"Ghost Princess DEF."},
+{n:"Perona (Thriller)",s:"Perona",e:"green",c:"runner",r:"BF",star:4,d:"Thriller RUN hollow."},
+{n:"Sentomaru (Egghead)",s:"Sentomaru",e:"red",c:"defender",r:"BF",star:4,d:"Navy DEF axe."},
+{n:"Sentomaru (Science)",s:"Sentomaru",e:"green",c:"defender",r:"BF",star:4,d:"Navy Science DEF."},
+{n:"Pacifista",s:"Pacifista",e:"dark",c:"attacker",r:"BF",star:4,d:"Navy robot ATK."},
+{n:"Kuma (Seraphim)",s:"S-Bear",e:"green",c:"attacker",r:"BF",star:4,d:"Seraphim ATK."},
+{n:"S-Hawk",s:"S-Hawk",e:"red",c:"attacker",r:"BF",star:4,d:"Seraphim ATK sword."},
+{n:"S-Shark",s:"S-Shark",e:"green",c:"runner",r:"BF",star:4,d:"Seraphim RUN Fish-Man."},
+{n:"York",s:"York",e:"red",c:"defender",r:"BF",star:4,d:"Punk-06 DEF."},
+{n:"Atlas",s:"Atlas",e:"dark",c:"attacker",r:"BF",star:4,d:"Punk-05 ATK."},
+{n:"Lilith",s:"Lilith",e:"green",c:"defender",r:"BF",star:4,d:"Punk-02 DEF."},
+{n:"Stussy",s:"Stussy",e:"green",c:"defender",r:"BF",star:4,d:"Vegapunk Spy DEF."},
+{n:"Vegapunk",s:"Vegapunk",e:"green",c:"runner",r:"BF",star:4,d:"Genius Scientist RUN."},
+{n:"Wapol",s:"Wapol",e:"dark",c:"defender",r:"BF",star:4,d:"Drum Island DEF."},
+{n:"Dalton",s:"King Dalton",e:"dark",c:"attacker",r:"BF",star:4,d:"Sakura Kingdom ATK."},
+{n:"Shiryu (Clear)",s:"Shiryu",e:"green",c:"attacker",r:"BF",star:4,d:"Clear-Clear ATK invisible."},
+{n:"Shiryu (Head)",s:"Shiryu",e:"red",c:"attacker",r:"BF",star:4,d:"Impel Down ATK."},
+{n:"Burgess (Strong)",s:"Jesus Burgess",e:"red",c:"defender",r:"BF",star:4,d:"Strong-Strong DEF champion."},
+{n:"Burgess (Helsman)",s:"Jesus Burgess",e:"green",c:"attacker",r:"BF",star:4,d:"Blackbeard Pirates ATK."},
+{n:"Van Ogre",s:"Van Ogre",e:"dark",c:"attacker",r:"BF",star:4,d:"Warp-Warp ATK."},
+{n:"Doc Q",s:"Doc Q",e:"blue",c:"runner",r:"BF",star:4,d:"Sick-Sick RUN."},
+{n:"Broggy",s:"Broggy",e:"dark",c:"defender",r:"BF",star:4,d:"Giant DEF."},
+{n:"Dorry",s:"Dorry",e:"dark",c:"attacker",r:"BF",star:4,d:"Giant ATK."},
+{n:"Leo",s:"Leo",e:"red",c:"defender",r:"BF",star:4,d:"Tontatta DEF tiny."},
+{n:"Sai",s:"Sai",e:"light",c:"attacker",r:"BF",star:4,d:"Happosui ATK."},
+{n:"Foxy",s:"Foxy",e:"green",c:"defender",r:"BF",star:4,d:"Davy Back DEF slow."},
+{n:"Pell",s:"Pell",e:"blue",c:"attacker",r:"BF",star:4,d:"Alabasta ATK falcon."},
+{n:"Momonosuke",s:"Kozuki Momonosuke",e:"red",c:"defender",r:"BF",star:4,d:"Shogun DEF dragon."},
+{n:"Kinemon",s:"Kin'emon",e:"red",c:"defender",r:"BF",star:4,d:"Kozuki DEF fox fire."},
+{n:"Ashura Doji",s:"Ashura Doji",e:"green",c:"defender",r:"BF",star:4,d:"Kozuki DEF samurai."},
+{n:"Kawamatsu",s:"Kawamatsu",e:"red",c:"defender",r:"BF",star:4,d:"Kozuki DEF Fish-Man."},
+{n:"Kikunojo",s:"Kikunojo",e:"blue",c:"attacker",r:"BF",star:4,d:"Kozuki ATK sword."},
+{n:"Raizo",s:"Raizo",e:"red",c:"attacker",r:"BF",star:4,d:"Kozuki ATK ninja."},
+{n:"Shinobu",s:"Shinobu",e:"blue",c:"runner",r:"BF",star:4,d:"Kozuki RUN kunoichi."},
+{n:"Kanjuro",s:"Kurozumi Kanjuro",e:"green",c:"runner",r:"BF",star:4,d:"Kozuki spy RUN paint."},
+{n:"O-Lin",s:"O-Lin",e:"blue",c:"runner",r:"BF",star:4,d:"Big Mom RUN Oiran."},
+{n:"Hyogoro",s:"Hyogoro",e:"blue",c:"defender",r:"BF",star:4,d:"Wano DEF boss."},
+{n:"Hody Jones",s:"Hody Jones",e:"green",c:"runner",r:"BF",star:4,d:"Fish-Man RUN."},
+{n:"Neptune",s:"Neptune",e:"green",c:"defender",r:"BF",star:4,d:"Ryugu DEF king."},
+{n:"Caribou",s:"Caribou",e:"red",c:"defender",r:"BF",star:4,d:"Logia DEF swamp."},
+{n:"Vander Decken",s:"Vander Decken IX",e:"blue",c:"attacker",r:"BF",star:4,d:"Flying Pirates ATK."},
+{n:"Bellamy",s:"Bellamy",e:"green",c:"runner",r:"BF",star:4,d:"Spring RUN."},
+{n:"Hakuba",s:"Hakuba",e:"blue",c:"runner",r:"BF",star:4,d:"Sakura Kingdom RUN sword."},
+{n:"Chin Jao",s:"Chin Jao",e:"blue",c:"defender",r:"BF",star:4,d:"Happosui DEF head."},
+{n:"Pedro",s:"Pedro",e:"green",c:"attacker",r:"BF",star:4,d:"Minks ATK wild."},
+{n:"Momo (Shogun)",s:"Kozuki Momonosuke",e:"red",c:"defender",r:"BF",star:4,d:"Shogun DEF dragon v2."},
+{n:"Napping Kyoshiro",s:"Napping Kyoshiro",e:"blue",c:"runner",r:"BF",star:4,d:"Kyoshiro RUN."},
+{n:"Mont Blanc Noland",s:"Mont Blanc Noland",e:"blue",c:"defender",r:"BF",star:4,d:"Lvneel DEF explorer."},
+{n:"Kalgara",s:"Kalgara",e:"blue",c:"attacker",r:"BF",star:4,d:"Shandora ATK warrior."},
+{n:"Ganfor",s:"Ganfor",e:"dark",c:"defender",r:"BF",star:4,d:"Sky Knight DEF."},
+{n:"Bartolomeo",s:"Bartolomeo",e:"red",c:"defender",r:"BF",star:4,d:"Barto Club DEF barrier."},
+{n:"Cavendish",s:"Cavendish",e:"green",c:"attacker",r:"BF",star:4,d:"Beautiful Pirates ATK."},
+{n:"Moria (Paramount War)",s:"Gecko Moria",e:"blue",c:"attacker",r:"BF",star:4,d:"Paramount War ATK shadow."},
+{n:"Kuma (Warlords)",s:"Bartholomew Kuma",e:"blue",c:"defender",r:"BF",star:4,d:"Warlords DEF paw v2."},
+{n:"Caesar Clown",s:"Caesar Clown",e:"red",c:"defender",r:"BF",star:4,d:"Logia DEF gas."},
+{n:"Magellan",s:"Magellan",e:"blue",c:"defender",r:"BF",star:4,d:"Impel Down DEF poison."},
+{n:"Smoker (Grand Line)",s:"Smoker",e:"blue",c:"attacker",r:"BF",star:4,d:"Navy Logia ATK."},
+{n:"Smoker (Punk)",s:"Smoker (Chambres)",e:"red",c:"attacker",r:"BF",star:4,d:"Punk Hazard ATK."},
+{n:"Hina",s:"Hina",e:"green",c:"defender",r:"BF",star:4,d:"Navy DEF cage."},
+{n:"Tashigi",s:"Tashigi",e:"red",c:"runner",r:"BF",star:4,d:"Navy RUN sword."},
+{n:"Kaku (Awakened)",s:"Kaku",e:"light",c:"defender",r:"BF",star:4,d:"CP0 DEF giraffe."},
+{n:"Jabra",s:"Jabra",e:"green",c:"attacker",r:"BF",star:4,d:"CP9 ATK wolf."},
+{n:"Blueno",s:"Blueno",e:"blue",c:"runner",r:"BF",star:4,d:"CP9 RUN door."},
+{n:"Monet",s:"Monet",e:"red",c:"defender",r:"BF",star:4,d:"Don Quixote DEF snow."},
+{n:"Vergo",s:"Vergo",e:"green",c:"attacker",r:"BF",star:4,d:"Navy+Don Q ATK bamboo."},
+{n:"Gaimon",s:"Gaimon",e:"blue",c:"defender",r:"BF",star:4,d:"East Blue DEF box."},
+{n:"Brook (Whole Cake)",s:"Brook",e:"green",c:"runner",r:"BF",star:4,d:"Whole Cake RUN soul."},
+{n:"Nami (Whole Cake)",s:"Nami",e:"blue",c:"defender",r:"BF",star:4,d:"Whole Cake DEF weather."},
+{n:"Sanji (Whole Cake)",s:"Sanji",e:"red",c:"attacker",r:"BF",star:4,d:"Whole Cake ATK wedding."},
+{n:"Sanji (Royal Wedding)",s:"Sanji",e:"blue",c:"runner",r:"BF",star:4,d:"Royal Wedding RUN."},
+{n:"Jinbe (Whole Cake)",s:"Jinbe",e:"red",c:"defender",r:"BF",star:4,d:"Whole Cake DEF Fish-Man."},
+{n:"Sanji (Davy Back)",s:"Sanji",e:"red",c:"runner",r:"BF",star:4,d:"Davy Back RUN."},
+{n:"Luffy (Davy Back)",s:"Monkey D. Luffy",e:"red",c:"attacker",r:"BF",star:4,d:"Davy Back ATK."},
+{n:"Uta (Singer)",s:"Uta",e:"blue",c:"defender",r:"BF",star:4,d:"Film RED DEF singer."},
+{n:"Uta (Happy Halloween)",s:"Uta",e:"dark",c:"runner",r:"BF",star:4,d:"Halloween RUN+DEF."},
+{n:"Uta (Film RED)",s:"Uta",e:"red",c:"attacker",r:"BF",star:4,d:"Film RED ATK."},
+{n:"Ben Beckman",s:"Ben Beckman",e:"blue",c:"defender",r:"BF",star:4,d:"Red Hair Pirates DEF."},
+{n:"Yasopp",s:"Yasopp",e:"red",c:"defender",r:"BF",star:4,d:"Red Hair DEF sniper."},
+{n:"Lucky Roo",s:"Lucky Roo",e:"blue",c:"runner",r:"BF",star:4,d:"Red Hair Pirates RUN."},
+{n:"Shiki (Strong World)",s:"Shiki",e:"red",c:"runner",r:"BF",star:4,d:"Flying Pirates RUN lion."},
+{n:"Gild Tesoro",s:"Gild Tesoro",e:"blue",c:"attacker",r:"BF",star:4,d:"Film Gold ATK gold."},
+{n:"Douglas Bullet",s:"Douglas Bullet",e:"blue",c:"attacker",r:"BF",star:4,d:"STAMPEDE ATK giant."},
+{n:"Hancock (Stampede)",s:"Boa Hancock",e:"blue",c:"runner",r:"BF",star:4,d:"STAMPEDE RUN Kuja."},
+{n:"Bon Clay",s:"Bon Clay",e:"blue",c:"runner",r:"BF",star:4,d:"Impel Down RUN dance."},
+{n:"Smoker (Stampede)",s:"Smoker",e:"blue",c:"defender",r:"BF",star:4,d:"STAMPEDE DEF logia."},
+{n:"Sabo (Stampede)",s:"Sabo",e:"green",c:"attacker",r:"BF",star:4,d:"STAMPEDE ATK flame."},
+{n:"Luffy (Stampede)",s:"Monkey D. Luffy",e:"blue",c:"attacker",r:"BF",star:4,d:"STAMPEDE ATK Gear."},
+{n:"Ace (Navy Infiltrator)",s:"Portgas D. Ace",e:"red",c:"attacker",r:"BF",star:4,d:"Navy infiltrator ATK."},
+{n:"Crocodile (Impel)",s:"Crocodile",e:"green",c:"defender",r:"BF",star:4,d:"Impel Down DEF."},
+{n:"Hancock (Bikini)",s:"Boa Hancock",e:"green",c:"attacker",r:"BF",star:4,d:"Bikini ATK Kuja."},
+{n:"Nami (Bikini)",s:"Nami",e:"blue",c:"runner",r:"BF",star:4,d:"Bikini RUN weather."},
+{n:"Franky (2 Years)",s:"Franky",e:"red",c:"defender",r:"BF",star:4,d:"2 Years Later DEF cyborg."},
+{n:"Brook (2 Years)",s:"Brook",e:"green",c:"runner",r:"BF",star:4,d:"2 Years Later RUN soul."},
+{n:"Chopper (Holiday)",s:"Tony Tony Chopper",e:"blue",c:"attacker",r:"BF",star:4,d:"Holiday ATK candy."},
+{n:"Robin (Holiday)",s:"Nico Robin",e:"blue",c:"runner",r:"BF",star:4,d:"Holiday RUN."},
+{n:"Nico Robin (Enies)",s:"Nico Robin",e:"red",c:"defender",r:"BF",star:4,d:"Enies Lobby DEF."},
+{n:"Brook (Monster)",s:"Brook",e:"green",c:"runner",r:"BF",star:4,d:"Monster Point RUN soul."},
+{n:"Nico Robin (Egghead)",s:"Nico Robin",e:"light",c:"defender",r:"BF",star:4,d:"Egghead DEF.
+{n:"Chopper (Egghead)",s:"Tony Tony Chopper",e:"light",c:"attacker",r:"BF",star:4,d:"Egghead ATK+DEF class."},
+{n:"Brook (Egghead)",s:"Brook",e:"blue",c:"attacker",r:"BF",star:4,d:"Egghead ATK color change."},
+{n:"Nami (Egghead)",s:"Nami",e:"red",c:"runner",r:"BF",star:4,d:"Egghead RUN weather."},
+{n:"Usopp (Egghead)",s:"Usopp",e:"light",c:"defender",r:"BF",star:4,d:"Egghead DEF long range."},
+{n:"Sanji (Egghead)",s:"Sanji",e:"blue",c:"defender",r:"BF",star:4,d:"Egghead DEF royalty."},
+{n:"Franky (Egghead)",s:"Franky",e:"dark",c:"attacker",r:"BF",star:4,d:"Egghead ATK cyborg."},
+{n:"Jinbe (Egghead)",s:"Jinbe",e:"dark",c:"runner",r:"BF",star:4,d:"Egghead RUN Fish-Man."},
+{n:"Zoro (Egghead)",s:"Roronoa Zoro",e:"light",c:"runner",r:"BF",star:4,d:"Egghead RUN Worst Gen."},
+{n:"Luffy (Egghead)",s:"Monkey D. Luffy",e:"red",c:"runner",r:"BF",star:4,d:"Egghead RUN captain."},
+{n:"Vegapunk's Spy Stussy",s:"Stussy",e:"green",c:"defender",r:"BF",star:4,d:"Spy DEF."},
+{n:"Adio Suerte",s:"Adio Suerte",e:"blue",c:"attacker",r:"BF",star:4,d:"ODYSSEY ATK.",fl:"new"},
+// === SP (STEP UP) ===
+{n:"Luffy (Snakeman)",s:"Monkey D. Luffy",e:"red",c:"runner",r:"SP",star:4,d:"Gear 4 Snakeman RUN."},
+{n:"Luffy (Bounceman)",s:"Monkey D. Luffy",e:"green",c:"attacker",r:"SP",star:4,d:"Gear 4 Bounceman ATK."},
+{n:"Luffy (Luffytaro)",s:"Monkey D. Luffy",e:"blue",c:"attacker",r:"SP",star:4,d:"Wano Luffytaro ATK."},
+{n:"Luffy (Alliance)",s:"Monkey D. Luffy",e:"blue",c:"attacker",r:"SP",star:4,d:"Luffy+Law alliance ATK."},
+{n:"Luffy (Raid)",s:"Monkey D. Luffy",e:"green",c:"defender",r:"SP",star:4,d:"Raid DEF captain."},
+{n:"Zoro (Raid)",s:"Roronoa Zoro",e:"red",c:"attacker",r:"SP",star:4,d:"Raid ATK swordsman."},
+{n:"Zoro (Zorojuro)",s:"Roronoa Zoro",e:"blue",c:"attacker",r:"SP",star:4,d:"Wano Zorojuro ATK."},
+{n:"Nami (Raid)",s:"Nami",e:"red",c:"attacker",r:"SP",star:4,d:"Raid ATK weather."},
+{n:"Nami (Onami)",s:"Nami",e:"green",c:"runner",r:"SP",star:4,d:"Wano Onami RUN."},
+{n:"Nami (Imprisoned)",s:"Nami",e:"blue",c:"attacker",r:"SP",star:4,d:"Imprisoned ATK weather."},
+{n:"Usopp (Raid)",s:"Usopp",e:"blue",c:"runner",r:"SP",star:4,d:"Raid RUN long range."},
+{n:"Sanji (Raid)",s:"Sanji",e:"green",c:"attacker",r:"SP",star:4,d:"Raid ATK color change."},
+{n:"Sanji (WCI)",s:"Sanji",e:"red",c:"attacker",r:"SP",star:4,d:"Whole Cake ATK."},
+{n:"Sanji (Egghead)",s:"Sanji",e:"blue",c:"defender",r:"SP",star:4,d:"Egghead DEF."},
+{n:"Chopper (Raid)",s:"Tony Tony Chopper",e:"green",c:"attacker",r:"SP",star:4,d:"Raid ATK Zoan."},
+{n:"Chopper (Raid 2)",s:"Tony Tony Chopper",e:"blue",c:"attacker",r:"SP",star:4,d:"Raid ATK monster."},
+{n:"Robin (Raid)",s:"Nico Robin",e:"blue",c:"attacker",r:"SP",star:4,d:"Raid ATK Paramecia."},
+{n:"Franky (Raid)",s:"Franky",e:"red",c:"runner",r:"SP",star:4,d:"Raid RUN cyborg."},
+{n:"Brook (Raid)",s:"Brook",e:"red",c:"defender",r:"SP",star:4,d:"Raid DEF soul."},
+{n:"Jinbe (Raid)",s:"Jinbe",e:"blue",c:"defender",r:"SP",star:4,d:"Raid DEF Fish-Man."},
+{n:"Law (Raid)",s:"Trafalgar Law",e:"red",c:"attacker",r:"SP",star:4,d:"Raid ATK Room."},
+{n:"Kid (Raid)",s:"Eustass Kid",e:"red",c:"defender",r:"SP",star:4,d:"Raid DEF magnet."},
+{n:"Kinemon",s:"Kin'emon",e:"red",c:"defender",r:"SP",star:4,d:"Wano DEF fox fire."},
+{n:"Kuzan (Former)",s:"Kuzan",e:"green",c:"attacker",r:"SP",star:4,d:"Former Admiral ATK ice."},
+{n:"Koby (Step)",s:"Koby",e:"blue",c:"runner",r:"SP",star:4,d:"Navy RUN."},
+{n:"Helmeppo",s:"Helmeppo",e:"light",c:"runner",r:"SP",star:4,d:"Navy RUN."},
+{n:"Bonney (Egghead)",s:"Jewelry Bonney",e:"blue",c:"defender",r:"SP",star:4,d:"Egghead DEF."},
+{n:"York (Step)",s:"York",e:"red",c:"defender",r:"SP",star:4,d:"Punk-06 DEF."},
+{n:"Atlas (Step)",s:"Atlas",e:"dark",c:"attacker",r:"SP",star:4,d:"Punk-05 ATK."},
+{n:"Lilith (Step)",s:"Lilith",e:"green",c:"defender",r:"SP",star:4,d:"Punk-02 DEF."},
+{n:"Koala (Rev)",s:"Koala",e:"red",c:"attacker",r:"SP",star:4,d:"Revolutionary ATK."},
+{n:"Carrot (Step)",s:"Carrot",e:"green",c:"runner",r:"SP",star:4,d:"Minks RUN."},
+{n:"Carrot (WCI)",s:"Carrot",e:"light",c:"attacker",r:"SP",star:4,d:"Whole Cake ATK Minks."},
+{n:"Marco (Step)",s:"Marco",e:"red",c:"runner",r:"SP",star:4,d:"WB Pirates RUN phoenix."},
+{n:"Ace (Step)",s:"Portgas D. Ace",e:"green",c:"runner",r:"SP",star:4,d:"WB Pirates RUN fire."},
+{n:"Rayleigh (Step)",s:"Silvers Rayleigh",e:"dark",c:"defender",r:"SP",star:4,d:"Roger Pirates DEF."},
+{n:"Jinbe (WCI)",s:"Jinbe",e:"red",c:"defender",r:"SP",star:4,d:"Whole Cake DEF."},
+{n:"Katakuri (BM)",s:"Charlotte Katakuri",e:"red",c:"attacker",r:"SP",star:4,d:"BM Pirates ATK mochi."},
+{n:"Linlin (BM)",s:"Charlotte Linlin",e:"green",c:"defender",r:"SP",star:4,d:"BM Pirates DEF."},
+{n:"Pudding (Step)",s:"Charlotte Pudding",e:"red",c:"attacker",r:"SP",star:4,d:"BM Pirates ATK."},
+{n:"Pudding (WCI)",s:"Charlotte Pudding",e:"green",c:"defender",r:"SP",star:4,d:"Whole Cake DEF."},
+{n:"Oven",s:"Charlotte Oven",e:"red",c:"defender",r:"SP",star:4,d:"BM Pirates DEF."},
+{n:"Cracker (BM)",s:"Charlotte Cracker",e:"blue",c:"attacker",r:"SP",star:4,d:"BM Pirates ATK biscuit."},
+{n:"Pedro",s:"Pedro",e:"green",c:"attacker",r:"SP",star:4,d:"Minks ATK."},
+{n:"Pudding (Step 2)",s:"Charlotte Pudding",e:"green",c:"defender",r:"SP",star:4,d:"BM Pirates DEF v2."},
+{n:"Monet",s:"Monet",e:"red",c:"defender",r:"SP",star:4,d:"Don Q DEF snow."},
+{n:"Vergo",s:"Vergo",e:"green",c:"attacker",r:"SP",star:4,d:"Navy+Don Q ATK."},
+{n:"Sugar (Don Q)",s:"Sugar",e:"red",c:"defender",r:"SP",star:4,d:"Don Q DEF toy."},
+{n:"Senor Pink",s:"Señor Pink",e:"red",c:"runner",r:"SP",star:4,d:"Don Q RUN."},
+{n:"Baby 5",s:"Baby 5",e:"green",c:"defender",r:"SP",star:4,d:"Don Q DEF."},
+{n:"Perona (Step)",s:"Perona",e:"green",c:"runner",r:"SP",star:4,d:"Thriller RUN v2."},
+{n:"Kuma (Rev)",s:"Bartholomew Kuma",e:"blue",c:"defender",r:"SP",star:4,d:"Revolutionary DEF."},
+{n:"Buggy (Step)",s:"Buggy",e:"blue",c:"attacker",r:"SP",star:4,d:"Warlords ATK v2."},
+{n:"Hancock (Step)",s:"Boa Hancock",e:"blue",c:"attacker",r:"SP",star:4,d:"Kuja Pirates ATK."},
+{n:"Crocodile (Step)",s:"Crocodile",e:"green",c:"runner",r:"SP",star:4,d:"Warlords RUN sand."},
+{n:"Moria (Step)",s:"Gecko Moria",e:"blue",c:"attacker",r:"SP",star:4,d:"Warlords ATK shadow."},
+{n:"Law (Step)",s:"Trafalgar Law",e:"red",c:"runner",r:"SP",star:4,d:"Warlords RUN Room."},
+{n:"Law (Wano)",s:"Trafalgar Law",e:"red",c:"defender",r:"SP",star:4,d:"Wano DEF."},
+{n:"Doflamingo (Step)",s:"Don Quixote Doflamingo",e:"red",c:"runner",r:"SP",star:4,d:"Warlords RUN string."},
+{n:"Zoro (Billion)",s:"Roronoa Zoro",e:"red",c:"attacker",r:"SP",star:4,d:"Dressrosa ATK."},
+{n:"Luffy (Alliance)",s:"Monkey D. Luffy",e:"blue",c:"attacker",r:"SP",star:4,d:"Luffy+Law ATK."},
+{n:"Kid (New World)",s:"Eustass Kid",e:"green",c:"defender",r:"SP",star:4,d:"New World DEF magnet."},
+{n:"Drake (X)",s:"X. Drake",e:"blue",c:"attacker",r:"SP",star:4,d:"SWORD ATK Zoan."},
+{n:"Drake (Wano)",s:"X.Drake",e:"red",c:"attacker",r:"SP",star:4,d:"Wano ATK Zoan."},
+{n:"Apoo (Step)",s:"Scratchmen Apoo",e:"green",c:"runner",r:"SP",star:4,d:"On-Air RUN."},
+{n:"Urouge (Step)",s:"Urouge",e:"red",c:"defender",r:"SP",star:4,d:"Fallen Monk DEF v2."},
+{n:"Killer (Free)",s:"Killer",e:"blue",c:"runner",r:"SP",star:4,d:"Kid Pirates RUN."},
+{n:"Izo",s:"Izo",e:"blue",c:"attacker",r:"SP",star:4,d:"WB Pirates 16th ATK."},
+{n:"Raizo (Step)",s:"Raizo",e:"red",c:"attacker",r:"SP",star:4,d:"Kozuki ATK."},
+{n:"Shinobu",s:"Shinobu",e:"blue",c:"runner",r:"SP",star:4,d:"Kozuki RUN."},
+{n:"Kanjuro (Step)",s:"Kurozumi Kanjuro",e:"green",c:"runner",r:"SP",star:4,d:"Kozuki spy RUN."},
+{n:"Ashura Doji",s:"Ashura Doji",e:"green",c:"defender",r:"SP",star:4,d:"Kozuki DEF."},
+{n:"Kawamatsu",s:"Kawamatsu",e:"red",c:"defender",r:"SP",star:4,d:"Kozuki DEF."},
+{n:"Kikunojo",s:"Kikunojo",e:"blue",c:"attacker",r:"SP",star:4,d:"Kozuki ATK."},
+{n:"Sasaki",s:"Sasaki",e:"green",c:"runner",r:"SP",star:4,d:"Tobi Roppo RUN."},
+{n:"Black Maria",s:"Black Maria",e:"green",c:"defender",r:"SP",star:4,d:"Tobi Roppo DEF."},
+{n:"Inazuma",s:"Inazuma",e:"blue",c:"defender",r:"SP",star:4,d:"Revolutionary DEF."},
+{n:"Hack",s:"Hack",e:"blue",c:"attacker",r:"SP",star:4,d:"Revolutionary ATK."},
+{n:"Reiju (Germa)",s:"Vinsmoke Reiju",e:"blue",c:"runner",r:"SP",star:4,d:"Germa RUN."},
+{n:"Judge (Germa)",s:"Vinsmoke Judge",e:"blue",c:"defender",r:"SP",star:4,d:"Germa DEF."},
+{n:"Ichiji (Germa)",s:"Vinsmoke Ichiji",e:"red",c:"attacker",r:"SP",star:4,d:"Germa ATK fire."},
+{n:"Niji (Germa)",s:"Vinsmoke Neji",e:"blue",c:"runner",r:"SP",star:4,d:"Germa RUN lightning."},
+{n:"Yonji (Germa)",s:"Vinsmoke Yonji",e:"green",c:"defender",r:"SP",star:4,d:"Germa DEF."},
+{n:"Jabra",s:"Jabra",e:"green",c:"attacker",r:"SP",star:4,d:"CP9 ATK wolf."},
+{n:"Blueno",s:"Blueno",e:"blue",c:"runner",r:"SP",star:4,d:"CP9 RUN door."},
+{n:"Kaku (CP9)",s:"Kaku",e:"red",c:"runner",r:"SP",star:4,d:"CP9 RUN giraffe."},
+{n:"Lucci (CP9)",s:"Rob Lucci",e:"green",c:"attacker",r:"SP",star:4,d:"CP9 ATK leopard."},
+{n:"Smoker (Grand)",s:"Smoker",e:"blue",c:"attacker",r:"SP",star:4,d:"Grand Line ATK."},
+{n:"Smoker (Punk)",s:"Smoker",e:"red",c:"attacker",r:"SP",star:4,d:"Punk Hazard ATK."},
+{n:"Tashigi",s:"Tashigi",e:"red",c:"runner",r:"SP",star:4,d:"Navy RUN sword."},
+{n:"Hina",s:"Hina",e:"green",c:"defender",r:"SP",star:4,d:"Navy DEF cage."},
+{n:"Sentomaru (Step)",s:"Sentomaru",e:"green",c:"defender",r:"SP",star:4,d:"Navy DEF."},
+{n:"Pacifista",s:"Pacifista",e:"dark",c:"attacker",r:"SP",star:4,d:"Navy ATK robot."},
+{n:"Helmeppo",s:"Helmeppo",e:"light",c:"runner",r:"SP",star:4,d:"Navy RUN v2."},
+{n:"Caesar",s:"Caesar Clown",e:"red",c:"defender",r:"SP",star:4,d:"Logia DEF gas."},
+{n:"Magellan",s:"Magellan",e:"blue",c:"defender",r:"SP",star:4,d:"Impel Down DEF poison."},
+{n:"Bon Clay",s:"Bon Clay",e:"blue",c:"runner",r:"SP",star:4,d:"Impel Down RUN."},
+{n:"Hody",s:"Hody Jones",e:"green",c:"runner",r:"SP",star:4,d:"Fish-Man RUN v2."},
+{n:"Neptune",s:"Neptune",e:"green",c:"defender",r:"SP",star:4,d:"Ryugu DEF."},
+{n:"Vander Decken",s:"Vander Decken IX",e:"blue",c:"attacker",r:"SP",star:4,d:"Flying Pirates ATK v2."},
+{n:"Bellamy",s:"Bellamy",e:"green",c:"runner",r:"SP",star:4,d:"Spring RUN v2."},
+{n:"Hakuba",s:"Hakuba",e:"blue",c:"runner",r:"SP",star:4,d:"Sakura RUN v2."},
+{n:"Chin Jao",s:"Chin Jao",e:"blue",c:"defender",r:"SP",star:4,d:"Happosui DEF."},
+{n:"Ivankov",s:"Emporio Ivankov",e:"green",c:"runner",r:"SP",star:4,d:"Revolutionary RUN v2."},
+{n:"Ganfor",s:"Ganfor",e:"dark",c:"defender",r:"SP",star:4,d:"Sky Knight DEF v2."},
+{n:"Bartolomeo",s:"Bartolomeo",e:"red",c:"defender",r:"SP",star:4,d:"Barto Club DEF."},
+{n:"Cavendish",s:"Cavendish",e:"green",c:"attacker",r:"SP",star:4,d:"Beautiful Pirates ATK."},
+{n:"Leo",s:"Leo",e:"red",c:"defender",r:"SP",star:4,d:"Tontatta DEF."},
+{n:"Sai",s:"Sai",e:"light",c:"attacker",r:"SP",star:4,d:"Happosui ATK v2."},
+{n:"Foxy",s:"Foxy",e:"green",c:"defender",r:"SP",star:4,d:"Davy Back DEF."},
+{n:"Rayleigh (Roger)",s:"Silvers Rayleigh",e:"blue",c:"runner",r:"SP",star:4,d:"Roger Pirates RUN."},
+{n:"Oden (Wano)",s:"Kozuki Oden",e:"light",c:"attacker",r:"SP",star:4,d:"Wano Daimyo ATK."},
+{n:"Marco (Wano)",s:"Marco",e:"green",c:"runner",r:"SP",star:4,d:"Wano RUN phoenix."},
+{n:"Kid (Raid)",s:"Eustass Kid",e:"red",c:"defender",r:"SP",star:4,d:"Raid DEF v2."},
+{n:"Killer (Raid)",s:"Killer",e:"blue",c:"attacker",r:"SP",star:4,d:"Raid ATK."},
+{n:"Jinbe (Step)",s:"Jinbe",e:"blue",c:"attacker",r:"SP",star:4,d:"Warlords ATK Fish-Man."},
+{n:"Diamante",s:"Diamante",e:"green",c:"attacker",r:"SP",star:4,d:"Don Q ATK."},
+{n:"Trebol",s:"Trebol",e:"green",c:"defender",r:"SP",star:4,d:"Don Q DEF v2."},
+{n:"Jozu",s:"Jozu",e:"blue",c:"defender",r:"SP",star:4,d:"WB Pirates DEF."},
+{n:"Vista",s:"Vista",e:"blue",c:"runner",r:"SP",star:4,d:"WB Pirates RUN."},
+{n:"Burgess (Step)",s:"Jesus Burgess",e:"green",c:"attacker",r:"SP",star:4,d:"Blackbeard Pirates ATK."},
+{n:"Shiryu (Step)",s:"Shiryu",e:"red",c:"attacker",r:"SP",star:4,d:"Blackbeard Pirates ATK."},
+{n:"Noland",s:"Mont Blanc Noland",e:"blue",c:"defender",r:"SP",star:4,d:"Lvneel DEF."},
+{n:"Kalgara",s:"Kalgara",e:"blue",c:"attacker",r:"SP",star:4,d:"Shandora ATK v2."},
+{n:"Pell",s:"Pell",e:"blue",c:"attacker",r:"SP",star:4,d:"Alabasta ATK v2."},
+{n:"Kyoshiro",s:"Napping Kyoshiro",e:"blue",c:"runner",r:"SP",star:4,d:"Kyoshiro RUN v2."},
+{n:"Brulee",s:"Charlotte Brulee",e:"red",c:"defender",r:"SP",star:4,d:"BM Pirates DEF mirror."},
+{n:"Yasopp",s:"Yasopp",e:"red",c:"defender",r:"SP",star:4,d:"Red Hair DEF sniper v2."},
+{n:"Lucky Roo",s:"Lucky Roo",e:"blue",c:"runner",r:"SP",star:4,d:"Red Hair RUN v2."},
+{n:"Alber",s:"Alber",e:"red",c:"attacker",r:"SP",star:4,d:"Lunarian ATK fire."},
+{n:"Burgess (Step 2)",s:"Jesus Burgess",e:"green",c:"attacker",r:"SP",star:4,d:"Blackbeard Pirates ATK v2."},
+{n:"Ideo",s:"Ideo",e:"red",c:"runner",r:"SP",star:4,d:"Happosui RUN boxer."},
+{n:"Elizabello",s:"Elizabello II",e:"red",c:"attacker",r:"SP",star:4,d:"Prodence ATK king."},
+{n:"Otama",s:"Otama & Komachiyo",e:"blue",c:"runner",r:"SP",star:4,d:"Wano RUN tango."},
+{n:"Bonekichi",s:"Bonekichi",e:"blue",c:"defender",r:"SP",star:4,d:"Wano DEF Chopper."},
+{n:"Orobi",s:"Orobi",e:"green",c:"runner",r:"SP",star:4,d:"Wano RUN Robin."},
+{n:"Franosuke",s:"Franosuke",e:"blue",c:"attacker",r:"SP",star:4,d:"Wano ATK Franky."},
+{n:"Usohachi",s:"Usohachi",e:"red",c:"defender",r:"SP",star:4,d:"Wano DEF Usopp."},
+{n:"Brook (Holiday)",s:"Brook",e:"red",c:"attacker",r:"SP",star:4,d:"Holiday ATK."},
+{n:"Chopper (Free)",s:"Tony Tony Chopper",e:"green",c:"defender",r:"SP",star:4,d:"Free DEF."},
+{n:"Usopp (Sniper)",s:"Sniper King",e:"green",c:"runner",r:"SP",star:4,d:"Cola RUN long range."},
+{n:"Nami (Cola)",s:"Nami",e:"blue",c:"attacker",r:"SP",star:4,d:"Cola ATK long range."},
+{n:"Ace (Cola)",s:"Portgas D. Ace",e:"red",c:"attacker",r:"SP",star:4,d:"Cola ATK fire."},
+{n:"Crocodile (Cola)",s:"Crocodile",e:"green",c:"defender",r:"SP",star:4,d:"Cola DEF."},
+{n:"Mr. 5",s:"Mr. 5",e:"dark",c:"defender",r:"SP",star:4,d:"Baroque Works DEF bomb."},
+{n:"Ms. Valentine",s:"Ms. Valentine",e:"green",c:"runner",r:"SP",star:4,d:"Baroque Works RUN kilo."},
+{n:"Mr. 3",s:"Mr. 3",e:"green",c:"defender",r:"SP",star:4,d:"Baroque Works DEF wax."},
+{n:"Ms. Goldenweek",s:"Ms. Goldenweek",e:"blue",c:"runner",r:"SP",star:4,d:"Baroque Works RUN art."},
+{n:"Hawkins",s:"Basil Hawkins",e:"blue",c:"defender",r:"SP",star:4,d:"Wano DEF straw."},
+{n:"Smoothie",s:"Charlotte Smoothie",e:"green",c:"attacker",r:"SP",star:4,d:"BM Pirates ATK juice."},
+{n:"Gecko Moria (Step)",s:"Gecko Moria",e:"blue",c:"attacker",r:"SP",star:4,d:"Paramount War ATK."},
+{n:"Gaimon",s:"Gaimon",e:"blue",c:"defender",r:"SP",star:4,d:"East Blue DEF."},
+{n:"Wyper",s:"Wyper",e:"red",c:"runner",r:"SP",star:4,d:"Shandian RUN long range."},
+{n:"Kuma (Step)",s:"Bartholomew Kuma",e:"blue",c:"defender",r:"SP",star:4,d:"Warlords DEF paw v2."},
+{n:"Sengoku (Step)",s:"Sengoku",e:"blue",c:"defender",r:"SP",star:4,d:"Navy DEF."},
+{n:"Garp (Free)",s:"Monkey D. Garp",e:"green",c:"defender",r:"SP",star:4,d:"Navy Free DEF."},
+{n:"Rebecca",s:"Rebecca",e:"green",c:"defender",r:"SP",star:4,d:"Dressrosa DEF princess."},
+// === FREE / COLA / SCOUT / LIMITED ===
+{n:"Luffy (Paramount Free)",s:"Monkey D. Luffy",e:"green",c:"runner",r:"FREE",star:4,d:"Free unit runner."},
+{n:"Luffy (Film RED Scout)",s:"Monkey D. Luffy",e:"red",c:"attacker",r:"FREE",star:3,d:"Film RED Scout ATK."},
+{n:"Luffy (Stampede Scout)",s:"Monkey D. Luffy",e:"blue",c:"attacker",r:"FREE",star:3,d:"STAMPEDE Scout ATK."},
+{n:"Luffy (Film RED 3★)",s:"Monkey D. Luffy",e:"red",c:"attacker",r:"FREE",star:3,d:"Film RED 3★ ATK."},
+{n:"Franky (Holiday Free)",s:"Franky",e:"red",c:"attacker",r:"FREE",star:3,d:"Holiday Free ATK."},
+{n:"Kung Fu Jugon",s:"Kung Fu Jugon",e:"green",c:"attacker",r:"FREE",star:3,d:"Grand Line ATK color change."},
+{n:"Chopperemon",s:"Chopperemon",e:"red",c:"runner",r:"FREE",star:3,d:"Wano Free RUN."},
+{n:"Gaimon (Free)",s:"Gaimon",e:"blue",c:"defender",r:"FREE",star:3,d:"East Blue Free DEF."},
+{n:"Demaro Black",s:"Demaro Black",e:"light",c:"defender",r:"FREE",star:3,d:"Fake Straw Hat DEF."},
+{n:"Adio Suerte (Free)",s:"Adio Suerte",e:"blue",c:"attacker",r:"FREE",star:4,d:"ODYSSEY Free ATK.",fl:"new"},
+{n:"Lapin",s:"Lapin",e:"dark",c:"attacker",r:"FREE",star:3,d:"April Fools 2026 ATK.",fl:"new"},
+{n:"Charlos",s:"St. Charlos",e:"light",c:"defender",r:"FREE",star:2,d:"Celestial Dragon DEF."},
+{n:"Gaimon (2★)",s:"Gaimon",e:"blue",c:"defender",r:"FREE",star:2,d:"East Blue 2★ DEF."},
+{n:"Buggy (2★)",s:"Buggy",e:"blue",c:"attacker",r:"FREE",star:2,d:"Warlords 2★ ATK."},
+{n:"Koby (2★)",s:"Koby",e:"blue",c:"runner",r:"FREE",star:2,d:"Navy 2★ RUN."},
+{n:"Helmeppo (2★)",s:"Helmeppo",e:"light",c:"runner",r:"FREE",star:2,d:"Navy 2★ RUN."},
+{n:"Tashigi (2★)",s:"Tashigi",e:"red",c:"runner",r:"FREE",star:2,d:"Navy 2★ RUN."},
+{n:"Smoker (2★)",s:"Smoker",e:"blue",c:"attacker",r:"FREE",star:2,d:"Navy 2★ ATK."},
+{n:"Nami (2★)",s:"Nami",e:"blue",c:"runner",r:"FREE",star:2,d:"Straw Hat 2★ RUN."},
+{n:"Usopp (2★)",s:"Usopp",e:"green",c:"runner",r:"FREE",star:2,d:"Straw Hat 2★ RUN."},
+{n:"Chopper (2★)",s:"Tony Tony Chopper",e:"blue",c:"attacker",r:"FREE",star:2,d:"Straw Hat 2★ ATK."},
+{n:"Robin (2★)",s:"Nico Robin",e:"red",c:"attacker",r:"FREE",star:2,d:"Straw Hat 2★ ATK."},
+{n:"Franky (2★)",s:"Franky",e:"red",c:"defender",r:"FREE",star:2,d:"Straw Hat 2★ DEF."},
+{n:"Brook (2★)",s:"Brook",e:"green",c:"runner",r:"FREE",star:2,d:"Straw Hat 2★ RUN."},
+{n:"Zoro (2★)",s:"Roronoa Zoro",e:"red",c:"attacker",r:"FREE",star:2,d:"Straw Hat 2★ ATK."},
+{n:"Sanji (2★)",s:"Sanji",e:"blue",c:"attacker",r:"FREE",star:2,d:"Straw Hat 2★ ATK."},
+{n:"Luffy (2★)",s:"Monkey D. Luffy",e:"red",c:"attacker",r:"FREE",star:2,d:"Straw Hat 2★ ATK."},
+{n:"Ace (2★)",s:"Portgas D. Ace",e:"red",c:"attacker",r:"FREE",star:2,d:"WB Pirates 2★ ATK."},
+{n:"Jinbe (2★)",s:"Jinbe",e:"blue",c:"attacker",r:"FREE",star:2,d:"Warlords 2★ ATK."},
+{n:"Law (2★)",s:"Trafalgar Law",e:"red",c:"runner",r:"FREE",star:2,d:"Warlords 2★ RUN."},
+{n:"Hancock (2★)",s:"Boa Hancock",e:"blue",c:"attacker",r:"FREE",star:2,d:"Kuja 2★ ATK."},
+{n:"Crocodile (2★)",s:"Crocodile",e:"green",c:"runner",r:"FREE",star:2,d:"Warlords 2★ RUN."},
+{n:"Doflamingo (2★)",s:"Don Quixote Doflamingo",e:"blue",c:"attacker",r:"FREE",star:2,d:"Warlords 2★ ATK."},
+{n:"Mihawk (2★)",s:"Dracule Mihawk",e:"green",c:"attacker",r:"FREE",star:2,d:"Warlords 2★ ATK."},
+{n:"Katakuri (2★)",s:"Charlotte Katakuri",e:"green",c:"attacker",r:"FREE",star:2,d:"BM 2★ ATK."},
+{n:"Linlin (2★)",s:"Charlotte Linlin",e:"green",c:"defender",r:"FREE",star:2,d:"BM 2★ DEF."},
+{n:"Kaido (2★)",s:"Kaido",e:"blue",c:"attacker",r:"FREE",star:2,d:"AK 2★ ATK."},
+{n:"Roger (2★)",s:"Gol D. Roger",e:"red",c:"attacker",r:"FREE",star:2,d:"Roger 2★ ATK."},
+{n:"Shanks (2★)",s:"Shanks",e:"red",c:"attacker",r:"FREE",star:2,d:"Red Hair 2★ ATK."},
+{n:"WB (2★)",s:"Edward Newgate",e:"red",c:"defender",r:"FREE",star:2,d:"WB 2★ DEF."},
+{n:"Rayleigh (2★)",s:"Silvers Rayleigh",e:"dark",c:"attacker",r:"FREE",star:2,d:"Roger 2★ ATK."},
+{n:"Oden (2★)",s:"Kozuki Oden",e:"green",c:"attacker",r:"FREE",star:2,d:"Wano 2★ ATK."},
+{n:"Yamato (2★)",s:"Yamato",e:"green",c:"runner",r:"FREE",star:2,d:"Wano 2★ RUN."},
+{n:"Garp (2★)",s:"Monkey D. Garp",e:"green",c:"defender",r:"FREE",star:2,d:"Navy 2★ DEF."},
+{n:"Kuzan (2★)",s:"Kuzan",e:"blue",c:"attacker",r:"FREE",star:2,d:"Navy 2★ ATK."},
+{n:"Kizaru (2★)",s:"Borsalino",e:"blue",c:"runner",r:"FREE",star:2,d:"Navy 2★ RUN."},
+{n:"Akainu (2★)",s:"Sakazuki",e:"red",c:"attacker",r:"FREE",star:2,d:"Navy 2★ ATK."},
+{n:"Sabo (2★)",s:"Sabo",e:"red",c:"attacker",r:"FREE",star:2,d:"Revolutionary 2★ ATK."},
+{n:"Bonney (2★)",s:"Jewelry Bonney",e:"blue",c:"defender",r:"FREE",star:2,d:"Worst Gen 2★ DEF."},
+{n:"Kid (2★)",s:"Eustass Kid",e:"red",c:"attacker",r:"FREE",star:2,d:"Worst Gen 2★ ATK."},
+{n:"Apoo (2★)",s:"Scratchmen Apoo",e:"green",c:"runner",r:"FREE",star:2,d:"Worst Gen 2★ RUN."},
+{n:"Hawkins (2★)",s:"Basil Hawkins",e:"blue",c:"defender",r:"FREE",star:2,d:"Worst Gen 2★ DEF."},
+{n:"Drake (2★)",s:"X. Drake",e:"blue",c:"attacker",r:"FREE",star:2,d:"Worst Gen 2★ ATK."},
+{n:"Killer (2★)",s:"Killer",e:"blue",c:"runner",r:"FREE",star:2,d:"Worst Gen 2★ RUN."},
+{n:"Urouge (2★)",s:"Urouge",e:"red",c:"defender",r:"FREE",star:2,d:"Worst Gen 2★ DEF."},
+{n:"Perona (2★)",s:"Perona",e:"blue",c:"runner",r:"FREE",star:2,d:"Thriller 2★ RUN."},
+{n:"Moria (2★)",s:"Gecko Moria",e:"blue",c:"attacker",r:"FREE",star:2,d:"Warlords 2★ ATK."},
+{n:"Corazon (2★)",s:"Corazon",e:"blue",c:"defender",r:"FREE",star:2,d:"Don Q 2★ DEF."},
+{n:"Kuma (2★)",s:"Bartholomew Kuma",e:"blue",c:"defender",r:"FREE",star:2,d:"Warlords 2★ DEF."},
+{n:"Eneru (2★)",s:"Eneru",e:"blue",c:"defender",r:"FREE",star:2,d:"Skypiea 2★ DEF."},
+{n:"Enel (2★)",s:"Eneru",e:"blue",c:"defender",r:"FREE",star:2,d:"Skypiea 2★ DEF v2."},
+{n:"Magellan (2★)",s:"Magellan",e:"blue",c:"defender",r:"FREE",star:2,d:"Impel Down 2★ DEF."},
+{n:"Sentomaru (2★)",s:"Sentomaru",e:"green",c:"defender",r:"FREE",star:2,d:"Navy 2★ DEF."},
+{n:"Caesar (2★)",s:"Caesar Clown",e:"red",c:"defender",r:"FREE",star:2,d:"Logia 2★ DEF."},
+{n:"Momonosuke (2★)",s:"Kozuki Momonosuke",e:"red",c:"defender",r:"FREE",star:2,d:"Wano 2★ DEF."},
+{n:"Kinemon (2★)",s:"Kin'emon",e:"red",c:"defender",r:"FREE",star:2,d:"Wano 2★ DEF."},
+{n:"Raizo (2★)",s:"Raizo",e:"red",c:"attacker",r:"FREE",star:2,d:"Wano 2★ ATK."},
+{n:"Ashura (2★)",s:"Ashura Doji",e:"green",c:"defender",r:"FREE",star:2,d:"Wano 2★ DEF."},
+{n:"Kawamatsu (2★)",s:"Kawamatsu",e:"red",c:"defender",r:"FREE",star:2,d:"Wano 2★ DEF."},
+{n:"Kikunojo (2★)",s:"Kikunojo",e:"blue",c:"attacker",r:"FREE",star:2,d:"Wano 2★ ATK."},
+{n:"Shinobu (2★)",s:"Shinobu",e:"blue",c:"runner",r:"FREE",star:2,d:"Wano 2★ RUN."},
+{n:"Kanjuro (2★)",s:"Kurozumi Kanjuro",e:"green",c:"runner",r:"FREE",star:2,d:"Wano 2★ RUN."},
+{n:"O-Lin (2★)",s:"O-Lin",e:"blue",c:"runner",r:"FREE",star:2,d:"Wano 2★ RUN."},
+{n:"Hyogoro (2★)",s:"Hyogoro",e:"blue",c:"defender",r:"FREE",star:2,d:"Wano 2★ DEF."},
+{n:"Pell (2★)",s:"Pell",e:"blue",c:"attacker",r:"FREE",star:2,d:"Alabasta 2★ ATK."},
+{n:"Noland (2★)",s:"Mont Blanc Noland",e:"blue",c:"defender",r:"FREE",star:2,d:"Grand Line 2★ DEF."},
+{n:"Kalgara (2★)",s:"Kalgara",e:"blue",c:"attacker",r:"FREE",star:2,d:"Shandora 2★ ATK."},
+{n:"Ganfor (2★)",s:"Ganfor",e:"dark",c:"defender",r:"FREE",star:2,d:"Sky 2★ DEF."},
+{n:"Wyper (2★)",s:"Wyper",e:"red",c:"runner",r:"FREE",star:2,d:"Shandian 2★ RUN."},
+{n:"Sai (2★)",s:"Sai",e:"light",c:"attacker",r:"FREE",star:2,d:"Happosui 2★ ATK."},
+{n:"Leo (2★)",s:"Leo",e:"red",c:"defender",r:"FREE",star:2,d:"Tontatta 2★ DEF."},
+{n:"Bartolomeo (2★)",s:"Bartolomeo",e:"red",c:"defender",r:"FREE",star:2,d:"Barto Club 2★ DEF."},
+{n:"Cavendish (2★)",s:"Cavendish",e:"green",c:"attacker",r:"FREE",star:2,d:"Beautiful Pirates 2★ ATK."},
+{n:"Ideo (2★)",s:"Ideo",e:"red",c:"runner",r:"FREE",star:2,d:"Happosui 2★ RUN."},
+{n:"Elizabello (2★)",s:"Elizabello II",e:"red",c:"attacker",r:"FREE",star:2,d:"Prodence 2★ ATK."},
+{n:"Bellamy (2★)",s:"Bellamy",e:"green",c:"runner",r:"FREE",star:2,d:"Dressrosa 2★ RUN."},
+{n:"Rebecca (2★)",s:"Rebecca",e:"green",c:"defender",r:"FREE",star:2,d:"Dressrosa 2★ DEF."},
+{n:"Kyoshiro (2★)",s:"Napping Kyoshiro",e:"blue",c:"runner",r:"FREE",star:2,d:"Wano 2★ RUN."},
+{n:"Hody (2★)",s:"Hody Jones",e:"green",c:"runner",r:"FREE",star:2,d:"Fish-Man 2★ RUN."},
+{n:"Neptune (2★)",s:"Neptune",e:"green",c:"defender",r:"FREE",star:2,d:"Ryugu 2★ DEF."},
+{n:"Caribou (2★)",s:"Caribou",e:"red",c:"defender",r:"FREE",star:2,d:"Logia 2★ DEF."},
+{n:"Vander (2★)",s:"Vander Decken IX",e:"blue",c:"attacker",r:"FREE",star:2,d:"Flying 2★ ATK."},
+{n:"Foxy (2★)",s:"Foxy",e:"green",c:"defender",r:"FREE",star:2,d:"Davy Back 2★ DEF."},
+{n:"Shiryu (2★)",s:"Shiryu",e:"green",c:"attacker",r:"FREE",star:2,d:"Blackbeard 2★ ATK."},
+{n:"Burgess (2★)",s:"Jesus Burgess",e:"green",c:"attacker",r:"FREE",star:2,d:"Blackbeard 2★ ATK."},
+{n:"Van Ogre (2★)",s:"Van Ogre",e:"dark",c:"attacker",r:"FREE",star:2,d:"Blackbeard 2★ ATK."},
+{n:"Doc Q (2★)",s:"Doc Q",e:"blue",c:"runner",r:"FREE",star:2,d:"Blackbeard 2★ RUN."},
+{n:"Jozu (2★)",s:"Jozu",e:"blue",c:"defender",r:"FREE",star:2,d:"WB 2★ DEF."},
+{n:"Vista (2★)",s:"Vista",e:"blue",c:"runner",r:"FREE",star:2,d:"WB 2★ RUN."},
+{n:"Izo (2★)",s:"Izo",e:"blue",c:"attacker",r:"FREE",star:2,d:"WB 2★ ATK."},
+{n:"Marco (2★)",s:"Marco",e:"red",c:"runner",r:"FREE",star:2,d:"WB 2★ RUN."},
+{n:"Belo Betty (2★)",s:"Belo Betty",e:"red",c:"defender",r:"FREE",star:2,d:"Revolutionary 2★ DEF."},
+{n:"Karasu (2★)",s:"Karasu",e:"green",c:"runner",r:"FREE",star:2,d:"Revolutionary 2★ RUN."},
+{n:"Inazuma (2★)",s:"Inazuma",e:"blue",c:"defender",r:"FREE",star:2,d:"Revolutionary 2★ DEF."},
+{n:"Hack (2★)",s:"Hack",e:"blue",c:"attacker",r:"FREE",star:2,d:"Revolutionary 2★ ATK."},
+{n:"Koala (2★)",s:"Koala",e:"red",c:"attacker",r:"FREE",star:2,d:"Revolutionary 2★ ATK."},
+{n:"Ivankov (2★)",s:"Emporio Ivankov",e:"green",c:"runner",r:"FREE",star:2,d:"Revolutionary 2★ RUN."},
+{n:"Trebol (2★)",s:"Trebol",e:"green",c:"defender",r:"FREE",star:2,d:"Don Q 2★ DEF."},
+{n:"Diamante (2★)",s:"Diamante",e:"green",c:"attacker",r:"FREE",star:2,d:"Don Q 2★ ATK."},
+{n:"Sugar (2★)",s:"Sugar",e:"red",c:"defender",r:"FREE",star:2,d:"Don Q 2★ DEF."},
+{n:"Senor Pink (2★)",s:"Señor Pink",e:"red",c:"runner",r:"FREE",star:2,d:"Don Q 2★ RUN."},
+{n:"Baby 5 (2★)",s:"Baby 5",e:"green",c:"defender",r:"FREE",star:2,d:"Don Q 2★ DEF."},
+{n:"Monet (2★)",s:"Monet",e:"red",c:"defender",r:"FREE",star:2,d:"Don Q 2★ DEF."},
+{n:"Vergo (2★)",s:"Vergo",e:"green",c:"attacker",r:"FREE",star:2,d:"Don Q 2★ ATK."},
+{n:"Burgess (2★ 2)",s:"Jesus Burgess",e:"green",c:"attacker",r:"FREE",star:2,d:"Blackbeard 2★ ATK v2."},
+{n:"Noland (2★ 2)",s:"Mont Blanc Noland",e:"blue",c:"defender",r:"FREE",star:2,d:"Lvneel 2★ DEF."},
+{n:"Kalgara (2★ 2)",s:"Kalgara",e:"blue",c:"attacker",r:"FREE",star:2,d:"Shandora 2★ ATK v2."},
+{n:"Ganfor (2★ 2)",s:"Ganfor",e:"dark",c:"defender",r:"FREE",star:2,d:"Sky 2★ DEF v2."},
+{n:"Rebecca (2★ 2)",s:"Rebecca",e:"green",c:"defender",r:"FREE",star:2,d:"Dressrosa 2★ DEF v2."},
+{n:"Hakuba (2★)",s:"Hakuba",e:"blue",c:"runner",r:"FREE",star:2,d:"Sakura 2★ RUN."},
+{n:"Chin Jao (2★)",s:"Chin Jao",e:"blue",c:"defender",r:"FREE",star:2,d:"Happosui 2★ DEF."},
+{n:"Pedro (2★)",s:"Pedro",e:"green",c:"attacker",r:"FREE",star:2,d:"Minks 2★ ATK."},
+{n:"Brulee (2★)",s:"Charlotte Brulee",e:"red",c:"defender",r:"FREE",star:2,d:"BM 2★ DEF."},
+{n:"Cracker (2★)",s:"Charlotte Cracker",e:"blue",c:"attacker",r:"FREE",star:2,d:"BM 2★ ATK."},
+{n:"Pudding (2★)",s:"Charlotte Pudding",e:"green",c:"defender",r:"FREE",star:2,d:"BM 2★ DEF."},
+{n:"Oven (2★)",s:"Charlotte Oven",e:"red",c:"defender",r:"FREE",star:2,d:"BM 2★ DEF."},
+{n:"Smoothie (2★)",s:"Charlotte Smoothie",e:"green",c:"attacker",r:"FREE",star:2,d:"BM 2★ ATK."},
+{n:"Perospero (2★)",s:"Charlotte Perospero",e:"green",c:"attacker",r:"FREE",star:2,d:"BM 2★ ATK."},
+{n:"Ulti (2★)",s:"Ulti",e:"blue",c:"attacker",r:"FREE",star:2,d:"Tobi Roppo 2★ ATK."},
+{n:"Page One (2★)",s:"Page One",e:"red",c:"defender",r:"FREE",star:2,d:"Tobi Roppo 2★ DEF."},
+{n:"Who's Who (2★)",s:"Who's-Who",e:"green",c:"attacker",r:"FREE",star:2,d:"Tobi Roppo 2★ ATK."},
+{n:"Black Maria (2★)",s:"Black Maria",e:"green",c:"defender",r:"FREE",star:2,d:"Tobi Roppo 2★ DEF."},
+{n:"Sasaki (2★)",s:"Sasaki",e:"green",c:"runner",r:"FREE",star:2,d:"Tobi Roppo 2★ RUN."},
+{n:"Bepo (2★)",s:"Bepo",e:"light",c:"defender",r:"FREE",star:2,d:"Minks 2★ DEF."},
+{n:"Yasopp (2★)",s:"Yasopp",e:"red",c:"defender",r:"FREE",star:2,d:"Red Hair 2★ DEF."},
+{n:"Lucky Roo (2★)",s:"Lucky Roo",e:"blue",c:"runner",r:"FREE",star:2,d:"Red Hair 2★ RUN."},
+{n:"Ben Beckman (2★)",s:"Ben Beckman",e:"blue",c:"defender",r:"FREE",star:2,d:"Red Hair 2★ DEF."},
+{n:"Alber (2★)",s:"Alber",e:"red",c:"attacker",r:"FREE",star:2,d:"Lunarian 2★ ATK."},
+{n:"King (2★)",s:"King",e:"red",c:"runner",r:"FREE",star:2,d:"AK 2★ RUN."},
+{n:"Queen (2★)",s:"Queen",e:"red",c:"runner",r:"FREE",star:2,d:"AK 2★ RUN."},
+{n:"Jack (2★)",s:"Jack",e:"green",c:"attacker",r:"FREE",star:2,d:"AK 2★ ATK."},
+{n:"Wapol (2★)",s:"Wapol",e:"dark",c:"defender",r:"FREE",star:2,d:"Drum 2★ DEF."},
+{n:"Dalton (2★)",s:"King Dalton",e:"dark",c:"attacker",r:"FREE",star:2,d:"Sakura 2★ ATK."},
+{n:"Mr. 5 (2★)",s:"Mr. 5",e:"dark",c:"defender",r:"FREE",star:2,d:"Baroque 2★ DEF."},
+{n:"Ms. Valentine (2★)",s:"Ms. Valentine",e:"green",c:"runner",r:"FREE",star:2,d:"Baroque 2★ RUN."},
+{n:"Mr. 3 (2★)",s:"Mr. 3",e:"green",c:"defender",r:"FREE",star:2,d:"Baroque 2★ DEF."},
+{n:"Ms. Goldenweek (2★)",s:"Ms. Goldenweek",e:"blue",c:"runner",r:"FREE",star:2,d:"Baroque 2★ RUN."},
+{n:"Kaku (2★)",s:"Kaku",e:"red",c:"runner",r:"FREE",star:2,d:"CP9 2★ RUN."},
+{n:"Lucci (2★)",s:"Rob Lucci",e:"green",c:"attacker",r:"FREE",star:2,d:"CP9 2★ ATK."},
+{n:"Jabra (2★)",s:"Jabra",e:"green",c:"attacker",r:"FREE",star:2,d:"CP9 2★ ATK."},
+{n:"Blueno (2★)",s:"Blueno",e:"blue",c:"runner",r:"FREE",star:2,d:"CP9 2★ RUN."},
 ];
 
 // MEDALS
 const MD=[
-{n:"Triple Luffy Set",c:"runner",m:["Battle Ax G-40","Jet Rocket G-105","King Cobra G-119"],tg:["Luffy","Straw Hat","Paramecia"],b:"Skill 1+2 CD Reduction",d:"Versatile skill cycle cepat.",f:"Runner & Attacker"},
-{n:"Triple Kaido Set",c:"defender",m:["Kaido Medal","King Medal","Queen Medal"],tg:["Kaido Pirates","New World","Treachery"],b:"Balanced + DMG Reduction",d:"Balanced defender HP tinggi.",f:"Defender"},
-{n:"Triple Shanks Set",c:"runner",m:["Shanks Medal","Roger Medal","Beckman Medal"],tg:["Red Hair Pirates","Grandline","Supernova"],b:"Skill Cycle + Speed",d:"Skill cycle runner aktif.",f:"Runner"},
-{n:"BM Pirates Set",c:"attacker",m:["Big Mom Medal","Katakuri Medal","Cracker Medal"],tg:["BM Pirates","New World","Paramecia"],b:"Balanced ATK + HP",d:"Balanced attacker HP tinggi.",f:"Attacker"},
-{n:"Marineford Set",c:"defender",m:["Garp Medal","Akainu Medal","Kuzan Medal"],tg:["Marine","Marineford","Haki"],b:"DEF + DMG Reduction",d:"Defense terkuat pure tank.",f:"Defender"},
-{n:"Worst Gen Set",c:"attacker",m:["Luffy Medal","Law Medal","Kid Medal"],tg:["Worst Gen","Supernova","Paramecia"],b:"ATK + Crit Rate",d:"Damage tinggi crit bagus.",f:"Attacker"},
-{n:"Wano Country Set",c:"runner",m:["Oden Medal","Yamato Medal","Zoro Medal"],tg:["Wano Country","Samurai","New World"],b:"Speed + Capture Speed",d:"Runner cepat capture tinggi.",f:"Runner"},
-{n:"WB Pirates Set",c:"defender",m:["WB Medal","Marco Medal","Ace Medal"],tg:["WB Pirates","Grandline","Paramecia"],b:"HP + Heal on KO",d:"Tank regen sustain.",f:"Defender"},
-{n:"Egghead Luffy Set",c:"attacker",m:["Egghead Luffy Medal","Gear 4 Medal","Nika Medal"],tg:["Luffy","Egghead","Nika"],b:"S1 CD + Damage",d:"Terbaru untuk Luffy G5.",f:"Attacker"},
-{n:"Gorosei Set",c:"defender",m:["Nusjuro Medal","Mars Medal","Gorosei Medal"],tg:["Gorosei","Holy Knights","World Gov"],b:"HP + DEF Boost",d:"Set Gorosei EX terbaru.",f:"Defender"},
-{n:"CP0 Set",c:"attacker",m:["Lucci Medal","Kaku Medal","Spandam Medal"],tg:["CP0","World Gov","Cipher Pol"],b:"ATK + Crit Boost",d:"Set untuk Lucci Awakened.",f:"Attacker"},
-{n:"Seraphim Set",c:"attacker",m:["S-Snake Medal","Seraphim Medal","Hancock Medal"],tg:["Seraphim","Seven Warlords","Land of Women"],b:"ATK + Freeze Duration",d:"Set untuk S-Snake EX.",f:"Attacker"}
+{n:"Triple Luffy Set",c:"runner",m:["Battle Ax G-40","Jet Rocket G-105","King Cobra G-119"],tg:["Luffy","Straw Hat","Paramecia"],b:"Skill 1+2 CD Reduction",d:"Versatile skill cycle.",f:"Runner & Attacker"},
+{n:"Triple Kaido Set",c:"defender",m:["Kaido Medal","King Medal","Queen Medal"],tg:["Kaido Pirates","New World","Treachery"],b:"Balanced + DMG Reduction",d:"Balanced defender HP.",f:"Defender"},
+{n:"Triple Shanks Set",c:"runner",m:["Shanks Medal","Roger Medal","Beckman Medal"],tg:["Red Hair Pirates","Grandline","Supernova"],b:"Skill Cycle + Speed",d:"Skill cycle runner.",f:"Runner"},
+{n:"BM Pirates Set",c:"attacker",m:["Big Mom Medal","Katakuri Medal","Cracker Medal"],tg:["BM Pirates","New World","Paramecia"],b:"Balanced ATK + HP",d:"Balanced attacker.",f:"Attacker"},
+{n:"Marineford Set",c:"defender",m:["Garp Medal","Akainu Medal","Kuzan Medal"],tg:["Marine","Marineford","Haki"],b:"DEF + DMG Reduction",d:"Pure tank.",f:"Defender"},
+{n:"Worst Gen Set",c:"attacker",m:["Luffy Medal","Law Medal","Kid Medal"],tg:["Worst Gen","Supernova","Paramecia"],b:"ATK + Crit Rate",d:"Damage tinggi.",f:"Attacker"},
+{n:"Wano Country Set",c:"runner",m:["Oden Medal","Yamato Medal","Zoro Medal"],tg:["Wano Country","Samurai","New World"],b:"Speed + Capture Speed",d:"Runner cepat.",f:"Runner"},
+{n:"WB Pirates Set",c:"defender",m:["WB Medal","Marco Medal","Ace Medal"],tg:["WB Pirates","Grandline","Paramecia"],b:"HP + Heal on KO",d:"Tank sustain.",f:"Defender"},
+{n:"Egghead Luffy Set",c:"attacker",m:["Egghead Luffy Medal","Gear 4 Medal","Nika Medal"],tg:["Luffy","Egghead","Nika"],b:"S1 CD + Damage",d:"Untuk Luffy G5.",f:"Attacker"},
+{n:"Gorosei Set",c:"defender",m:["Nusjuro Medal","Mars Medal","Gorosei Medal"],tg:["Gorosei","Holy Knights","World Gov"],b:"HP + DEF Boost",d:"Gorosei EX.",f:"Defender"},
+{n:"CP0 Set",c:"attacker",m:["Lucci Medal","Kaku Medal","Spandam Medal"],tg:["CP0","World Gov","Cipher Pol"],b:"ATK + Crit Boost",d:"Lucci Awakened.",f:"Attacker"},
+{n:"Seraphim Set",c:"attacker",m:["S-Snake Medal","Seraphim Medal","Hancock Medal"],tg:["Seraphim","Seven Warlords","Land of Women"],b:"ATK + Freeze",d:"S-Snake EX.",f:"Attacker"}
 ];
 
 // SUPPORTS
@@ -348,75 +830,87 @@ const SP=[
 {n:"Kid",e:"red",c:"attacker",tg:["Worst Gen","Supernova","Paramecia"],b:"+18% ATK RED",f:"RED ATK"}
 ];
 
-// COUNTERS
+// COUNTERS (meta)
 const CT=[
-{ch:"Jewelry Bonney (Nika)",ct:["Kizaru (BLUE - speed hindari)","Kuzan (BLUE - freeze)"],cb:["Garp (RED - damage besar)","Zoro & Sanji (GREEN - damage tinggi)"],ti:"Bonney terbaru kuat tapi lemah RED. Timing skill penting."},
-{ch:"Garp (Legendary Hero)",ct:["Kizaru (BLUE - speed tinggi)","Kuzan (BLUE - freeze)"],cb:["Zoro & Sanji (GREEN - damage)","Nusjuro (GREEN - range)"],ti:"Garp kuat tapi lemah BLUE maintain distance."},
-{ch:"Borsalino (Kizaru)",ct:["Garp (RED - damage skill besar)","Zoro & Sanji (GREEN - damage)"],cb:["Kuzan (BLUE - freeze)","Mars (BLUE - tank absorb)"],ti:"Kizaru cepat tapi di-nerf. Fokus element advantage."},
-{ch:"Sanji & Zoro (Wings)",ct:["Garp (RED - damage besar)","Akainu (RED - DOT)"],cb:["Kizaru (BLUE - speed)","Kuzan (BLUE - freeze)"],ti:"Duo EX kuat tapi lemah RED."},
-{ch:"St. Marcus Mars",ct:["Zoro & Sanji (GREEN - damage)","Yamato (GREEN - speed)"],cb:["Garp (RED - burst damage)","Bonney (RED - skill range)"],ti:"Tank terkuat tapi lambat."},
-{ch:"St. Nusjuro",ct:["Garp (RED - damage besar)","Akainu (RED - DOT)"],cb:["Zoro & Sanji (GREEN - damage)","Yamato (GREEN - speed)"],ti:"Speed tinggi HP rendah. Hindari RED."},
-{ch:"Kuzan (BB Pirates)",ct:["Zoro & Sanji (GREEN - damage)","Yamato (GREEN - speed)"],cb:["Garp (RED - damage bypass freeze)","Bonney (RED - range)"],ti:"Freeze kuat di-nerf. Defense rendah."},
-{ch:"Roronoa Zoro",ct:["Garp (RED - damage besar)","Akainu (RED - DOT)"],cb:["Kizaru (BLUE - speed)","Mars (BLUE - tank)"],ti:"Close range kuat. Jaga jarak."},
-{ch:"Shanks (Film Red)",ct:["Kizaru (BLUE - speed match)","Kuzan (BLUE - freeze)"],cb:["Garp (RED - damage)","Luffy G5 (RED - skill kuat)"],ti:"Haki kuat lemah element."},
-{ch:"Luffy (Gear Five)",ct:["Kizaru (BLUE - speed)","Kuzan (BLUE - freeze)"],cb:["Garp (RED - damage)","Zoro & Sanji (GREEN - counter)"],ti:"Cooldown skill lama. Manfaatkan timing."},
-{ch:"Kaido (Strongest)",ct:["Zoro & Sanji (GREEN - damage)","Yamato (GREEN - speed)"],cb:["Garp (RED - bypass defense)","Bonney (RED - range)"],ti:"Sangat tank tapi lambat."},
-{ch:"Gol D. Roger (King)",ct:["Kizaru (BLUE - speed)","Kuzan (BLUE - freeze)"],cb:["Garp (RED - damage tinggi)","Zoro & Sanji (GREEN - damage)"],ti:"Damage tinggi lemah element."},
-{ch:"Sakazuki (Akainu)",ct:["Kaido (BLUE - absorb DOT)","Kuzan (BLUE - freeze)"],cb:["Zoro & Sanji (GREEN - damage)","Nusjuro (GREEN - range)"],ti:"DOT kuat di-buff. Manfaatkan range."},
-{ch:"Marshall D. Teach",ct:["Luffy G5 (RED - skill kuat)","Zoro & Sanji (GREEN - damage)"],cb:["Kizaru (BLUE - hindari gravity)","Kuzan (BLUE - freeze)"],ti:"Gravity mengganggu. Maintain distance."},
-{ch:"Rob Lucci (Awakened)",ct:["Kizaru (BLUE - speed)","Kuzan (BLUE - freeze)"],cb:["Garp (RED - damage besar)","Zoro & Sanji (GREEN - damage)"],ti:"Burst damage tinggi tapi squishy."},
-{ch:"S-Snake (Seraphim)",ct:["Kizaru (BLUE - speed)","Mars (BLUE - tank)"],cb:["Garp (RED - damage)","Zoro & Sanji (GREEN - damage)"],ti:"Unique mechanics tapi masih baru."}
+{ch:"Bonney (Nika)",ct:["Kizaru (BLUE)","Kuzan (BLUE)"],cb:["Garp (RED)","Zoro & Sanji (GREEN)"],ti:"Terbaru kuat tapi lemah RED."},
+{ch:"Garp",ct:["Kizaru (BLUE)","Kuzan (BLUE)"],cb:["Zoro & Sanji (GREEN)","Nusjuro (GREEN)"],ti:"Kuat tapi lemah BLUE."},
+{ch:"Kizaru",ct:["Garp (RED)","Zoro & Sanji (GREEN)"],cb:["Kuzan (BLUE)","Mars (BLUE)"],ti:"Cepat di-nerf. Fokus element."},
+{ch:"Zoro & Sanji",ct:["Garp (RED)","Akainu (RED)"],cb:["Kizaru (BLUE)","Kuzan (BLUE)"],ti:"Duo kuat lemah RED."},
+{ch:"Mars",ct:["Zoro & Sanji (GREEN)","Yamato (GREEN)"],cb:["Garp (RED)","Bonney (RED)"],ti:"Tank terkuat tapi lambat."},
+{ch:"Nusjuro",ct:["Garp (RED)","Akainu (RED)"],cb:["Zoro & Sanji (GREEN)","Yamato (GREEN)"],ti:"Speed tinggi HP rendah."},
+{ch:"Kuzan",ct:["Zoro & Sanji (GREEN)","Yamato (GREEN)"],cb:["Garp (RED)","Bonney (RED)"],ti:"Freeze di-nerf. Defense rendah."},
+{ch:"Zoro",ct:["Garp (RED)","Akainu (RED)"],cb:["Kizaru (BLUE)","Mars (BLUE)"],ti:"Close range kuat."},
+{ch:"Shanks",ct:["Kizaru (BLUE)","Kuzan (BLUE)"],cb:["Garp (RED)","Luffy G5 (RED)"],ti:"Haki kuat lemah element."},
+{ch:"Luffy G5",ct:["Kizaru (BLUE)","Kuzan (BLUE)"],cb:["Garp (RED)","Zoro & Sanji (GREEN)"],ti:"Cooldown skill lama."},
+{ch:"Kaido",ct:["Zoro & Sanji (GREEN)","Yamato (GREEN)"],cb:["Garp (RED)","Bonney (RED)"],ti:"Sangat tank lambat."},
+{ch:"Roger",ct:["Kizaru (BLUE)","Kuzan (BLUE)"],cb:["Garp (RED)","Zoro & Sanji (GREEN)"],ti:"Damage tinggi lemah element."},
+{ch:"Akainu",ct:["Kaido (BLUE)","Kuzan (BLUE)"],cb:["Zoro & Sanji (GREEN)","Nusjuro (GREEN)"],ti:"DOT kuat di-buff."},
+{ch:"Blackbeard",ct:["Luffy G5 (RED)","Zoro & Sanji (GREEN)"],cb:["Kizaru (BLUE)","Kuzan (BLUE)"],ti:"Gravity mengganggu."},
+{ch:"Lucci (Awakened)",ct:["Kizaru (BLUE)","Kuzan (BLUE)"],cb:["Garp (RED)","Zoro & Sanji (GREEN)"],ti:"Burst tinggi squishy."},
+{ch:"S-Snake",ct:["Kizaru (BLUE)","Mars (BLUE)"],cb:["Garp (RED)","Zoro & Sanji (GREEN)"],ti:"Unique mechanics baru."}
 ];
 
 // STATE
-let cF={e:'all',c:'all'},mF='all',sF='all',bS=[null,null,null,null,null,null,null,null,null,null];
-const TG={"Red Hair Pirates":{a:3,d:2,h:2,s:1},"Marine":{a:2,d:3,h:2,s:1},"Marineford":{a:2,d:2,h:3,s:1},"Grandline":{a:2,d:2,h:2,s:2},"Haki":{a:3,d:1,h:1,s:3},"Logia":{a:2,d:3,h:2,s:1},"Straw Hat":{a:3,d:1,h:2,s:3},"Wano Country":{a:3,d:2,h:2,s:2},"Swordsman":{a:4,d:1,h:1,s:2},"Kaido Pirates":{a:3,d:3,h:2,s:1},"New World":{a:2,d:2,h:2,s:2},"Treachery":{a:3,d:2,h:3,s:0},"WB Pirates":{a:2,d:3,h:3,s:1},"Paramecia":{a:2,d:2,h:2,s:2},"Supernova":{a:3,d:1,h:2,s:3},"Worst Gen":{a:3,d:2,h:2,s:2},"BM Pirates":{a:2,d:3,h:3,s:1},"Samurai":{a:3,d:2,h:1,s:3},"East Blue":{a:2,d:2,h:2,s:2},"Bonney Pirates":{a:3,d:1,h:2,s:3},"Gorosei":{a:3,d:3,h:3,s:1},"Holy Knights":{a:3,d:2,h:2,s:2},"World Gov":{a:2,d:3,h:3,s:1},"Revolutionary":{a:3,d:1,h:2,s:3},"Seven Warlords":{a:3,d:2,h:2,s:2},"CP0":{a:3,d:2,h:2,s:2},"Cipher Pol":{a:2,d:2,h:3,s:1},"Seraphim":{a:3,d:2,h:2,s:2},"Land of Women":{a:2,d:2,h:2,s:3},"Egghead":{a:3,d:2,h:2,s:2},"Nika":{a:4,d:1,h:2,s:2},"Red Hair Pirates":{a:3,d:2,h:2,s:1},"Daimyo":{a:3,d:2,h:2,s:2},"Great Pirate":{a:3,d:2,h:2,s:2},"King of Pirates":{a:3,d:2,h:2,s:2},"Fire Fist":{a:3,d:1,h:2,s:3},"Oiran":{a:2,d:2,h:3,s:1},"Okuchi":{a:3,d:2,h:2,s:2},"Divine":{a:3,d:2,h:2,s:2},"Flame Emperor":{a:3,d:2,h:1,s:3},"Legendary Hero":{a:3,d:2,h:2,s:2},"Four Emperors":{a:3,d:2,h:2,s:2},"Awakened":{a:4,d:1,h:1,s:2},"Winner Island":{a:2,d:2,h:2,s:3},"Seven Warlords of the Sea":{a:3,d:2,h:2,s:2}};
+let cF={r:'all',e:'all',c:'all'},mF='all',sF='all',bS=[null,null,null,null,null,null,null,null,null,null];
+const TG={"Red Hair Pirates":{a:3,d:2,h:2,s:1},"Marine":{a:2,d:3,h:2,s:1},"Marineford":{a:2,d:2,h:3,s:1},"Grandline":{a:2,d:2,h:2,s:2},"Haki":{a:3,d:1,h:1,s:3},"Logia":{a:2,d:3,h:2,s:1},"Straw Hat":{a:3,d:1,h:2,s:3},"Wano Country":{a:3,d:2,h:2,s:2},"Swordsman":{a:4,d:1,h:1,s:2},"Kaido Pirates":{a:3,d:3,h:2,s:1},"New World":{a:2,d:2,h:2,s:2},"Treachery":{a:3,d:2,h:3,s:0},"WB Pirates":{a:2,d:3,h:3,s:1},"Paramecia":{a:2,d:2,h:2,s:2},"Supernova":{a:3,d:1,h:2,s:3},"Worst Gen":{a:3,d:2,h:2,s:2},"BM Pirates":{a:2,d:3,h:3,s:1},"Samurai":{a:3,d:2,h:1,s:3},"East Blue":{a:2,d:2,h:2,s:2},"Bonney Pirates":{a:3,d:1,h:2,s:3},"Gorosei":{a:3,d:3,h:3,s:1},"Holy Knights":{a:3,d:2,h:2,s:2},"World Gov":{a:2,d:3,h:3,s:1},"Revolutionary":{a:3,d:1,h:2,s:3},"Seven Warlords":{a:3,d:2,h:2,s:2},"CP0":{a:3,d:2,h:2,s:2},"Cipher Pol":{a:2,d:2,h:3,s:1},"Seraphim":{a:3,d:2,h:2,s:2},"Land of Women":{a:2,d:2,h:2,s:3},"Egghead":{a:3,d:2,h:2,s:2},"Nika":{a:4,d:1,h:2,s:2},"Don Quixote Family":{a:3,d:2,h:2,s:2},"Kozuki Clan / Kozuki Clan Servant":{a:3,d:2,h:2,s:2},"Minks":{a:2,d:2,h:2,s:3},"Fish-Man":{a:2,d:2,h:2,s:2},"Zoan":{a:2,d:3,h:2,s:1},"Germa 66":{a:3,d:2,h:2,s:2},"Royalty / Former Royalty":{a:2,d:2,h:2,s:2},"Captain":{a:3,d:2,h:2,s:2},"Baroque Works":{a:2,d:2,h:2,s:2},"Roger Pirates / Ex-Roger Pirates":{a:3,d:2,h:2,s:2},"Whitebeard Pirates":{a:2,d:3,h:3,s:1},"Red-Haired Pirates":{a:3,d:2,h:2,s:1},"Animal Kingdom Pirates":{a:3,d:2,h:2,s:1},"Big Mom Pirates":{a:2,d:3,h:3,s:1},"Navy":{a:2,d:3,h:2,s:1},"Thousand Sunny":{a:2,d:2,h:2,s:2},"Long-Range Normal Attacks":{a:2,d:2,h:2,s:2},"Kuja Pirates":{a:3,d:2,h:2,s:2},"Sky Island":{a:2,d:2,h:2,s:2},"Impel Down":{a:2,d:2,h:3,s:1},"Don Quixote":{a:3,d:2,h:2,s:2},"Germa":{a:3,d:2,h:2,s:2},"Worst Generation":{a:3,d:2,h:2,s:2},"Kozuki":{a:3,d:2,h:2,s:2},"Tobi Roppo":{a:3,d:2,h:2,s:2},"Lead Performer":{a:3,d:2,h:2,s:2},"Supreme Commander":{a:3,d:2,h:2,s:2},"Lunarian":{a:3,d:2,h:2,s:2},"On-Air Pirates":{a:2,d:2,h:2,s:3},"Fallen Monk Pirates":{a:2,d:3,h:2,s:1},"Happosui Army":{a:3,d:2,h:2,s:2},"Tontatta Pirates":{a:2,d:2,h:2,s:2},"Beautiful Pirates":{a:3,d:1,h:1,s:3},"Barto Club":{a:2,d:3,h:2,s:1},"Kyoshiro Family":{a:2,d:2,h:2,s:3},"Prodence Kingdom":{a:3,d:2,h:2,s:2},"Alabasta Kingdom":{a:2,d:2,h:2,s:2},"Shandian Warriors":{a:3,d:2,h:2,s:2},"Ryugu Kingdom":{a:2,d:3,h:3,s:1},"Drum Island":{a:2,d:2,h:2,s:2},"Sakura Kingdom":{a:3,d:2,h:2,s:2},"Skypiea":{a:2,d:2,h:2,s:2},"Thriller Bark":{a:2,d:2,h:2,s:2},"Pirate Festival":{a:2,d:2,h:2,s:2},"Punk Hazard":{a:2,d:2,h:2,s:2},"Dressrosa":{a:3,d:2,h:2,s:2},"Whole Cake Island":{a:2,d:3,h:3,s:1},"Zou":{a:2,d:2,h:2,s:3},"Wano":{a:3,d:2,h:2,s:2},"Egghead Island":{a:3,d:2,h:2,s:2},"Land of Wano":{a:3,d:2,h:2,s:2}};
 
 // RENDER
 function rC(){
     const g=document.getElementById('cG'),q=document.getElementById('cS').value.toLowerCase();
-    let f=CH.filter(c=>{const ms=c.n.toLowerCase().includes(q)||c.e.includes(q)||c.c.includes(q);const me=cF.e==='all'||c.e===cF.e;const mc=cF.c==='all'||c.c===cF.c;return ms&&me&&mc});
-    const to={GOD:0,SS:1,S:2,A:3,B:4,C:5};f.sort((a,b)=>to[a.t]-to[b.t]);
-    g.innerHTML=f.map(c=>`<div class="cd" onclick="oM('${c.n.replace(/'/g,"\\'")}')" style="position:relative"><span class="tb t-${c.t.toLowerCase()}">${c.t}</span><div class="ch"><div class="av ${c.e==='red'?'r':c.e==='blue'?'b':'g'}">${c.i}</div><div class="ci"><h3>${c.n} ${c.fl==='new'?'<span class="ti nw">NEW</span>':''}${c.fl==='buff'?'<span class="ti bf">BUFF</span>':''}${c.fl==='nerf'?'<span class="ti nf">NERF</span>':''}</h3><span class="eb ${c.e==='red'?'r':c.e==='blue'?'b':'g'}">${c.e.toUpperCase()}</span><span class="cc">${c.c.toUpperCase()}</span></div></div><p style="color:var(--dim);font-size:11px;margin-bottom:8px">${c.d}</p><div class="cs"><div class="ct-t md">🏅 Medal</div><div class="tl"><span class="ti md">${c.md[0]}</span><span class="ti md">${c.md[1]}</span><span class="ti md">${c.md[2]}</span></div></div><div class="cs"><div class="ct-t sp">👥 Support</div><div class="tl"><span class="ti sp">${c.s[0]}</span><span class="ti sp">${c.s[1]}</span><span class="ti sp">${c.s[2]}</span></div></div><div class="cs"><div class="ct-t ct">⚔️ Counter</div><div class="tl">${c.ct.map(x=>`<span class="ti ct">${x}</span>`).join('')}${c.w.map(x=>`<span class="ti wk">⚠️ ${x}</span>`).join('')}</div></div></div>`).join('');
+    let f=ALL.filter(ch=>{const ms=ch.n.toLowerCase().includes(q)||ch.s.toLowerCase().includes(q)||ch.e.includes(q)||ch.c.includes(q)||ch.r.toLowerCase().includes(q);const mr=cF.r==='all'||ch.r===cF.r;const me=cF.e==='all'||ch.e===cF.e;const mc=cF.c==='all'||ch.c===cF.c;return ms&&mr&&me&&mc});
+    document.getElementById('charCount').textContent=`Menampilkan ${f.length} dari ${ALL.length} karakter`;
+    g.innerHTML=f.map(ch=>{const ec=ch.e==='red'?'r':ch.e==='blue'?'b':ch.e==='green'?'g':ch.e==='dark'?'d':'l';const rc=ch.r==='EX'?'t-ex':ch.r==='BF'?'t-bf':ch.r==='SP'?'t-sp':'t-fr';const ini=ch.n.length>20?ch.s.substring(0,2).toUpperCase():ch.n.substring(0,2).toUpperCase();return`<div class="cd" onclick="oM('${ch.n.replace(/'/g,"\\'").replace(/&/g,"&amp;")}')" style="position:relative"><span class="tb ${rc}">${ch.r}</span><div class="ch"><div class="av ${ec}">${ini}</div><div class="ci"><h3>${ch.n}</h3><small>${ch.s}</small><br><span class="eb ${ec}">${ch.e.toUpperCase()}</span><span class="cc">${ch.c.toUpperCase()}</span> <span style="font-size:8px;color:var(--dim)">${ch.star}★</span></div></div><p style="color:var(--dim);font-size:10px;margin-bottom:6px">${ch.d}${ch.fl==='new'?' <span class="ti nw">NEW</span>':''}${ch.fl==='buff'?' <span class="ti bf">BUFF</span>':''}${ch.fl==='nerf'?' <span class="ti nf">NERF</span>':''}</p>${ch.md?`<div class="cs"><div class="cs-t md">🏅 Medal</div><div class="tl">${ch.md.map(m=>`<span class="ti md">${m}</span>`).join('')}</div></div>`:''}${ch.ct?`<div class="cs"><div class="cs-t ct">⚔️ Counter</div><div class="tl">${ch.ct.map(x=>`<span class="ti ct">${x}</span>`).join('')}${ch.w?ch.w.map(x=>`<span class="ti wk">⚠️ ${x}</span>`).join(''):''}</div></div>`:''}</div>`}).join('');
 }
 function rM(){
     const g=document.getElementById('mG'),q=document.getElementById('mS').value.toLowerCase();
     let f=MD.filter(m=>{const ms=m.n.toLowerCase().includes(q)||m.tg.some(t=>t.toLowerCase().includes(q));const mc=mF==='all'||m.c===mF;return ms&&mc});
-    g.innerHTML=f.map(m=>`<div class="cd"><div class="ch"><div class="av ${m.c==='attacker'?'r':m.c==='defender'?'b':'g'}">🏅</div><div class="ci"><h3>${m.n}</h3><span class="cc">${m.c.toUpperCase()}</span></div></div><p style="color:var(--acc);font-size:12px;font-weight:600;margin-bottom:5px">${m.b}</p><p style="color:var(--dim);font-size:11px;margin-bottom:8px">${m.d}</p><div class="cs"><div class="ct-t md">🏅 Medals</div><div class="tl">${m.m.map(x=>`<span class="ti md">${x}</span>`).join('')}</div></div><div class="cs"><div class="ct-t sp">🏷️ Tags</div><div class="tl">${m.tg.map(x=>`<span class="ti sp">${x}</span>`).join('')}</div></div><div class="cs"><div class="ct-t ct">🎯 Best For</div><div class="tl"><span class="ti ct">${m.f}</span></div></div></div>`).join('');
+    g.innerHTML=f.map(m=>`<div class="cd"><div class="ch"><div class="av ${m.c==='attacker'?'r':m.c==='defender'?'b':'g'}">🏅</div><div class="ci"><h3>${m.n}</h3><span class="cc">${m.c.toUpperCase()}</span></div></div><p style="color:var(--acc);font-size:11px;font-weight:600;margin-bottom:4px">${m.b}</p><p style="color:var(--dim);font-size:10px;margin-bottom:6px">${m.d}</p><div class="cs"><div class="cs-t md">🏅</div><div class="tl">${m.m.map(x=>`<span class="ti md">${x}</span>`).join('')}</div></div><div class="cs"><div class="cs-t sp">🏷️</div><div class="tl">${m.tg.map(x=>`<span class="ti sp">${x}</span>`).join('')}</div></div></div>`).join('');
 }
 function rS(){
     const g=document.getElementById('sG'),q=document.getElementById('sS').value.toLowerCase();
     let f=SP.filter(s=>{const ms=s.n.toLowerCase().includes(q)||s.tg.some(t=>t.toLowerCase().includes(q));const me=sF==='all'||s.e===sF;return ms&&me});
-    g.innerHTML=f.map(s=>`<div class="cd"><div class="ch"><div class="av ${s.e==='red'?'r':s.e==='blue'?'b':'g'}">${s.n.substring(0,2).toUpperCase()}</div><div class="ci"><h3>${s.n}</h3><span class="eb ${s.e==='red'?'r':s.e==='blue'?'b':'g'}">${s.e.toUpperCase()}</span><span class="cc">${s.c.toUpperCase()}</span></div></div><p style="color:var(--grn);font-size:12px;font-weight:600;margin-bottom:7px">${s.b}</p><div class="cs"><div class="ct-t sp">🏷️ Tags</div><div class="tl">${s.tg.map(x=>`<span class="ti sp">${x}</span>`).join('')}</div></div><div class="cs"><div class="ct-t ct">🎯 Best For</div><div class="tl"><span class="ti ct">${s.f}</span></div></div></div>`).join('');
+    g.innerHTML=f.map(s=>`<div class="cd"><div class="ch"><div class="av ${s.e==='red'?'r':s.e==='blue'?'b':'g'}">${s.n.substring(0,2).toUpperCase()}</div><div class="ci"><h3>${s.n}</h3><span class="eb ${s.e==='red'?'r':s.e==='blue'?'b':'g'}">${s.e.toUpperCase()}</span><span class="cc">${s.c.toUpperCase()}</span></div></div><p style="color:var(--grn);font-size:11px;font-weight:600;margin-bottom:6px">${s.b}</p><div class="cs"><div class="cs-t sp">🏷️</div><div class="tl">${s.tg.map(x=>`<span class="ti sp">${x}</span>`).join('')}</div></div></div>`).join('');
 }
 function rCT(){
     const g=document.getElementById('ctG'),q=document.getElementById('ctS').value.toLowerCase();
     let f=CT.filter(c=>c.ch.toLowerCase().includes(q)||c.ct.some(x=>x.toLowerCase().includes(q))||c.cb.some(x=>x.toLowerCase().includes(q)));
-    g.innerHTML=f.map(c=>`<div class="cd"><div class="ch"><div class="av r">⚔️</div><div class="ci"><h3>${c.ch}</h3></div></div><div class="cs"><div class="ct-t ct">✅ Mengalahkan:</div><div class="tl">${c.ct.map(x=>`<span class="ti ct">${x}</span>`).join('')}</div></div><div class="cs" style="border-color:var(--b)"><div class="ct-t" style="color:var(--b)">❌ Dikalahkan oleh:</div><div class="tl">${c.cb.map(x=>`<span class="ti wk">${x}</span>`).join('')}</div></div><div class="cs"><div class="ct-t sp">💡 Tips</div><p style="color:var(--dim);font-size:11px">${c.ti}</p></div></div>`).join('');
+    g.innerHTML=f.map(c=>`<div class="cd"><div class="ch"><div class="av r">⚔️</div><div class="ci"><h3>${c.ch}</h3></div></div><div class="cs"><div class="cs-t ct">✅ Mengalahkan:</div><div class="tl">${c.ct.map(x=>`<span class="ti ct">${x}</span>`).join('')}</div></div><div class="cs" style="border-color:var(--b)"><div class="cs-t" style="color:var(--b)">❌ Dikalahkan oleh:</div><div class="tl">${c.cb.map(x=>`<span class="ti wk">${x}</span>`).join('')}</div></div><div class="cs"><div class="cs-t sp">💡</div><p style="color:var(--dim);font-size:10px">${c.ti}</p></div></div>`).join('');
+}
+function rMeta(){
+    const g=document.getElementById('metaGrid');
+    const tiers={GOD:ALL.filter(c=>c.r==='EX'&&c.tier==='GOD'),SS:ALL.filter(c=>c.r==='EX'&&(c.tier==='SS'||!c.tier)),S:ALL.filter(c=>c.r==='EX'&&c.tier==='S'),A:ALL.filter(c=>c.r==='EX'&&c.tier==='A'),B:ALL.filter(c=>c.r==='EX'&&(c.tier==='B'||c.tier==='C'))};
+    let html='<div style="margin-bottom:16px"><p style="color:var(--dim);font-size:12px">Tier list berdasarkan meta League Battle Season 181. Hanya EX characters yang masuk meta tier.</p></div>';
+    Object.entries(tiers).forEach(([tier,chars])=>{
+        if(!chars.length)return;
+        const cls=tier==='GOD'?'t-ex':tier==='SS'?'t-bf':tier==='S'?'t-sp':tier==='A'?'t-fr':'t-co';
+        html+=`<div style="margin-bottom:16px"><h3 style="font-size:14px;margin-bottom:8px"><span class="tb ${cls}" style="position:static;font-size:11px">${tier}</span></h3><div class="gr">${chars.map(ch=>{const ec=ch.e==='red'?'r':ch.e==='blue'?'b':'g';return`<div class="cd" onclick="oM('${ch.n.replace(/'/g,"\\'").replace(/&/g,"&amp;")}')"><div class="ch"><div class="av ${ec}">${ch.n.substring(0,2).toUpperCase()}</div><div class="ci"><h3>${ch.n}</h3><span class="eb ${ec}">${ch.e.toUpperCase()}</span><span class="cc">${ch.c.toUpperCase()}</span></div></div><p style="color:var(--dim);font-size:10px">${ch.d}${ch.fl==='new'?' <span class="ti nw">NEW</span>':''}${ch.fl==='buff'?' <span class="ti bf">BUFF</span>':''}${ch.fl==='nerf'?' <span class="ti nf">NERF</span>':''}</p></div>`}).join('')}</div></div>`;
+    });
+    g.innerHTML=html;
 }
 // FILTER
-function sE(s,e,b){if(s==='c')cF.e=e;sA(b);rC()}
-function sL(s,c,b){if(s==='c')cF.c=cF.c===c?'all':c;sA(b);rC()}
+function sR(r,v,b){cF.r=v;sA(b);rC()}
+function sE2(s,e,b){if(s==='c')cF.e=e;sA(b);rC()}
+function sC2(s,c,b){if(s==='c')cF.c=cF.c===c?'all':c;sA(b);rC()}
 function sMC(c,b){mF=c;sA(b);rM()}
 function sSE(e,b){sF=e;sA(b);rS()}
 function sA(b){b.parentElement.querySelectorAll('.fb').forEach(x=>x.classList.remove('on'));b.classList.add('on')}
 // NAV
-function go(id,b){document.querySelectorAll('.sec').forEach(s=>s.classList.remove('on'));document.getElementById(id).classList.add('on');document.querySelectorAll('.nb').forEach(x=>x.classList.remove('on'));b.classList.add('on');if(id==='chars')rC();if(id==='medals')rM();if(id==='support')rS();if(id==='counters')rCT()}
+function go(id,b){document.querySelectorAll('.sec').forEach(s=>s.classList.remove('on'));document.getElementById(id).classList.add('on');document.querySelectorAll('.nb').forEach(x=>x.classList.remove('on'));b.classList.add('on');if(id==='chars')rC();if(id==='meta')rMeta();if(id==='medals')rM();if(id==='support')rS();if(id==='counters')rCT()}
 // MODAL
-function oM(n){const c=CH.find(x=>x.n===n);if(!c)return;const m=document.getElementById('modal'),ct=document.getElementById('mC');ct.innerHTML=`<div class="mh"><div class="ma ${c.e==='red'?'r':c.e==='blue'?'b':'g'}">${c.i}</div><div><h2 style="font-size:20px">${c.n} ${c.fl==='new'?'<span class="ti nw">NEW</span>':''}${c.fl==='buff'?'<span class="ti bf">BUFF</span>':''}${c.fl==='nerf'?'<span class="ti nf">NERF</span>':''}</h2><span class="eb ${c.e==='red'?'r':c.e==='blue'?'b':'g'}">${c.e.toUpperCase()}</span><span class="cc">${c.c.toUpperCase()}</span><span class="tb t-${c.t.toLowerCase()}" style="position:static;margin-left:5px">${c.t}</span></div></div><p style="color:var(--dim);margin-bottom:14px;line-height:1.5;font-size:12px">${c.d}</p><div class="ms"><h4 class="md">🏅 Medal Set</h4><div class="mi"><div class="mi-n">${c.md[0]}</div><div class="mi-d">${c.mD.split('|')[0]}</div></div><div class="mi"><div class="mi-n">${c.md[1]}</div><div class="mi-d">${c.mD.split('|')[1]}</div></div><div class="mi"><div class="mi-n">${c.md[2]}</div><div class="mi-d">${c.mD.split('|')[2]}</div></div></div><div class="ms"><h4 class="sp">👥 Support</h4>${c.s.map((x,i)=>`<div class="mi"><div class="mi-n">${x}</div><div class="mi-d">${i===0?c.sD:''}</div></div>`).join('')}</div><div class="ms"><h4 class="ct">⚔️ Counter</h4><p style="font-size:12px;font-weight:600;color:var(--grn);margin-bottom:5px">✅ Mengalahkan:</p>${c.ct.map(x=>`<div class="mi"><div class="mi-n">${x}</div></div>`).join('')}<p style="font-size:12px;font-weight:600;color:var(--b);margin:8px 0 5px">❌ Dikalahkan oleh:</p>${c.w.map(x=>`<div class="mi"><div class="mi-n">${x}</div></div>`).join('')}</div>`;m.classList.add('on')}
+function oM(n){const ch=ALL.find(x=>x.n===n);if(!ch)return;const ec=ch.e==='red'?'r':ch.e==='blue'?'b':ch.e==='green'?'g':ch.e==='dark'?'d':'l';const m=document.getElementById('modal'),ct=document.getElementById('mC');ct.innerHTML=`<div class="mh"><div class="ma ${ec}">${ch.n.substring(0,2).toUpperCase()}</div><div><h2 style="font-size:18px">${ch.n} ${ch.fl==='new'?'<span class="ti nw">NEW</span>':''}${ch.fl==='buff'?'<span class="ti bf">BUFF</span>':''}${ch.fl==='nerf'?'<span class="ti nf">NERF</span>':''}</h2><small style="color:var(--dim)">${ch.s}</small><br><span class="eb ${ec}">${ch.e.toUpperCase()}</span><span class="cc">${ch.c.toUpperCase()}</span> <span style="font-size:10px;color:var(--dim)">${ch.star}★ ${ch.r}</span></div></div><p style="color:var(--dim);margin-bottom:12px;line-height:1.4;font-size:11px">${ch.d}</p>${ch.md?`<div class="ms"><h4 class="md">🏅 Medal Set</h4>${ch.md.map((m,i)=>`<div class="mi"><div class="mi-n">${m}</div>${ch.sD?`<div class="mi-d">${i===0?ch.sD:''}</div>`:''}</div>`).join('')}</div>`:''}${ch.ct?`<div class="ms"><h4 class="ct">⚔️ Counter</h4><p style="font-size:11px;font-weight:600;color:var(--grn);margin-bottom:4px">✅ Mengalahkan:</p>${ch.ct.map(x=>`<div class="mi"><div class="mi-n">${x}</div></div>`).join('')}<p style="font-size:11px;font-weight:600;color:var(--b);margin:6px 0 4px">❌ Dikalahkan oleh:</p>${ch.w?ch.w.map(x=>`<div class="mi"><div class="mi-n">${x}</div></div>`).join(''):''}</div>`:''}`;m.classList.add('on')}
 function clM(){document.getElementById('modal').classList.remove('on')}
 document.getElementById('modal').addEventListener('click',function(e){if(e.target===this)clM()});
 // BUILDER
-function rSl(){const g=document.getElementById('bSl');g.innerHTML=bS.map((s,i)=>{if(s)return`<div class="bg-c filled"><div class="bg-n">Slot ${i+1}</div><div class="av ${s.e==='red'?'r':s.e==='blue'?'b':'g'}" style="width:36px;height:36px;font-size:14px;margin-bottom:5px">${s.n.substring(0,2).toUpperCase()}</div><div class="bg-nm">${s.n}</div><div class="bg-h">${s.e.toUpperCase()} ${s.c.toUpperCase()}</div><div class="bg-r" onclick="event.stopPropagation();rS2(${i})">✕</div></div>`;return`<div class="bg-c" onclick="document.getElementById('bS').focus()"><div class="bg-n">Slot ${i+1}</div><div class="bg-e">+</div><div class="bg-h">Klik search untuk menambah</div></div>`}).join('');cT()}
-function rB(){const q=document.getElementById('bS').value.toLowerCase(),r=document.getElementById('bR');if(!q){r.style.display='none';return}const f=SP.filter(s=>s.n.toLowerCase().includes(q));if(!f.length){r.innerHTML='<div style="padding:8px;color:var(--dim)">Tidak ditemukan</div>';r.style.display='block';return}r.innerHTML=f.map(s=>`<div style="padding:7px 12px;cursor:pointer;border-bottom:1px solid var(--bdr);display:flex;align-items:center;gap:8px" onclick="aB('${s.n.replace(/'/g,"\\'")}')"><div class="av ${s.e==='red'?'r':s.e==='blue'?'b':'g'}" style="width:28px;height:28px;font-size:10px">${s.n.substring(0,2).toUpperCase()}</div><div><div style="font-size:12px;font-weight:600">${s.n}</div><div style="font-size:10px;color:var(--dim)">${s.e.toUpperCase()} ${s.c.toUpperCase()}</div></div></div>`).join('');r.style.display='block'}
+function rSl(){const g=document.getElementById('bSl');g.innerHTML=bS.map((s,i)=>{if(s){const ec=s.e==='red'?'r':s.e==='blue'?'b':'g';return`<div class="bg-c filled"><div class="bg-n">Slot ${i+1}</div><div class="av ${ec}" style="width:32px;height:32px;font-size:12px;margin-bottom:4px">${s.n.substring(0,2).toUpperCase()}</div><div class="bg-nm">${s.n}</div><div class="bg-h">${s.e.toUpperCase()} ${s.c.toUpperCase()}</div><div class="bg-r" onclick="event.stopPropagation();rS2(${i})">✕</div></div>`}return`<div class="bg-c" onclick="document.getElementById('bS').focus()"><div class="bg-n">Slot ${i+1}</div><div class="bg-e">+</div><div class="bg-h">Klik search</div></div>`}).join('');cT()}
+function rB(){const q=document.getElementById('bS').value.toLowerCase(),r=document.getElementById('bR');if(!q){r.style.display='none';return}const f=SP.filter(s=>s.n.toLowerCase().includes(q));if(!f.length){r.innerHTML='<div style="padding:6px;color:var(--dim);font-size:11px">Tidak ditemukan</div>';r.style.display='block';return}r.innerHTML=f.map(s=>`<div style="padding:6px 10px;cursor:pointer;border-bottom:1px solid var(--bdr);display:flex;align-items:center;gap:6px;font-size:11px" onclick="aB('${s.n.replace(/'/g,"\\'")}')"><div class="av ${s.e==='red'?'r':s.e==='blue'?'b':'g'}" style="width:24px;height:24px;font-size:9px">${s.n.substring(0,2).toUpperCase()}</div><div><b>${s.n}</b> <span style="color:var(--dim)">${s.e.toUpperCase()} ${s.c.toUpperCase()}</span></div></div>`).join('');r.style.display='block'}
 function cBS(){document.getElementById('bR').style.display='none'}
 document.addEventListener('click',function(e){if(!e.target.closest('#bS')&&!e.target.closest('#bR'))cBS()});
 function aB(n){const s=SP.find(x=>x.n===n);if(!s)return;const i=bS.findIndex(x=>x===null);if(i===-1){alert('Semua slot terisi!');return}if(bS.some(x=>x&&x.n===n)){alert('Sudah ada di slot!');return}bS[i]=s;document.getElementById('bS').value='';document.getElementById('bR').style.display='none';rSl()}
 function rS2(i){bS[i]=null;rSl()}
 function cB(){bS=[null,null,null,null,null,null,null,null,null,null];rSl()}
-function cT(){const tb=document.getElementById('tB'),tl=document.getElementById('tL'),fl=bS.filter(x=>x!==null);if(!fl.length){tb.style.display='none';return}tb.style.display='block';let tot={a:0,d:0,h:0,s:0},tc={},ec={red:0,blue:0,green:0},cc={attacker:0,defender:0,runner:0};fl.forEach(s=>{if(s.tg)s.tg.forEach(t=>{if(TG[t]){tot.a+=TG[t].a;tot.d+=TG[t].d;tot.h+=TG[t].h;tot.s+=TG[t].s}tc[t]=(tc[t]||0)+1});ec[s.e]=(ec[s.e]||0)+1;cc[s.c]=(cc[s.c]||0)+1});const mx=Math.max(tot.a,tot.d,tot.h,tot.s,1);const cl=v=>v>=mx*.8?'hi':v>=mx*.5?'md':'lo';tl.innerHTML=`<div class="tr"><span class="tr-n">⚔️ Attack Boost</span><span class="tr-v ${cl(tot.a)}">+${tot.a} pts</span></div><div class="tr"><span class="tr-n">🛡️ Defense Boost</span><span class="tr-v ${cl(tot.d)}">+${tot.d} pts</span></div><div class="tr"><span class="tr-n">❤️ HP Boost</span><span class="tr-v ${cl(tot.h)}">+${tot.h} pts</span></div><div class="tr"><span class="tr-n">💨 Speed Boost</span><span class="tr-v ${cl(tot.s)}">+${tot.s} pts</span></div><div style="margin-top:10px;padding-top:10px;border-top:1px solid var(--bdr)"><div class="tr"><span class="tr-n">📊 Characters</span><span class="tr-v">${fl.length}/10</span></div><div class="tr"><span class="tr-n">🔥 RED</span><span class="tr-v">${ec.red}</span></div><div class="tr"><span class="tr-n">💧 BLUE</span><span class="tr-v">${ec.blue}</span></div><div class="tr"><span class="tr-n">🌿 GREEN</span><span class="tr-v">${ec.green}</span></div><div class="tr"><span class="tr-n">⚔️ ATK</span><span class="tr-v">${cc.attacker}</span></div><div class="tr"><span class="tr-n">🛡️ DEF</span><span class="tr-v">${cc.defender}</span></div><div class="tr"><span class="tr-n">🏃 RUN</span><span class="tr-v">${cc.runner}</span></div></div><div style="margin-top:10px;padding-top:10px;border-top:1px solid var(--bdr)"><p style="font-size:12px;font-weight:600;color:var(--acc);margin-bottom:6px">🏷️ Active Tags (${Object.keys(tc).length})</p><div class="tl">${Object.entries(tc).map(([t,c])=>`<span class="ti ${c>=3?'sp':'md'}">${t} (${c})</span>`).join('')}</div></div>`}
+function cT(){const tb=document.getElementById('tB'),tl=document.getElementById('tL'),fl=bS.filter(x=>x!==null);if(!fl.length){tb.style.display='none';return}tb.style.display='block';let tot={a:0,d:0,h:0,s:0},tc={},ec={red:0,blue:0,green:0},cc={attacker:0,defender:0,runner:0};fl.forEach(s=>{if(s.tg)s.tg.forEach(t=>{if(TG[t]){tot.a+=TG[t].a;tot.d+=TG[t].d;tot.h+=TG[t].h;tot.s+=TG[t].s}tc[t]=(tc[t]||0)+1});ec[s.e]=(ec[s.e]||0)+1;cc[s.c]=(cc[s.c]||0)+1});const mx=Math.max(tot.a,tot.d,tot.h,tot.s,1);const cl=v=>v>=mx*.8?'hi':v>=mx*.5?'md':'lo';tl.innerHTML=`<div class="tr"><span class="tr-n">⚔️ ATK</span><span class="tr-v ${cl(tot.a)}">+${tot.a}</span></div><div class="tr"><span class="tr-n">🛡️ DEF</span><span class="tr-v ${cl(tot.d)}">+${tot.d}</span></div><div class="tr"><span class="tr-n">❤️ HP</span><span class="tr-v ${cl(tot.h)}">+${tot.h}</span></div><div class="tr"><span class="tr-n">💨 SPD</span><span class="tr-v ${cl(tot.s)}">+${tot.s}</span></div><div style="margin-top:8px;padding-top:8px;border-top:1px solid var(--bdr)"><div class="tr"><span class="tr-n">📊</span><span class="tr-v">${fl.length}/10</span></div><div class="tr"><span class="tr-n">🔥</span><span class="tr-v">${ec.red}</span></div><div class="tr"><span class="tr-n">💧</span><span class="tr-v">${ec.blue}</span></div><div class="tr"><span class="tr-n">🌿</span><span class="tr-v">${ec.green}</span></div><div class="tr"><span class="tr-n">⚔️</span><span class="tr-v">${cc.attacker}</span></div><div class="tr"><span class="tr-n">🛡️</span><span class="tr-v">${cc.defender}</span></div><div class="tr"><span class="tr-n">🏃</span><span class="tr-v">${cc.runner}</span></div></div><div style="margin-top:8px;padding-top:8px;border-top:1px solid var(--bdr)"><p style="font-size:11px;font-weight:600;color:var(--acc);margin-bottom:4px">🏷️ Tags (${Object.keys(tc).length})</p><div class="tl">${Object.entries(tc).map(([t,c])=>`<span class="ti ${c>=3?'sp':'md'}">${t} (${c})</span>`).join('')}</div></div>`}
 // STATS
-function uS(){document.getElementById('sCh').textContent=CH.length;document.getElementById('sMd').textContent=MD.length;document.getElementById('sSp').textContent=SP.length;document.getElementById('sCt').textContent=CT.length;document.getElementById('sNw').textContent=15}
+function uS(){const ex=ALL.filter(c=>c.r==='EX').length;const bf=ALL.filter(c=>c.r==='BF').length;const sp=ALL.filter(c=>c.r==='SP').length;const ot=ALL.length-ex-bf-sp;document.getElementById('sCh').textContent=ALL.length;document.getElementById('sEx').textContent=ex;document.getElementById('sBf').textContent=bf;document.getElementById('sSp2').textContent=sp;document.getElementById('sOt').textContent=ot}
 // INIT
 uS();rC();rSl();
 </script>
