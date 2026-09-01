@@ -258,11 +258,10 @@
     <div class="nb-i"><span class="nb-b nerf">NERF</span><span class="nb-t"><b>Kuzan (BB)</b> - Freeze duration dikurangi.</span><span class="nb-d">Jul 2026</span></div>
 </div>
 <div class="nb-bar" style="border-color:var(--acc)">
-    <h3 style="color:var(--acc)">🔄 Rerun</h3>
-    <div class="nb-i"><span class="nb-b rerun">RERUN</span><span class="nb-t"><b>Luffy G5</b> - Banner Anniversary!</span><span class="nb-d">Aug 2026</span></div>
-    <div class="nb-i"><span class="nb-b rerun">RERUN</span><span class="nb-t"><b>Kaido (Strongest)</b> - Bounty Festival.</span><span class="nb-d">Jul 2026</span></div>
-    <div class="nb-i"><span class="nb-b rerun">RERUN</span><span class="nb-t"><b>Roger (King)</b> - Waktu terbatas.</span><span class="nb-d">Jul 2026</span></div>
-    <div class="nb-i"><span class="nb-b rerun">RERUN</span><span class="nb-t"><b>Shanks (Divine)</b> - Film Red event.</span><span class="nb-d">Jun 2026</span></div>
+    <h3 style="color:var(--acc)">🔄 Rerun (Verified from Official OPBR)</h3>
+    <div class="nb-i"><span class="nb-b rerun">EX RERUN</span><span class="nb-t"><b>Sanji & Zoro (Wings)</b> - 260 Million Downloads Campaign #2!</span><span class="nb-d">Aug 31, 2026</span></div>
+    <div class="nb-i"><span class="nb-b rerun">EX RERUN</span><span class="nb-t"><b>Kaido (Onigashima)</b> - 260 Million Downloads Campaign.</span><span class="nb-d">Aug 28, 2026</span></div>
+    <div class="nb-i"><span class="nb-b rerun">BF RERUN</span><span class="nb-t"><b>Giant Warrior Hajrudin</b> - 2026 Summer Campaign #2.</span><span class="nb-d">Aug 25, 2026</span></div>
 </div>
 </div>
 </main>
@@ -466,7 +465,7 @@ const ALL=[
 {n:"Robin (Holiday)",s:"Nico Robin",e:"blue",c:"runner",r:"BF",star:4,d:"Holiday RUN."},
 {n:"Nico Robin (Enies)",s:"Nico Robin",e:"red",c:"defender",r:"BF",star:4,d:"Enies Lobby DEF."},
 {n:"Brook (Monster)",s:"Brook",e:"green",c:"runner",r:"BF",star:4,d:"Monster Point RUN soul."},
-{n:"Nico Robin (Egghead)",s:"Nico Robin",e:"light",c:"defender",r:"BF",star:4,d:"Egghead DEF.
+{n:"Nico Robin (Egghead)",s:"Nico Robin",e:"light",c:"defender",r:"BF",star:4,d:"Egghead DEF."},
 {n:"Chopper (Egghead)",s:"Tony Tony Chopper",e:"light",c:"attacker",r:"BF",star:4,d:"Egghead ATK+DEF class."},
 {n:"Brook (Egghead)",s:"Brook",e:"blue",c:"attacker",r:"BF",star:4,d:"Egghead ATK color change."},
 {n:"Nami (Egghead)",s:"Nami",e:"red",c:"runner",r:"BF",star:4,d:"Egghead RUN weather."},
@@ -859,7 +858,7 @@ function rC(){
     const g=document.getElementById('cG'),q=document.getElementById('cS').value.toLowerCase();
     let f=ALL.filter(ch=>{const ms=ch.n.toLowerCase().includes(q)||ch.s.toLowerCase().includes(q)||ch.e.includes(q)||ch.c.includes(q)||ch.r.toLowerCase().includes(q);const mr=cF.r==='all'||ch.r===cF.r;const me=cF.e==='all'||ch.e===cF.e;const mc=cF.c==='all'||ch.c===cF.c;return ms&&mr&&me&&mc});
     document.getElementById('charCount').textContent=`Menampilkan ${f.length} dari ${ALL.length} karakter`;
-    g.innerHTML=f.map(ch=>{const ec=ch.e==='red'?'r':ch.e==='blue'?'b':ch.e==='green'?'g':ch.e==='dark'?'d':'l';const rc=ch.r==='EX'?'t-ex':ch.r==='BF'?'t-bf':ch.r==='SP'?'t-sp':'t-fr';const ini=ch.n.length>20?ch.s.substring(0,2).toUpperCase():ch.n.substring(0,2).toUpperCase();return`<div class="cd" onclick="oM('${ch.n.replace(/'/g,"\\'").replace(/&/g,"&amp;")}')" style="position:relative"><span class="tb ${rc}">${ch.r}</span><div class="ch"><div class="av ${ec}">${ini}</div><div class="ci"><h3>${ch.n}</h3><small>${ch.s}</small><br><span class="eb ${ec}">${ch.e.toUpperCase()}</span><span class="cc">${ch.c.toUpperCase()}</span> <span style="font-size:8px;color:var(--dim)">${ch.star}★</span></div></div><p style="color:var(--dim);font-size:10px;margin-bottom:6px">${ch.d}${ch.fl==='new'?' <span class="ti nw">NEW</span>':''}${ch.fl==='buff'?' <span class="ti bf">BUFF</span>':''}${ch.fl==='nerf'?' <span class="ti nf">NERF</span>':''}</p>${ch.md?`<div class="cs"><div class="cs-t md">🏅 Medal</div><div class="tl">${ch.md.map(m=>`<span class="ti md">${m}</span>`).join('')}</div></div>`:''}${ch.ct?`<div class="cs"><div class="cs-t ct">⚔️ Counter</div><div class="tl">${ch.ct.map(x=>`<span class="ti ct">${x}</span>`).join('')}${ch.w?ch.w.map(x=>`<span class="ti wk">⚠️ ${x}</span>`).join(''):''}</div></div>`:''}</div>`}).join('');
+    g.innerHTML=f.map(ch=>{const ec=ch.e==='red'?'r':ch.e==='blue'?'b':ch.e==='green'?'g':ch.e==='dark'?'d':'l';const rc=ch.r==='EX'?'t-ex':ch.r==='BF'?'t-bf':ch.r==='SP'?'t-sp':'t-fr';const ini=ch.n.length>20?ch.s.substring(0,2).toUpperCase():ch.n.substring(0,2).toUpperCase();return`<div class="cd" onclick="oM('${ch.n.replace(/'/g,"\\'")}')" style="position:relative"><span class="tb ${rc}">${ch.r}</span><div class="ch"><div class="av ${ec}">${ini}</div><div class="ci"><h3>${ch.n}</h3><small>${ch.s}</small><br><span class="eb ${ec}">${ch.e.toUpperCase()}</span><span class="cc">${ch.c.toUpperCase()}</span> <span style="font-size:8px;color:var(--dim)">${ch.star}★</span></div></div><p style="color:var(--dim);font-size:10px;margin-bottom:6px">${ch.d}${ch.fl==='new'?' <span class="ti nw">NEW</span>':''}${ch.fl==='buff'?' <span class="ti bf">BUFF</span>':''}${ch.fl==='nerf'?' <span class="ti nf">NERF</span>':''}</p>${ch.md?`<div class="cs"><div class="cs-t md">🏅 Medal</div><div class="tl">${ch.md.map(m=>`<span class="ti md">${m}</span>`).join('')}</div></div>`:''}${ch.ct?`<div class="cs"><div class="cs-t ct">⚔️ Counter</div><div class="tl">${ch.ct.map(x=>`<span class="ti ct">${x}</span>`).join('')}${ch.w?ch.w.map(x=>`<span class="ti wk">⚠️ ${x}</span>`).join(''):''}</div></div>`:''}</div>`}).join('');
 }
 function rM(){
     const g=document.getElementById('mG'),q=document.getElementById('mS').value.toLowerCase();
@@ -876,14 +875,15 @@ function rCT(){
     let f=CT.filter(c=>c.ch.toLowerCase().includes(q)||c.ct.some(x=>x.toLowerCase().includes(q))||c.cb.some(x=>x.toLowerCase().includes(q)));
     g.innerHTML=f.map(c=>`<div class="cd"><div class="ch"><div class="av r">⚔️</div><div class="ci"><h3>${c.ch}</h3></div></div><div class="cs"><div class="cs-t ct">✅ Mengalahkan:</div><div class="tl">${c.ct.map(x=>`<span class="ti ct">${x}</span>`).join('')}</div></div><div class="cs" style="border-color:var(--b)"><div class="cs-t" style="color:var(--b)">❌ Dikalahkan oleh:</div><div class="tl">${c.cb.map(x=>`<span class="ti wk">${x}</span>`).join('')}</div></div><div class="cs"><div class="cs-t sp">💡</div><p style="color:var(--dim);font-size:10px">${c.ti}</p></div></div>`).join('');
 }
+const TIER={'Jewelry Bonney (Nika)':'GOD','Garp (Legendary Hero)':'GOD','Borsalino (Kizaru)':'GOD','Sanji & Zoro (Wings)':'GOD','St. Marcus Mars':'SS','St. Nusjuro':'SS','Kuzan (BB Pirates)':'SS','Zoro (Raid)':'SS','Shanks (Film Red)':'SS','Luffy (Gear Five)':'SS','Sabo (Flame Emperor)':'SS','Kaido (Strongest)':'SS','Shanks (Divine)':'SS','Roger (King)':'S','Yamato (Okuchi)':'S','Akainu (Sakazuki)':'S','Blackbeard (4 Emperors)':'S','Law (Winner)':'S','Lucci (Awakened)':'S','Kid & Law (Onigashima)':'S','Roger (Great)':'A','Kaido (Onigashima)':'A','Oden (Daimyo)':'A','Charlotte Linlin':'A','Yamato (Son)':'A','O-Lin (Onigashima)':'A','Luffy (4 Emperors)':'A','Blackbeard (Warlords)':'B','S-Snake (Seraphim)':'B','Luffy (King)':'C','WB (Edward Newgate)':'C','Zephyr (Film Z)':'C','Teach (Warlords)':'C','Luffy (Four Emperors)':'C','Luffy (Paramount)':'C'};
 function rMeta(){
     const g=document.getElementById('metaGrid');
-    const tiers={GOD:ALL.filter(c=>c.r==='EX'&&c.tier==='GOD'),SS:ALL.filter(c=>c.r==='EX'&&(c.tier==='SS'||!c.tier)),S:ALL.filter(c=>c.r==='EX'&&c.tier==='S'),A:ALL.filter(c=>c.r==='EX'&&c.tier==='A'),B:ALL.filter(c=>c.r==='EX'&&(c.tier==='B'||c.tier==='C'))};
+    const tiers={GOD:ALL.filter(c=>c.r==='EX'&&TIER[c.n]==='GOD'),SS:ALL.filter(c=>c.r==='EX'&&TIER[c.n]==='SS'),S:ALL.filter(c=>c.r==='EX'&&TIER[c.n]==='S'),A:ALL.filter(c=>c.r==='EX'&&TIER[c.n]==='A'),B:ALL.filter(c=>c.r==='EX'&&(TIER[c.n]==='B'||TIER[c.n]==='C'))};
     let html='<div style="margin-bottom:16px"><p style="color:var(--dim);font-size:12px">Tier list berdasarkan meta League Battle Season 181. Hanya EX characters yang masuk meta tier.</p></div>';
     Object.entries(tiers).forEach(([tier,chars])=>{
         if(!chars.length)return;
         const cls=tier==='GOD'?'t-ex':tier==='SS'?'t-bf':tier==='S'?'t-sp':tier==='A'?'t-fr':'t-co';
-        html+=`<div style="margin-bottom:16px"><h3 style="font-size:14px;margin-bottom:8px"><span class="tb ${cls}" style="position:static;font-size:11px">${tier}</span></h3><div class="gr">${chars.map(ch=>{const ec=ch.e==='red'?'r':ch.e==='blue'?'b':'g';return`<div class="cd" onclick="oM('${ch.n.replace(/'/g,"\\'").replace(/&/g,"&amp;")}')"><div class="ch"><div class="av ${ec}">${ch.n.substring(0,2).toUpperCase()}</div><div class="ci"><h3>${ch.n}</h3><span class="eb ${ec}">${ch.e.toUpperCase()}</span><span class="cc">${ch.c.toUpperCase()}</span></div></div><p style="color:var(--dim);font-size:10px">${ch.d}${ch.fl==='new'?' <span class="ti nw">NEW</span>':''}${ch.fl==='buff'?' <span class="ti bf">BUFF</span>':''}${ch.fl==='nerf'?' <span class="ti nf">NERF</span>':''}</p></div>`}).join('')}</div></div>`;
+        html+=`<div style="margin-bottom:16px"><h3 style="font-size:14px;margin-bottom:8px"><span class="tb ${cls}" style="position:static;font-size:11px">${tier}</span></h3><div class="gr">${chars.map(ch=>{const ec=ch.e==='red'?'r':ch.e==='blue'?'b':'g';return`<div class="cd" onclick="oM('${ch.n.replace(/'/g,"\\'")}')"><div class="ch"><div class="av ${ec}">${ch.n.substring(0,2).toUpperCase()}</div><div class="ci"><h3>${ch.n}</h3><span class="eb ${ec}">${ch.e.toUpperCase()}</span><span class="cc">${ch.c.toUpperCase()}</span></div></div><p style="color:var(--dim);font-size:10px">${ch.d}${ch.fl==='new'?' <span class="ti nw">NEW</span>':''}${ch.fl==='buff'?' <span class="ti bf">BUFF</span>':''}${ch.fl==='nerf'?' <span class="ti nf">NERF</span>':''}</p></div>`}).join('')}</div></div>`;
     });
     g.innerHTML=html;
 }
