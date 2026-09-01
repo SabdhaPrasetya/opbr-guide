@@ -1,0 +1,1805 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OPBR Guide - Medal, Support & Counter</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        :root {
+            --bg-dark: #0a0a1a;
+            --bg-card: #12122a;
+            --bg-card-hover: #1a1a3a;
+            --primary: #ff4444;
+            --secondary: #4488ff;
+            --accent: #ffaa00;
+            --green: #44cc44;
+            --text: #ffffff;
+            --text-dim: #8888aa;
+            --border: #2a2a4a;
+            --red-element: #ff4444;
+            --blue-element: #4488ff;
+            --green-element: #44cc44;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: var(--bg-dark);
+            color: var(--text);
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        /* Animated Background */
+        .bg-animation {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: 
+                radial-gradient(ellipse at 20% 50%, rgba(255,68,68,0.08) 0%, transparent 50%),
+                radial-gradient(ellipse at 80% 50%, rgba(68,136,255,0.08) 0%, transparent 50%),
+                radial-gradient(ellipse at 50% 100%, rgba(255,170,0,0.05) 0%, transparent 50%);
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #1a1a3a 0%, #0a0a2a 100%);
+            border-bottom: 2px solid var(--primary);
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(10px);
+        }
+
+        .header-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: 800;
+        }
+
+        .logo h1 {
+            font-size: 24px;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .logo p {
+            font-size: 12px;
+            color: var(--text-dim);
+        }
+
+        /* Navigation */
+        nav {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .nav-btn {
+            padding: 10px 20px;
+            border: 2px solid var(--border);
+            background: transparent;
+            color: var(--text);
+            border-radius: 25px;
+            cursor: pointer;
+            font-family: 'Poppins', sans-serif;
+            font-size: 14px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .nav-btn:hover, .nav-btn.active {
+            background: var(--primary);
+            border-color: var(--primary);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(255,68,68,0.3);
+        }
+
+        /* Main Content */
+        main {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 30px 20px;
+        }
+
+        .section {
+            display: none;
+        }
+
+        .section.active {
+            display: block;
+            animation: fadeIn 0.5s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Section Title */
+        .section-title {
+            font-size: 32px;
+            font-weight: 800;
+            margin-bottom: 10px;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .section-desc {
+            color: var(--text-dim);
+            margin-bottom: 30px;
+            font-size: 16px;
+        }
+
+        /* Search & Filter */
+        .search-filter {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+
+        .search-box {
+            flex: 1;
+            min-width: 250px;
+            padding: 12px 20px;
+            background: var(--bg-card);
+            border: 2px solid var(--border);
+            border-radius: 12px;
+            color: var(--text);
+            font-size: 16px;
+            font-family: 'Poppins', sans-serif;
+            transition: border-color 0.3s;
+        }
+
+        .search-box:focus {
+            outline: none;
+            border-color: var(--primary);
+        }
+
+        .filter-btn {
+            padding: 10px 20px;
+            border: 2px solid var(--border);
+            background: var(--bg-card);
+            color: var(--text);
+            border-radius: 12px;
+            cursor: pointer;
+            font-family: 'Poppins', sans-serif;
+            font-size: 14px;
+            transition: all 0.3s;
+        }
+
+        .filter-btn:hover, .filter-btn.active {
+            border-color: var(--primary);
+            background: rgba(255,68,68,0.1);
+        }
+
+        .filter-btn.red { border-color: var(--red-element); }
+        .filter-btn.red:hover, .filter-btn.red.active { background: rgba(255,68,68,0.2); }
+        .filter-btn.blue { border-color: var(--blue-element); }
+        .filter-btn.blue:hover, .filter-btn.blue.active { background: rgba(68,136,255,0.2); }
+        .filter-btn.green { border-color: var(--green-element); }
+        .filter-btn.green:hover, .filter-btn.green.active { background: rgba(68,204,68,0.2); }
+
+        /* Character Grid */
+        .char-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 20px;
+        }
+
+        .char-card {
+            background: var(--bg-card);
+            border: 2px solid var(--border);
+            border-radius: 16px;
+            padding: 20px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .char-card:hover {
+            border-color: var(--primary);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(255,68,68,0.2);
+        }
+
+        .char-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+
+        .char-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            font-weight: 800;
+        }
+
+        .char-avatar.red { background: linear-gradient(135deg, #ff4444, #cc0000); }
+        .char-avatar.blue { background: linear-gradient(135deg, #4488ff, #0044cc); }
+        .char-avatar.green { background: linear-gradient(135deg, #44cc44, #008800); }
+
+        .char-info h3 {
+            font-size: 18px;
+            font-weight: 700;
+        }
+
+        .char-info .element-badge {
+            display: inline-block;
+            padding: 3px 10px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            margin-top: 5px;
+        }
+
+        .element-badge.red { background: rgba(255,68,68,0.2); color: var(--red-element); }
+        .element-badge.blue { background: rgba(68,136,255,0.2); color: var(--blue-element); }
+        .element-badge.green { background: rgba(68,204,68,0.2); color: var(--green-element); }
+
+        .char-class {
+            display: inline-block;
+            padding: 3px 10px;
+            border-radius: 20px;
+            font-size: 11px;
+            font-weight: 600;
+            margin-left: 8px;
+            background: rgba(255,170,0,0.2);
+            color: var(--accent);
+        }
+
+        .tier-badge {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            padding: 4px 12px;
+            border-radius: 8px;
+            font-size: 12px;
+            font-weight: 700;
+        }
+
+        .tier-sss { background: linear-gradient(135deg, #ff0000, #ff4444); }
+        .tier-ss { background: linear-gradient(135deg, #ff6600, #ffaa00); }
+        .tier-s { background: linear-gradient(135deg, #00aaff, #4488ff); }
+        .tier-a { background: linear-gradient(135deg, #44cc44, #00aa00); }
+        .tier-b { background: linear-gradient(135deg, #888888, #aaaaaa); }
+
+        /* Medal Section */
+        .medal-section {
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px solid var(--border);
+        }
+
+        .medal-title {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--accent);
+            margin-bottom: 10px;
+        }
+
+        .medal-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .medal-item {
+            padding: 6px 12px;
+            background: rgba(255,170,0,0.1);
+            border: 1px solid rgba(255,170,0,0.3);
+            border-radius: 8px;
+            font-size: 12px;
+            color: var(--accent);
+        }
+
+        /* Support Section */
+        .support-section {
+            margin-top: 12px;
+            padding-top: 12px;
+            border-top: 1px solid var(--border);
+        }
+
+        .support-title {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--green);
+            margin-bottom: 10px;
+        }
+
+        .support-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .support-item {
+            padding: 6px 12px;
+            background: rgba(68,204,68,0.1);
+            border: 1px solid rgba(68,204,68,0.3);
+            border-radius: 8px;
+            font-size: 12px;
+            color: var(--green);
+        }
+
+        /* Counter Section */
+        .counter-section {
+            margin-top: 12px;
+            padding-top: 12px;
+            border-top: 1px solid var(--border);
+        }
+
+        .counter-title {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+
+        .counter-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .counter-item {
+            padding: 6px 12px;
+            background: rgba(255,68,68,0.1);
+            border: 1px solid rgba(255,68,68,0.3);
+            border-radius: 8px;
+            font-size: 12px;
+            color: var(--primary);
+        }
+
+        .counter-item.weak {
+            background: rgba(68,136,255,0.1);
+            border-color: rgba(68,136,255,0.3);
+            color: var(--blue);
+        }
+
+        /* Modal */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.8);
+            z-index: 200;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .modal-overlay.active {
+            display: flex;
+        }
+
+        .modal {
+            background: var(--bg-card);
+            border: 2px solid var(--border);
+            border-radius: 20px;
+            max-width: 700px;
+            width: 100%;
+            max-height: 90vh;
+            overflow-y: auto;
+            padding: 30px;
+            position: relative;
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            width: 35px;
+            height: 35px;
+            border: none;
+            background: rgba(255,68,68,0.2);
+            color: var(--primary);
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal-char-header {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 25px;
+        }
+
+        .modal-avatar {
+            width: 80px;
+            height: 80px;
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 36px;
+            font-weight: 800;
+        }
+
+        .modal-section {
+            margin-bottom: 20px;
+        }
+
+        .modal-section h4 {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 12px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid var(--border);
+        }
+
+        .modal-section h4.medal-color { color: var(--accent); border-color: var(--accent); }
+        .modal-section h4.support-color { color: var(--green); border-color: var(--green); }
+        .modal-section h4.counter-color { color: var(--primary); border-color: var(--primary); }
+
+        .modal-item {
+            padding: 10px 15px;
+            background: rgba(255,255,255,0.03);
+            border-radius: 10px;
+            margin-bottom: 8px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .modal-item-name {
+            font-weight: 500;
+        }
+
+        .modal-item-desc {
+            font-size: 13px;
+            color: var(--text-dim);
+        }
+
+        /* Element Guide */
+        .element-guide {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .element-card {
+            background: var(--bg-card);
+            border: 2px solid var(--border);
+            border-radius: 16px;
+            padding: 25px;
+            text-align: center;
+        }
+
+        .element-icon {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 36px;
+            margin: 0 auto 15px;
+        }
+
+        .element-icon.red { background: linear-gradient(135deg, #ff4444, #cc0000); }
+        .element-icon.blue { background: linear-gradient(135deg, #4488ff, #0044cc); }
+        .element-icon.green { background: linear-gradient(135deg, #44cc44, #008800); }
+
+        .element-card h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .element-card p {
+            color: var(--text-dim);
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .element-weakness {
+            margin-top: 15px;
+            padding: 10px;
+            background: rgba(255,68,68,0.1);
+            border-radius: 10px;
+            font-size: 13px;
+        }
+
+        /* Stats */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .stat-card {
+            background: var(--bg-card);
+            border: 2px solid var(--border);
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 36px;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .stat-label {
+            font-size: 13px;
+            color: var(--text-dim);
+            margin-top: 5px;
+        }
+
+        /* Tips Section */
+        .tips-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .tip-card {
+            background: var(--bg-card);
+            border: 2px solid var(--border);
+            border-radius: 16px;
+            padding: 25px;
+        }
+
+        .tip-card h3 {
+            font-size: 18px;
+            margin-bottom: 12px;
+            color: var(--accent);
+        }
+
+        .tip-card p {
+            color: var(--text-dim);
+            font-size: 14px;
+            line-height: 1.7;
+        }
+
+        .tip-card ul {
+            list-style: none;
+            margin-top: 10px;
+        }
+
+        .tip-card li {
+            padding: 6px 0;
+            color: var(--text-dim);
+            font-size: 13px;
+        }
+
+        .tip-card li::before {
+            content: "⚔️ ";
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 30px;
+            color: var(--text-dim);
+            font-size: 13px;
+            border-top: 1px solid var(--border);
+            margin-top: 50px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                gap: 15px;
+            }
+            nav {
+                justify-content: center;
+            }
+            .char-grid {
+                grid-template-columns: 1fr;
+            }
+            .section-title {
+                font-size: 24px;
+            }
+        }
+
+        /* Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--bg-dark);
+        }
+        ::-webkit-scrollbar-thumb {
+            background: var(--border);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--primary);
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-animation"></div>
+
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <div class="logo-icon">⚔️</div>
+                <div>
+                    <h1>OPBR GUIDE</h1>
+                    <p>Medal, Support & Counter Guide</p>
+                </div>
+            </div>
+            <nav>
+                <button class="nav-btn active" onclick="showSection('home', this)">🏠 Home</button>
+                <button class="nav-btn" onclick="showSection('characters', this)">👤 Karakter</button>
+                <button class="nav-btn" onclick="showSection('medals', this)">🏅 Medal</button>
+                <button class="nav-btn" onclick="showSection('support', this)">👥 Support</button>
+                <button class="nav-btn" onclick="showSection('counters', this)">⚔️ Counter</button>
+                <button class="nav-btn" onclick="showSection('tips', this)">💡 Tips</button>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- HOME SECTION -->
+        <div id="home" class="section active">
+            <h2 class="section-title">🏴‍☠️ Selamat Datang di OPBR Guide!</h2>
+            <p class="section-desc">Panduan lengkap untuk One Piece Bounty Rush - Medal, Support, Counter & Tips</p>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number" id="totalChars">0</div>
+                    <div class="stat-label">Karakter</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" id="totalMedals">0</div>
+                    <div class="stat-label">Medal Sets</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" id="totalSupports">0</div>
+                    <div class="stat-label">Support Tips</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" id="totalCounters">0</div>
+                    <div class="stat-label">Counter Matchup</div>
+                </div>
+            </div>
+
+            <h3 style="font-size: 22px; margin-bottom: 20px;">🎯 Element System</h3>
+            <div class="element-guide">
+                <div class="element-card">
+                    <div class="element-icon red">🔥</div>
+                    <h3 style="color: var(--red-element);">RED (Api)</h3>
+                    <p>Karakter RED kuat terhadap GREEN. Cocok untuk attacker dengan damage tinggi.</p>
+                    <div class="element-weakness">
+                        ❌ Lemah terhadap: <strong style="color: var(--blue-element);">BLUE</strong>
+                    </div>
+                </div>
+                <div class="element-card">
+                    <div class="element-icon blue">💧</div>
+                    <h3 style="color: var(--blue-element);">BLUE (Air)</h3>
+                    <p>Karakter BLUE kuat terhadap RED. Cocok untuk defender dengan pertahanan kuat.</p>
+                    <div class="element-weakness">
+                        ❌ Lemah terhadap: <strong style="color: var(--green-element);">GREEN</strong>
+                    </div>
+                </div>
+                <div class="element-card">
+                    <div class="element-icon green">🌿</div>
+                    <h3 style="color: var(--green-element);">GREEN (Hijau)</h3>
+                    <p>Karakter GREEN kuat terhadap BLUE. Cocok untuk runner dengan kecepatan tinggi.</p>
+                    <div class="element-weakness">
+                        ❌ Lemah terhadap: <strong style="color: var(--red-element);">RED</strong>
+                    </div>
+                </div>
+            </div>
+
+            <div class="element-guide">
+                <div class="element-card" style="border-color: var(--accent);">
+                    <h3 style="color: var(--accent); margin-bottom: 15px;">⚔️ Class System</h3>
+                    <p><strong style="color: var(--primary);">ATTACKER</strong> - Damage dealer, fokus serangan</p>
+                    <p style="margin-top: 8px;"><strong style="color: var(--secondary);">DEFENDER</strong> - Tank, jaga treasure area</p>
+                    <p style="margin-top: 8px;"><strong style="color: var(--green);">RUNNER</strong> - Cepat, capture treasure</p>
+                </div>
+                <div class="element-card" style="border-color: var(--accent);">
+                    <h3 style="color: var(--accent); margin-bottom: 15px;">📊 Tier System</h3>
+                    <p><span class="tier-badge tier-sss" style="position:static;">SSS</span> - Godlike, meta defining</p>
+                    <p style="margin-top: 8px;"><span class="tier-badge tier-ss" style="position:static;">SS</span> - Sangat kuat</p>
+                    <p style="margin-top: 8px;"><span class="tier-badge tier-s" style="position:static;">S</span> - Kuat, viable</p>
+                    <p style="margin-top: 8px;"><span class="tier-badge tier-a" style="position:static;">A</span> - Bagus</p>
+                    <p style="margin-top: 8px;"><span class="tier-badge tier-b" style="position:static;">B</span> - Playable</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- CHARACTERS SECTION -->
+        <div id="characters" class="section">
+            <h2 class="section-title">👤 Daftar Karakter</h2>
+            <p class="section-desc">Klik karakter untuk melihat detail medal, support, dan counter</p>
+
+            <div class="search-filter">
+                <input type="text" class="search-box" placeholder="🔍 Cari karakter..." id="charSearch" oninput="filterCharacters()">
+                <button class="filter-btn" onclick="filterByElement('all', this)">Semua</button>
+                <button class="filter-btn red" onclick="filterByElement('red', this)">🔥 RED</button>
+                <button class="filter-btn blue" onclick="filterByElement('blue', this)">💧 BLUE</button>
+                <button class="filter-btn green" onclick="filterByElement('green', this)">🌿 GREEN</button>
+                <button class="filter-btn" onclick="filterByClass('attacker', this)">⚔️ Attacker</button>
+                <button class="filter-btn" onclick="filterByClass('defender', this)">🛡️ Defender</button>
+                <button class="filter-btn" onclick="filterByClass('runner', this)">🏃 Runner</button>
+            </div>
+
+            <div class="char-grid" id="charGrid"></div>
+        </div>
+
+        <!-- MEDALS SECTION -->
+        <div id="medals" class="section">
+            <h2 class="section-title">🏅 Medal Sets Terbaik</h2>
+            <p class="section-desc">Rekomendasi medal set untuk setiap class dan karakter</p>
+
+            <div class="search-filter">
+                <input type="text" class="search-box" placeholder="🔍 Cari medal set..." id="medalSearch" oninput="filterMedals()">
+                <button class="filter-btn" onclick="filterMedalByClass('all', this)">Semua</button>
+                <button class="filter-btn" onclick="filterMedalByClass('attacker', this)">⚔️ Attacker</button>
+                <button class="filter-btn" onclick="filterMedalByClass('defender', this)">🛡️ Defender</button>
+                <button class="filter-btn" onclick="filterMedalByClass('runner', this)">🏃 Runner</button>
+            </div>
+
+            <div class="char-grid" id="medalGrid"></div>
+        </div>
+
+        <!-- SUPPORT SECTION -->
+        <div id="support" class="section">
+            <h2 class="section-title">👥 Support Terbaik</h2>
+            <p class="section-desc">Karakter support terbaik untuk meningkatkan performa tim</p>
+
+            <div class="search-filter">
+                <input type="text" class="search-box" placeholder="🔍 Cari support..." id="supportSearch" oninput="filterSupports()">
+                <button class="filter-btn" onclick="filterSupportByElement('all', this)">Semua</button>
+                <button class="filter-btn red" onclick="filterSupportByElement('red', this)">🔥 RED</button>
+                <button class="filter-btn blue" onclick="filterSupportByElement('blue', this)">💧 BLUE</button>
+                <button class="filter-btn green" onclick="filterSupportByElement('green', this)">🌿 GREEN</button>
+            </div>
+
+            <div class="char-grid" id="supportGrid"></div>
+        </div>
+
+        <!-- COUNTERS SECTION -->
+        <div id="counters" class="section">
+            <h2 class="section-title">⚔️ Counter Matchup</h2>
+            <p class="section-desc">Panduan matchup - karakter apa yang mengalahkan karakter lain</p>
+
+            <div class="search-filter">
+                <input type="text" class="search-box" placeholder="🔍 Cari counter..." id="counterSearch" oninput="filterCounters()">
+            </div>
+
+            <div class="char-grid" id="counterGrid"></div>
+        </div>
+
+        <!-- TIPS SECTION -->
+        <div id="tips" class="section">
+            <h2 class="section-title">💡 Tips & Strategi</h2>
+            <p class="section-desc">Tips bermain OPBR untuk pemula hingga advanced</p>
+
+            <div class="tips-grid">
+                <div class="tip-card">
+                    <h3>🎯 Tips Attacker</h3>
+                    <ul>
+                        <li>Fokus target yang lemah secara element</li>
+                        <li>Gunakan skill cooldown yang tepat</li>
+                        <li>Jangan terlalu agresif tanpa support</li>
+                        <li>Pilih medal set yang meningkatkan damage</li>
+                        <li>Timing skill 2 untuk finishing blow</li>
+                    </ul>
+                </div>
+                <div class="tip-card">
+                    <h3>🛡️ Tips Defender</h3>
+                    <ul>
+                        <li>Jaga treasure area selalu aman</li>
+                        <li>Gunakan hyper armor untuk blocking</li>
+                        <li>Patner dengan attacker untuk defense</li>
+                        <li>Medal set fokus defense + HP</li>
+                        <li>Jangan kejar runner, fokus defense</li>
+                    </ul>
+                </div>
+                <div class="tip-card">
+                    <h3>🏃 Tips Runner</h3>
+                    <ul>
+                        <li>Capture treasure secepat mungkin</li>
+                        <li>Gunakan speed boost untuk escape</li>
+                        <li>Timing untuk capture saat lawan sibuk</li>
+                        <li>Medal set fokus speed + cooldown</li>
+                        <li>Jangan fight, fokus capture</li>
+                    </ul>
+                </div>
+                <div class="tip-card">
+                    <h3>📊 Tips Support</h3>
+                    <ul>
+                        <li>Build support 160%+ untuk bonus maksimal</li>
+                        <li>Gunakan karakter support yang sesuai element</li>
+                        <li>Max level semua support karakter</li>
+                        <li>Gunakan transfer boost untuk semua slot</li>
+                        <li>Fokus tag yang sesuai dengan class main</li>
+                    </ul>
+                </div>
+                <div class="tip-card">
+                    <h3>🏅 Tips Medal</h3>
+                    <ul>
+                        <li>Gunakan 3 medal dengan tag yang sama</li>
+                        <li>Prioritaskan skill cooldown reduction</li>
+                        <li>Medal EX untuk bonus stats lebih tinggi</li>
+                        <li>Upgrade medal ke max untuk bonus optimal</li>
+                        <li>Kombinasikan medal sesuai playstyle</li>
+                    </ul>
+                </div>
+                <div class="tip-card">
+                    <h3>⚡ Tips General</h3>
+                    <ul>
+                        <li>Kenali element lawan sebelum fight</li>
+                        <li>Timing dodge untuk hindari skill</li>
+                        <li>Communication dengan tim sangat penting</li>
+                        <li>Fokus objective, bukan kill</li>
+                        <li>Practice di solo battle dulu</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Character Modal -->
+    <div class="modal-overlay" id="charModal">
+        <div class="modal">
+            <button class="modal-close" onclick="closeModal()">✕</button>
+            <div id="modalContent"></div>
+        </div>
+    </div>
+
+    <footer>
+        <p>🏴‍☠️ OPBR Guide - Panduan Lengkap One Piece Bounty Rush</p>
+        <p style="margin-top: 5px;">Data berdasarkan meta 2025-2026 | Fan-made guide</p>
+    </footer>
+
+    <script>
+        // ========== DATA ==========
+        const characters = [
+            // SSS Tier
+            {
+                name: "Garp (Hiken)",
+                initials: "GP",
+                element: "red",
+                class: "attacker",
+                tier: "SSS",
+                medals: ["Garp Medal", "Roger Medal", "Akainu Medal"],
+                medalDesc: ["+18% Attack", "+15% Crit", "+12% Skill 2 CD"],
+                support: ["Roger", "Shanks", "Akainu", "Kaido", "Whitebeard"],
+                supportDesc: ["Red Attacker 160%", "Red Runner 160%", "Red Defender 160%"],
+                counters: ["Kizaru", "Kuzan"],
+                weakTo: ["Kizaru (BLUE)", "Kuzan (BLUE)"],
+                desc: "Salah satu karakter terkuat di meta. Damage skill 2 sangat besar dengan range luas."
+            },
+            {
+                name: "Kizaru (Pika Pika)",
+                initials: "KZ",
+                element: "blue",
+                class: "runner",
+                tier: "SSS",
+                medals: ["Kizaru Medal", "Kuzan Medal", "Marco Medal"],
+                medalDesc: ["+20% Speed", "+15% Skill 1 CD", "+10% Capture Speed"],
+                support: ["Kuzan", "Marco", "Law", "Kaido", "Aokiji"],
+                supportDesc: ["Blue Runner 160%", "Blue Attacker 160%", "Blue Defender 160%"],
+                counters: ["Garp", "Zoro"],
+                weakTo: ["Garp (RED)", "Zoro (GREEN)"],
+                desc: "Speed tinggi dengan skill invincibility. Sangat sulit ditangkap."
+            },
+            {
+                name: "Luffy Gear 5",
+                initials: "L5",
+                element: "red",
+                class: "attacker",
+                tier: "SSS",
+                medals: ["Egghead Luffy Medal", "Gear 4 Medal", "Shanks Medal"],
+                medalDesc: ["+20% Attack", "+18% Skill 1 CD", "+15% Crit"],
+                support: ["Zoro", "Nami", "Sanji", "Garp", "Roger"],
+                supportDesc: ["Red Attacker 160%", "Red Runner 160%", "Grandline tags"],
+                counters: ["Kizaru", "Kuzan"],
+                weakTo: ["Kizaru (BLUE)", "Kuzan (BLUE)"],
+                desc: "Transformasi terkuat Luffy. Multiple forms dengan damage luar biasa."
+            },
+
+            // SS Tier
+            {
+                name: "Zoro (Enma)",
+                initials: "ZR",
+                element: "green",
+                class: "attacker",
+                tier: "SS",
+                medals: ["Zoro Medal", "Mihawk Medal", "Raid Zoro Medal"],
+                medalDesc: ["+18% Attack", "+15% Crit", "+12% HP"],
+                support: ["Mihawk", "Luffy", "Sanji", "Yamato", "Oden"],
+                supportDesc: ["Green Attacker 160%", "Green Runner 160%", "New World tags"],
+                counters: ["Garp", "Kizaru"],
+                weakTo: ["Garp (RED)"],
+                desc: "Damage dealer terkuat untuk GREEN. Counter attack sangat mematikan."
+            },
+            {
+                name: "Shanks (Film Red)",
+                initials: "SK",
+                element: "red",
+                class: "runner",
+                tier: "SS",
+                medals: ["Shanks Medal", "Roger Medal", "Ben Beckman Medal"],
+                medalDesc: ["+18% Speed", "+15% Capture", "+12% Dodge"],
+                support: ["Roger", "Beckman", "Lucky Roo", "Yasopp", "Luffy"],
+                supportDesc: ["Red Runner 160%", "Red Attacker 160%", "East Blue tags"],
+                counters: ["Kizaru", "Kuzan"],
+                weakTo: ["Kizaru (BLUE)", "Kuzan (BLUE)"],
+                desc: "Haki observation yang kuat. Bisa detect musuh di dekat treasure."
+            },
+            {
+                name: "Kaido (Hybrid)",
+                initials: "KD",
+                element: "blue",
+                class: "defender",
+                tier: "SS",
+                medals: ["Kaido Medal", "King Medal", "Queen Medal"],
+                medalDesc: ["+20% HP", "+15% Defense", "+10% Damage Reduction"],
+                support: ["King", "Queen", "Jack", "Katakuri", "Cracker"],
+                supportDesc: ["Blue Defender 160%", "Blue Attacker 160%", "Treachery Party"],
+                counters: ["Zoro", "Yamato"],
+                weakTo: ["Zoro (GREEN)", "Yamato (GREEN)"],
+                desc: "Tank terkuat dengan hyper armor. Sangat sulit didorong dari treasure."
+            },
+            {
+                name: "Kuzan (Aokiji)",
+                initials: "KJ",
+                element: "blue",
+                class: "attacker",
+                tier: "SS",
+                medals: ["Kuzan Medal", "Akainu Medal", "Garp Medal"],
+                medalDesc: ["+18% Attack", "+15% Freeze Duration", "+12% Skill 1 CD"],
+                support: ["Garp", "Akainu", "Sengoku", "Kizaru", "Borsalino"],
+                supportDesc: ["Blue Attacker 160%", "Blue Defender 160%", "Marineford tags"],
+                counters: ["Zoro", "Yamato"],
+                weakTo: ["Zoro (GREEN)", "Yamato (GREEN)"],
+                desc: "Freeze skill yang sangat mengganggu. Range skill luas."
+            },
+
+            // S Tier
+            {
+                name: "Roger (Oden)",
+                initials: "RG",
+                element: "red",
+                class: "attacker",
+                tier: "S",
+                medals: ["Roger Medal", "Oden Medal", "Whitebeard Medal"],
+                medalDesc: ["+18% Attack", "+15% Crit", "+12% Skill 2 CD"],
+                support: ["Oden", "Whitebeard", "Shanks", "Marco", "Ace"],
+                supportDesc: ["Red Attacker 160%", "Red Runner 160%", "Grandline tags"],
+                counters: ["Kizaru", "Kuzan"],
+                weakTo: ["Kizaru (BLUE)", "Kuzan (BLUE)"],
+                desc: "King of Pirates dengan damage tinggi. Skill 2 one-shot potential."
+            },
+            {
+                name: "Yamato (Thunder Bagua)",
+                initials: "YM",
+                element: "green",
+                class: "runner",
+                tier: "S",
+                medals: ["Yamato Medal", "Kaido Medal", "Oden Medal"],
+                medalDesc: ["+18% Speed", "+15% Capture", "+12% Dodge"],
+                support: ["Kaido", "Oden", "Luffy", "Zoro", "Momonosuke"],
+                supportDesc: ["Green Runner 160%", "Green Attacker 160%", "Wano Country tags"],
+                counters: ["Garp", "Akainu"],
+                weakTo: ["Garp (RED)", "Akainu (RED)"],
+                desc: "Runner cepat dengan damage bagus. Counter skill sangat kuat."
+            },
+            {
+                name: "Akainu (Magellan)",
+                initials: "AK",
+                element: "red",
+                class: "defender",
+                tier: "S",
+                medals: ["Akainu Medal", "Kuzan Medal", "Garp Medal"],
+                medalDesc: ["+20% HP", "+15% Defense", "+10% Damage Reduction"],
+                support: ["Kuzan", "Garp", "Sengoku", "Borsalino", "Koby"],
+                supportDesc: ["Red Defender 160%", "Red Attacker 160%", "Marineford tags"],
+                counters: ["Kaido", "Kuzan"],
+                weakTo: ["Kaido (BLUE)", "Kuzan (BLUE)"],
+                desc: "Magma fists dengan DOT damage. Sangat kuat di defense."
+            },
+            {
+                name: "Blackbeard (Yami Yami)",
+                initials: "BB",
+                element: "blue",
+                class: "attacker",
+                tier: "S",
+                medals: ["Blackbeard Medal", "Shanks Medal", "Luffy Medal"],
+                medalDesc: ["+18% Attack", "+15% Dark Damage", "+12% HP"],
+                support: ["Shanks", "Luffy", "Ace", "Marco", "Lucky Roo"],
+                supportDesc: ["Blue Attacker 160%", "Blue Runner 160%", "Paramecia tags"],
+                counters: ["Luffy G5", "Zoro"],
+                weakTo: ["Luffy G5 (RED)", "Zoro (GREEN)"],
+                desc: "Gravity pull yang bisa mengganggu semua musuh. Gura Gura combo."
+            },
+            {
+                name: "Law (Room)",
+                initials: "LW",
+                element: "blue",
+                class: "runner",
+                tier: "S",
+                medals: ["Law Medal", "Kid Medal", "Corazon Medal"],
+                medalDesc: ["+18% Speed", "+15% Capture", "+12% Skill 1 CD"],
+                support: ["Kid", "Corazon", "Bonney", "Hawkins", "Drake"],
+                supportDesc: ["Blue Runner 160%", "Blue Attacker 160%", "Worst Generation tags"],
+                counters: ["Kaido", "Kuzan"],
+                weakTo: ["Kaido (BLUE)", "Kuzan (BLUE)"],
+                desc: "Room skill untuk teleport dan attack. Sangat versatile."
+            },
+            {
+                name: "Marco (Tori Tori)",
+                initials: "MC",
+                element: "blue",
+                class: "defender",
+                tier: "S",
+                medals: ["Marco Medal", "Whitebeard Medal", "Ace Medal"],
+                medalDesc: ["+20% HP", "+15% Heal", "+10% Defense"],
+                support: ["Whitebeard", "Ace", "Jozu", "Vista", "Oars"],
+                supportDesc: ["Blue Defender 160%", "Blue Attacker 160%", "Whitebeard Pirates tags"],
+                counters: ["Zoro", "Yamato"],
+                weakTo: ["Zoro (GREEN)", "Yamato (GREEN)"],
+                desc: "Healing terbaik sebagai defender. Regen HP sangat tinggi."
+            },
+
+            // A Tier
+            {
+                name: "Oden (Nitoryu)",
+                initials: "OD",
+                element: "green",
+                class: "attacker",
+                tier: "A",
+                medals: ["Oden Medal", "Roger Medal", "Izo Medal"],
+                medalDesc: ["+18% Attack", "+15% Crit", "+12% Skill 2 CD"],
+                support: ["Roger", "Izo", "Kinemon", "Denjiro", "Ashura Doji"],
+                supportDesc: ["Green Attacker 160%", "Green Runner 160%", "Wano Country tags"],
+                counters: ["Garp", "Akainu"],
+                weakTo: ["Garp (RED)", "Akainu (RED)"],
+                desc: "Attack range luas dengan damage tinggi. Combo skill sangat smooth."
+            },
+            {
+                name: "Kid (Punk Gibson)",
+                initials: "KD",
+                element: "red",
+                class: "attacker",
+                tier: "A",
+                medals: ["Kid Medal", "Law Medal", "Apoo Medal"],
+                medalDesc: ["+18% Attack", "+15% Crit", "+12% HP"],
+                support: ["Law", "Apoo", "Hawkins", "Killer", "Bonney"],
+                supportDesc: ["Red Attacker 160%", "Red Runner 160%", "Worst Generation tags"],
+                counters: ["Kizaru", "Kuzan"],
+                weakTo: ["Kizaru (BLUE)", "Kuzan (BLUE)"],
+                desc: "Magnet power dengan AoE damage. Sangat kuat di close range."
+            },
+            {
+                name: "Whitebeard (Gura Gura)",
+                initials: "WB",
+                element: "red",
+                class: "defender",
+                tier: "A",
+                medals: ["Whitebeard Medal", "Roger Medal", "Marco Medal"],
+                medalDesc: ["+20% HP", "+15% Defense", "+10% Damage Reduction"],
+                support: ["Roger", "Marco", "Ace", "Jozu", "Vista"],
+                supportDesc: ["Red Defender 160%", "Red Attacker 160%", "Whitebeard Pirates tags"],
+                counters: ["Kizaru", "Kuzan"],
+                weakTo: ["Kizaru (BLUE)", "Kuzan (BLUE)"],
+                desc: "Quake power dengan stun. Hyper armor saat skill aktif."
+            },
+            {
+                name: "Nami (Zeus)",
+                initials: "NM",
+                element: "green",
+                class: "runner",
+                tier: "A",
+                medals: ["Nami Medal", "Big Mom Medal", "Luffy Medal"],
+                medalDesc: ["+18% Speed", "+15% Capture", "+12% Dodge"],
+                support: ["Luffy", "Sanji", "Robin", "Chopper", "Brook"],
+                supportDesc: ["Green Runner 160%", "Green Attacker 160%", "Straw Hat tags"],
+                counters: ["Garp", "Akainu"],
+                weakTo: ["Garp (RED)", "Akainu (RED)"],
+                desc: "Runner cepat dengan clone trick. Bypass defense dengan smart play."
+            },
+            {
+                name: "Sanji (Diable Jambe)",
+                initials: "SN",
+                element: "blue",
+                class: "attacker",
+                tier: "A",
+                medals: ["Sanji Medal", "Judge Medal", "Reiju Medal"],
+                medalDesc: ["+18% Attack", "+15% Crit", "+12% Speed"],
+                support: ["Judge", "Reiju", "Ichiji", "Niji", "Yonji"],
+                supportDesc: ["Blue Attacker 160%", "Blue Runner 160%", "Germa tags"],
+                counters: ["Zoro", "Yamato"],
+                weakTo: ["Zoro (GREEN)", "Yamato (GREEN)"],
+                desc: "Kick attack dengan burn damage. Combo sangat smooth."
+            },
+
+            // B Tier
+            {
+                name: "Luffy (Snakeman)",
+                initials: "LS",
+                element: "red",
+                class: "runner",
+                tier: "B",
+                medals: ["Luffy Medal", "Katakuri Medal", "G4 Medal"],
+                medalDesc: ["+18% Speed", "+15% Capture", "+12% Skill 1 CD"],
+                support: ["Katakuri", "Sanji", "Zoro", "Nami", "Robin"],
+                supportDesc: ["Red Runner 160%", "Red Attacker 160%", "Straw Hat tags"],
+                counters: ["Kizaru", "Kuzan"],
+                weakTo: ["Kizaru (BLUE)", "Kuzan (BLUE)"],
+                desc: "Snakeman attack pattern yang sulit dihindari. Good for beginners."
+            },
+            {
+                name: "Katakuri (Mochi)",
+                initials: "KT",
+                element: "green",
+                class: "defender",
+                tier: "B",
+                medals: ["Katakuri Medal", "Big Mom Medal", "Cracker Medal"],
+                medalDesc: ["+20% HP", "+15% Defense", "+10% Damage Reduction"],
+                support: ["Big Mom", "Cracker", "Smoothie", "Perospero", "Luffy"],
+                supportDesc: ["Green Defender 160%", "Green Attacker 160%", "Big Mom Pirates tags"],
+                counters: ["Garp", "Akainu"],
+                weakTo: ["Garp (RED)", "Akainu (RED)"],
+                desc: "Future sight untuk dodge. Mochi trap yang mengganggu."
+            }
+        ];
+
+        const medalSets = [
+            {
+                name: "Triple Luffy Set",
+                class: "runner",
+                medals: ["Battle Ax G-40", "Jet Rocket G-105", "King Cobra G-119"],
+                tags: ["Luffy", "Straw Hat", "Paramecia"],
+                bonus: "Skill 1 + Skill 2 Cooldown Reduction",
+                desc: "Set versatile untuk karakter yang mengandalkan skill. Cooldown sangat cepat.",
+                bestFor: "Runner & Attacker"
+            },
+            {
+                name: "Triple Kaido Set",
+                class: "defender",
+                medals: ["Kaido Medal", "King Medal", "Queen Medal"],
+                tags: ["Kaido Pirates", "New World", "Treachery"],
+                bonus: "Balanced Stats + Damage Reduction",
+                desc: "Set balanced untuk defender. HP tinggi dengan damage reduction.",
+                bestFor: "Defender"
+            },
+            {
+                name: "Triple Shanks Set",
+                class: "runner",
+                medals: ["Shanks Medal", "Roger Medal", "Ben Beckman Medal"],
+                tags: ["Red Hair Pirates", "Grandline", "Supernova"],
+                bonus: "Skill Cycle + Speed Boost",
+                desc: "Set untuk skill cycle cepat. Cocok untuk runner yang aktif.",
+                bestFor: "Runner"
+            },
+            {
+                name: "Big Mom Pirates Set",
+                class: "attacker",
+                medals: ["Big Mom Medal", "Katakuri Medal", "Cracker Medal"],
+                tags: ["Big Mom Pirates", "New World", "Paramecia"],
+                bonus: "Balanced Attack + HP",
+                desc: "Set balanced untuk attacker dengan HP cukup tinggi.",
+                bestFor: "Attacker"
+            },
+            {
+                name: "Marineford Set",
+                class: "defender",
+                medals: ["Garp Medal", "Akainu Medal", "Kuzan Medal"],
+                tags: ["Marine", "Marineford", "Haki"],
+                bonus: "Defense + Damage Reduction",
+                desc: "Set defense terkuat. Sangat cocok untuk defender pure tank.",
+                bestFor: "Defender"
+            },
+            {
+                name: "Worst Generation Set",
+                class: "attacker",
+                medals: ["Luffy Medal", "Law Medal", "Kid Medal"],
+                tags: ["Worst Generation", "Supernova", "Paramecia"],
+                bonus: "Attack + Crit Rate",
+                desc: "Set damage tinggi untuk attacker. Crit rate sangat bagus.",
+                bestFor: "Attacker"
+            },
+            {
+                name: "Wano Country Set",
+                class: "runner",
+                medals: ["Oden Medal", "Yamato Medal", "Zoro Medal"],
+                tags: ["Wano Country", "Samurai", "New World"],
+                bonus: "Speed + Capture Speed",
+                desc: "Set untuk runner cepat. Capture speed sangat tinggi.",
+                bestFor: "Runner"
+            },
+            {
+                name: "Whitebeard Pirates Set",
+                class: "defender",
+                medals: ["Whitebeard Medal", "Marco Medal", "Ace Medal"],
+                tags: ["Whitebeard Pirates", "Grandline", "Paramecia"],
+                bonus: "HP + Heal on KO",
+                desc: "Set tank dengan regen. Cocok untuk defender sustain.",
+                bestFor: "Defender"
+            },
+            {
+                name: "Egghead Luffy Set",
+                class: "attacker",
+                medals: ["Egghead Luffy Medal", "Gear 4 Medal", "Nika Medal"],
+                tags: ["Luffy", "Egghead", "Nika"],
+                bonus: "Skill 1 Cooldown + Damage",
+                desc: "Set terbaru untuk Luffy G5. Skill 1 cooldown sangat cepat.",
+                bestFor: "Attacker"
+            },
+            {
+                name: "Boa Hancock Set",
+                class: "runner",
+                medals: ["Hancock Medal", "Kuja Pirates Medal", "Love-Love Medal"],
+                tags: ["Kuja Pirates", "Seven Warlords", "Love"],
+                bonus: "Speed + Charm Effect",
+                desc: "Set untuk runner dengan crowd control. Charm effect sangat mengganggu.",
+                bestFor: "Runner"
+            }
+        ];
+
+        const supports = [
+            {
+                name: "Roger",
+                element: "red",
+                class: "attacker",
+                tags: ["Red Hair Pirates", "Grandline", "Supernova"],
+                bonus: "+18% Attack for RED characters",
+                bestFor: "RED Attacker teams"
+            },
+            {
+                name: "Shanks",
+                element: "red",
+                class: "runner",
+                tags: ["Red Hair Pirates", "Haki", "Grandline"],
+                bonus: "+15% Speed for RED characters",
+                bestFor: "RED Runner teams"
+            },
+            {
+                name: "Kaido",
+                element: "blue",
+                class: "defender",
+                tags: ["Kaido Pirates", "New World", "Treachery"],
+                bonus: "+18% HP for BLUE characters",
+                bestFor: "BLUE Defender teams"
+            },
+            {
+                name: "Kuzan",
+                element: "blue",
+                class: "attacker",
+                tags: ["Marine", "Marineford", "Logia"],
+                bonus: "+15% Attack for BLUE characters",
+                bestFor: "BLUE Attacker teams"
+            },
+            {
+                name: "Zoro",
+                element: "green",
+                class: "attacker",
+                tags: ["Straw Hat", "Wano Country", "Swordsman"],
+                bonus: "+18% Attack for GREEN characters",
+                bestFor: "GREEN Attacker teams"
+            },
+            {
+                name: "Yamato",
+                element: "green",
+                class: "runner",
+                tags: ["Kaido Pirates", "Wano Country", "New World"],
+                bonus: "+15% Speed for GREEN characters",
+                bestFor: "GREEN Runner teams"
+            },
+            {
+                name: "Akainu",
+                element: "red",
+                class: "defender",
+                tags: ["Marine", "Marineford", "Logia"],
+                bonus: "+15% Defense for RED characters",
+                bestFor: "RED Defender teams"
+            },
+            {
+                name: "Marco",
+                element: "blue",
+                class: "defender",
+                tags: ["Whitebeard Pirates", "Grandline", "Paramecia"],
+                bonus: "+18% HP for BLUE characters",
+                bestFor: "BLUE Defender teams"
+            },
+            {
+                name: "Luffy",
+                element: "red",
+                class: "runner",
+                tags: ["Straw Hat", "Grandline", "Paramecia"],
+                bonus: "+15% Capture Speed",
+                bestFor: "All RED teams"
+            },
+            {
+                name: "Big Mom",
+                element: "green",
+                class: "defender",
+                tags: ["Big Mom Pirates", "New World", "Paramecia"],
+                bonus: "+18% HP for GREEN characters",
+                bestFor: "GREEN Defender teams"
+            },
+            {
+                name: "Whitebeard",
+                element: "red",
+                class: "defender",
+                tags: ["Whitebeard Pirates", "Grandline", "Paramecia"],
+                bonus: "+15% Damage Reduction",
+                bestFor: "RED Defender teams"
+            },
+            {
+                name: "Oden",
+                element: "green",
+                class: "attacker",
+                tags: ["Wano Country", "Samurai", "New World"],
+                bonus: "+18% Attack for GREEN characters",
+                bestFor: "GREEN Attacker teams"
+            }
+        ];
+
+        const counters = [
+            {
+                character: "Garp",
+                counters: ["Kizaru ( BLUE - kecepatan tinggi bisa hindari serangan Garp)", "Kuzan ( BLUE - freeze membatasi pergerakan Garp)"],
+                counterBy: ["Zoro (GREEN - damage tinggi bisa lawan)", "Luffy G5 (RED - skill invincibility)"],
+                tips: "Garp sangat kuat tapi lemah terhadap karakter BLUE yang bisa maintain distance."
+            },
+            {
+                character: "Kizaru",
+                counters: ["Garp (RED - damage skill 2 sangat besar)", "Zoro (GREEN - counter attack mematikan)"],
+                counterBy: ["Kuzan (BLUE - freeze bisa tangkap Kizaru)", "Kaido (BLUE - tank bisa absorb damage)"],
+                tips: "Kizaru sulit ditangkap karena speed. Fokus gunakan element advantage."
+            },
+            {
+                character: "Luffy G5",
+                counters: ["Kizaru (BLUE - speed bisa maintain distance)", "Kuzan (BLUE - freeze membatasi Luffy)"],
+                counterBy: ["Garp (RED - damage tinggi)", "Zoro (GREEN - counter attack)"],
+                tips: "Luffy G5 kuat tapi cooldown skill lama. Manfaatkan timing."
+            },
+            {
+                character: "Zoro",
+                counters: ["Garp (RED - damage sangat besar)", "Akainu (RED - DOT damage)"],
+                counterBy: ["Kizaru (BLUE - speed advantage)", "Kaido (BLUE - tank bisa absorb)"],
+                tips: "Zoro kuat di close range. Jaga jarak dan gunakan ranged attack."
+            },
+            {
+                character: "Kaido",
+                counters: ["Zoro (GREEN - damage tinggi)", "Yamato (GREEN - speed bisa hindari)"],
+                counterBy: ["Garp (RED - damage bypass defense)", "Akainu (RED - DOT damage)"],
+                tips: "Kaido sangat tank tapi lambat. Gunakan speed untuk hindari."
+            },
+            {
+                character: "Shanks",
+                counters: ["Kizaru (BLUE - speed bisa match Shanks)", "Kuzan (BLUE - freeze)"],
+                counterBy: ["Garp (RED - damage tinggi)", "Luffy G5 (RED - skill kuat)"],
+                tips: "Shanks kuat dengan Haki tapi lemah element. Gunakan counter element."
+            },
+            {
+                character: "Kuzan",
+                counters: ["Zoro (GREEN - damage tinggi)", "Yamato (GREEN - speed tinggi)"],
+                counterBy: ["Garp (RED - damage bypass freeze)", "Akainu (RED - DOT damage)"],
+                tips: "Kuzan kuat dengan freeze tapi defense rendah. Aggressive play style."
+            },
+            {
+                character: "Akainu",
+                counters: ["Kaido (BLUE - tank bisa absorb DOT)", "Kuzan (BLUE - freeze prevents approach)"],
+                counterBy: ["Zoro (GREEN - damage tinggi)", "Oden (GREEN - range attack)"],
+                tips: "Akainu kuat di defense. Gunakan DOT damage untuk pressure."
+            },
+            {
+                character: "Roger",
+                counters: ["Kizaru (BLUE - speed advantage)", "Kuzan (BLUE - freeze)"],
+                counterBy: ["Garp (RED - damage sama-sama tinggi)", "Zoro (GREEN - counter attack)"],
+                tips: "Roger kuat tapi lemah element. Maintain distance dan timing skill."
+            },
+            {
+                character: "Yamato",
+                counters: ["Garp (RED - damage sangat besar)", "Akainu (RED - DOT damage)"],
+                counterBy: ["Kaido (BLUE - tank bisa absorb)", "Kuzan (BLUE - freeze)"],
+                tips: "Yamato cepat tapi HP rendah. Hindari direct confrontation dengan RED."
+            },
+            {
+                character: "Marco",
+                counters: ["Zoro (GREEN - damage tinggi)", "Yamato (GREEN - speed tinggi)"],
+                counterBy: ["Garp (RED - burst damage)", "Akainu (RED - DOT mengganggu regen)"],
+                tips: "Marco kuat dengan regen. POTONG regen dengan anti-heal atau burst damage."
+            },
+            {
+                character: "Blackbeard",
+                counters: ["Luffy G5 (RED - skill kuat)", "Zoro (GREEN - damage tinggi)"],
+                counterBy: ["Kizaru (BLUE - speed bisa hindari gravity)", "Kuzan (BLUE - freeze)"],
+                tips: "Blackbeard gravity pull sangat mengganggu. Maintain distance."
+            }
+        ];
+
+        // ========== STATE ==========
+        let currentFilter = { element: 'all', class: 'all' };
+        let currentMedalFilter = 'all';
+        let currentSupportFilter = 'all';
+
+        // ========== RENDER FUNCTIONS ==========
+        function renderCharacters() {
+            const grid = document.getElementById('charGrid');
+            const search = document.getElementById('charSearch').value.toLowerCase();
+            
+            let filtered = characters.filter(c => {
+                const matchSearch = c.name.toLowerCase().includes(search) || 
+                                   c.element.toLowerCase().includes(search) ||
+                                   c.class.toLowerCase().includes(search);
+                const matchElement = currentFilter.element === 'all' || c.element === currentFilter.element;
+                const matchClass = currentFilter.class === 'all' || c.class === currentFilter.class;
+                return matchSearch && matchElement && matchClass;
+            });
+
+            // Sort by tier
+            const tierOrder = { 'SSS': 0, 'SS': 1, 'S': 2, 'A': 3, 'B': 4 };
+            filtered.sort((a, b) => tierOrder[a.tier] - tierOrder[b.tier]);
+
+            grid.innerHTML = filtered.map(c => `
+                <div class="char-card" onclick="openModal('${c.name}')" style="position: relative;">
+                    <span class="tier-badge tier-${c.tier.toLowerCase()}">${c.tier}</span>
+                    <div class="char-header">
+                        <div class="char-avatar ${c.element}">${c.initials}</div>
+                        <div class="char-info">
+                            <h3>${c.name}</h3>
+                            <span class="element-badge ${c.element}">${c.element.toUpperCase()}</span>
+                            <span class="char-class">${c.class.toUpperCase()}</span>
+                        </div>
+                    </div>
+                    <p style="color: var(--text-dim); font-size: 13px; margin-bottom: 12px;">${c.desc}</p>
+                    
+                    <div class="medal-section">
+                        <div class="medal-title">🏅 Medal Set</div>
+                        <div class="medal-list">
+                            ${c.medals.map(m => `<span class="medal-item">${m}</span>`).join('')}
+                        </div>
+                    </div>
+                    
+                    <div class="support-section">
+                        <div class="support-title">👥 Support</div>
+                        <div class="support-list">
+                            ${c.support.slice(0, 3).map(s => `<span class="support-item">${s}</span>`).join('')}
+                        </div>
+                    </div>
+                    
+                    <div class="counter-section">
+                        <div class="counter-title">⚔️ Counter</div>
+                        <div class="counter-list">
+                            ${c.counters.map(cr => `<span class="counter-item">${cr}</span>`).join('')}
+                            ${c.weakTo.map(w => `<span class="counter-item weak">⚠️ ${w}</span>`).join('')}
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function renderMedals() {
+            const grid = document.getElementById('medalGrid');
+            const search = document.getElementById('medalSearch').value.toLowerCase();
+            
+            let filtered = medalSets.filter(m => {
+                const matchSearch = m.name.toLowerCase().includes(search) ||
+                                   m.tags.some(t => t.toLowerCase().includes(search)) ||
+                                   m.bestFor.toLowerCase().includes(search);
+                const matchClass = currentMedalFilter === 'all' || m.class === currentMedalFilter;
+                return matchSearch && matchClass;
+            });
+
+            grid.innerHTML = filtered.map(m => `
+                <div class="char-card">
+                    <div class="char-header">
+                        <div class="char-avatar ${m.class === 'attacker' ? 'red' : m.class === 'defender' ? 'blue' : 'green'}">🏅</div>
+                        <div class="char-info">
+                            <h3>${m.name}</h3>
+                            <span class="char-class">${m.class.toUpperCase()}</span>
+                        </div>
+                    </div>
+                    <p style="color: var(--accent); font-size: 14px; font-weight: 600; margin-bottom: 8px;">${m.bonus}</p>
+                    <p style="color: var(--text-dim); font-size: 13px; margin-bottom: 12px;">${m.desc}</p>
+                    
+                    <div class="medal-section">
+                        <div class="medal-title">🏅 Medals</div>
+                        <div class="medal-list">
+                            ${m.medals.map(med => `<span class="medal-item">${med}</span>`).join('')}
+                        </div>
+                    </div>
+                    
+                    <div class="support-section">
+                        <div class="support-title">🏷️ Tags</div>
+                        <div class="support-list">
+                            ${m.tags.map(t => `<span class="support-item">${t}</span>`).join('')}
+                        </div>
+                    </div>
+                    
+                    <div class="counter-section">
+                        <div class="counter-title">🎯 Best For</div>
+                        <div class="counter-list">
+                            <span class="counter-item">${m.bestFor}</span>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function renderSupports() {
+            const grid = document.getElementById('supportGrid');
+            const search = document.getElementById('supportSearch').value.toLowerCase();
+            
+            let filtered = supports.filter(s => {
+                const matchSearch = s.name.toLowerCase().includes(search) ||
+                                   s.tags.some(t => t.toLowerCase().includes(search)) ||
+                                   s.bonus.toLowerCase().includes(search);
+                const matchElement = currentSupportFilter === 'all' || s.element === currentSupportFilter;
+                return matchSearch && matchElement;
+            });
+
+            grid.innerHTML = filtered.map(s => `
+                <div class="char-card">
+                    <div class="char-header">
+                        <div class="char-avatar ${s.element}">${s.name.substring(0, 2).toUpperCase()}</div>
+                        <div class="char-info">
+                            <h3>${s.name}</h3>
+                            <span class="element-badge ${s.element}">${s.element.toUpperCase()}</span>
+                            <span class="char-class">${s.class.toUpperCase()}</span>
+                        </div>
+                    </div>
+                    <p style="color: var(--green); font-size: 14px; font-weight: 600; margin-bottom: 8px;">${s.bonus}</p>
+                    
+                    <div class="support-section">
+                        <div class="support-title">🏷️ Tags</div>
+                        <div class="support-list">
+                            ${s.tags.map(t => `<span class="support-item">${t}</span>`).join('')}
+                        </div>
+                    </div>
+                    
+                    <div class="counter-section">
+                        <div class="counter-title">🎯 Best For</div>
+                        <div class="counter-list">
+                            <span class="counter-item">${s.bestFor}</span>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function renderCounters() {
+            const grid = document.getElementById('counterGrid');
+            const search = document.getElementById('counterSearch').value.toLowerCase();
+            
+            let filtered = counters.filter(c => {
+                return c.character.toLowerCase().includes(search) ||
+                       c.counters.some(cr => cr.toLowerCase().includes(search)) ||
+                       c.counterBy.some(cb => cb.toLowerCase().includes(search));
+            });
+
+            grid.innerHTML = filtered.map(c => `
+                <div class="char-card">
+                    <div class="char-header">
+                        <div class="char-avatar red">⚔️</div>
+                        <div class="char-info">
+                            <h3>${c.character}</h3>
+                        </div>
+                    </div>
+                    
+                    <div class="counter-section">
+                        <div class="counter-title">✅ Mengalahkan:</div>
+                        <div class="counter-list">
+                            ${c.counters.map(cr => `<span class="counter-item">${cr}</span>`).join('')}
+                        </div>
+                    </div>
+                    
+                    <div class="counter-section" style="border-color: var(--blue);">
+                        <div class="counter-title" style="color: var(--blue);">❌ Dikalahkan oleh:</div>
+                        <div class="counter-list">
+                            ${c.counterBy.map(cb => `<span class="counter-item weak">${cb}</span>`).join('')}
+                        </div>
+                    </div>
+                    
+                    <div class="support-section">
+                        <div class="support-title">💡 Tips</div>
+                        <p style="color: var(--text-dim); font-size: 13px;">${c.tips}</p>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // ========== FILTER FUNCTIONS ==========
+        function filterCharacters() {
+            renderCharacters();
+        }
+
+        function filterByElement(element, btn) {
+            currentFilter.element = element;
+            updateFilterButtons(btn);
+            renderCharacters();
+        }
+
+        function filterByClass(cls, btn) {
+            currentFilter.class = currentFilter.class === cls ? 'all' : cls;
+            updateFilterButtons(btn);
+            renderCharacters();
+        }
+
+        function filterMedals() {
+            renderMedals();
+        }
+
+        function filterMedalByClass(cls, btn) {
+            currentMedalFilter = cls;
+            updateFilterButtons(btn);
+            renderMedals();
+        }
+
+        function filterSupports() {
+            renderSupports();
+        }
+
+        function filterSupportByElement(element, btn) {
+            currentSupportFilter = element;
+            updateFilterButtons(btn);
+            renderSupports();
+        }
+
+        function filterCounters() {
+            renderCounters();
+        }
+
+        function updateFilterButtons(activeBtn) {
+            const siblings = activeBtn.parentElement.querySelectorAll('.filter-btn');
+            siblings.forEach(btn => btn.classList.remove('active'));
+            activeBtn.classList.add('active');
+        }
+
+        // ========== NAVIGATION ==========
+        function showSection(sectionId, btn) {
+            document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+            document.getElementById(sectionId).classList.add('active');
+            
+            document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+
+            // Render content
+            if (sectionId === 'characters') renderCharacters();
+            if (sectionId === 'medals') renderMedals();
+            if (sectionId === 'support') renderSupports();
+            if (sectionId === 'counters') renderCounters();
+        }
+
+        // ========== MODAL ==========
+        function openModal(charName) {
+            const char = characters.find(c => c.name === charName);
+            if (!char) return;
+
+            const modal = document.getElementById('charModal');
+            const content = document.getElementById('modalContent');
+
+            content.innerHTML = `
+                <div class="modal-char-header">
+                    <div class="modal-avatar ${char.element}">${char.initials}</div>
+                    <div>
+                        <h2 style="font-size: 24px;">${char.name}</h2>
+                        <span class="element-badge ${char.element}">${char.element.toUpperCase()}</span>
+                        <span class="char-class">${char.class.toUpperCase()}</span>
+                        <span class="tier-badge tier-${char.tier.toLowerCase()}" style="position:static; margin-left: 8px;">${char.tier}</span>
+                    </div>
+                </div>
+                
+                <p style="color: var(--text-dim); margin-bottom: 20px; line-height: 1.7;">${char.desc}</p>
+                
+                <div class="modal-section">
+                    <h4 class="medal-color">🏅 Medal Set Rekomendasi</h4>
+                    ${char.medals.map((m, i) => `
+                        <div class="modal-item">
+                            <div>
+                                <div class="modal-item-name">${m}</div>
+                                <div class="modal-item-desc">${char.medalDesc[i]}</div>
+                            </div>
+                        </div>
+                    `).join('')}
+                </div>
+                
+                <div class="modal-section">
+                    <h4 class="support-color">👥 Support Terbaik</h4>
+                    ${char.support.map((s, i) => `
+                        <div class="modal-item">
+                            <div>
+                                <div class="modal-item-name">${s}</div>
+                                <div class="modal-item-desc">${i < char.supportDesc.length ? char.supportDesc[i] : 'Support tag'}</div>
+                            </div>
+                        </div>
+                    `).join('')}
+                </div>
+                
+                <div class="modal-section">
+                    <h4 class="counter-color">⚔️ Counter Matchup</h4>
+                    <p style="font-size: 14px; font-weight: 600; color: var(--green); margin-bottom: 8px;">✅ Mengalahkan:</p>
+                    ${char.counters.map(cr => `
+                        <div class="modal-item">
+                            <div class="modal-item-name">${cr}</div>
+                        </div>
+                    `).join('')}
+                    <p style="font-size: 14px; font-weight: 600; color: var(--blue); margin: 12px 0 8px;">❌ Dikalahkan oleh:</p>
+                    ${char.weakTo.map(w => `
+                        <div class="modal-item">
+                            <div class="modal-item-name">${w}</div>
+                        </div>
+                    `).join('')}
+                </div>
+            `;
+
+            modal.classList.add('active');
+        }
+
+        function closeModal() {
+            document.getElementById('charModal').classList.remove('active');
+        }
+
+        // Close modal on outside click
+        document.getElementById('charModal').addEventListener('click', function(e) {
+            if (e.target === this) closeModal();
+        });
+
+        // ========== STATS ==========
+        function updateStats() {
+            document.getElementById('totalChars').textContent = characters.length;
+            document.getElementById('totalMedals').textContent = medalSets.length;
+            document.getElementById('totalSupports').textContent = supports.length;
+            document.getElementById('totalCounters').textContent = counters.length;
+        }
+
+        // ========== INIT ==========
+        updateStats();
+        renderCharacters();
+    </script>
+</body>
+</html>
